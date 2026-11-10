@@ -1,0 +1,161 @@
+FIL   B078008000112078603000000000ADXETIS
+UNH   ETEB02     078008000000011207860300003INVOIC99 b  UN
+BGM   38007800800012612186092023082109202308N2023071320230812
+FTX   INVDEURechnung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Wenn Sie Einwände gegen diese Rechnung haben, informieren Sie uns bitte schriftlich innerhalb eines Monats nach Erhalt. Andernfalls gilt die Rechnung als anerkannt. Den Einzelverbindungsnachweis können sie unter A1.net/rechnung abrufen. Auf Wunsch erhalten Sie diesen auch in Papierform.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+NADSE 00000000000A1 Telekom Austria AG                                                 Lassallestraße 9                                                      Wien                               1020   AT                                                                                                                                                                          AT57ZZZ00000001044                 280571f     0962635   
+COM   AD0800 664 100        TE Mo - Fr: 7-22 Uhr   TX A1 Service Team                                   EM 
+FIISE                             7501629      60000
+FIISE                AT716000000007501629   OPSKATWW
+UIDSE VA ATU62895905         
+NADBY 00112078603Martina Pöstinger                                                     Mustgasse 1/2/3/45                                                    Wien                               1110   AT
+NADIV 00112078603Martina Pöstinger                                                     POB: 1234567890                                                       Wien                               1110   AT                                                                                                                        
+FIIIV                               AT85xxxxxxxxxxxx4100GIBAATWWXXX1000023456789
+EMBIV VA                          
+LENIV VA                          
+CUX   EUR1  
+PAT   0120230831227Bitte nicht einzahlen! Der Betrag wird von Ihrem Konto BIC GIBAATWWXXX, IBAN AT85xxxxxxxxxxxx4100 mit der Mandatsreferenz 6000065931633 am 31.08.2023 eingezogen.                                                                                                                                                                                                                                                                                                                                                               
+UNS   D
+LIN   000001BVK.203927                         SA 000000000    00000000000000000000000000000         -00000000001548000000000000000   
+PIA   5                                     SA G000                65             
+PIA   1  TEST                                                                     
+PIA   7                                                                                                           Für einen Teil Ihres Produktes gilt eine Umsatzsteuer von nur 10 %.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+IMD   F  Gutschriften                                                                                                                                                
+SID   000001000001E000                                 SA 000000000    00000000000000000000000000000   -00000000000221000000000000000   
+IMD   F  100% Team Rabatt auf A1 Xplore TV M 2020                                                                                                                    
+TAXEURVAT0020000 00000000000000A2
+DTM   19420230813
+DTM   20620230912
+SID   000001000002E000                                 SA 000000000    00000000000000000000000000000   -00000000000965000000000000000   
+IMD   F  100% Team Rabatt auf A1 Xplore TV M 2020 (10% USt)                                                                                                          
+TAXEURVAT0010000 00000000000000A1
+DTM   19420230813
+DTM   20620230912
+SID   000001000003E000                                 SA 000000000    00000000000000000000000000000   -00000000000362000000000000000   
+IMD   F  100% Team Rabatt auf A1 Xplore TV Box                                                                                                                       
+TAXEURVAT0020000 00000000000000A2
+DTM   19420230813
+DTM   20620230912
+LIN   000002BVK.203927                         SA 000000000    00000000000000000000000000000          00000000001548000000000000000   
+PIA   5                                     SA M000                65             
+PIA   1  TEST                                                                     
+PIA   7                                                                                                           Für einen Teil Ihres Produktes gilt eine Umsatzsteuer von nur 10 %.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+IMD   F  Monatliche Entgelte                                                                                                                                         
+SID   000002000001M000                                 SA 000000000    00000000000000000000000000000    00000000000221000000000000000   
+IMD   F  A1 Xplore TV M 2020                                                                                                                                         
+TAXEURVAT0020000 00000000000000A2
+DTM   19420230813
+DTM   20620230912
+SID   000002000002M000                                 SA 000000000    00000000000000000000000000000    00000000000965000000000000000   
+IMD   F  A1 Xplore TV M 2020 (10% USt)                                                                                                                               
+TAXEURVAT0010000 00000000000000A1
+DTM   19420230813
+DTM   20620230912
+SID   000002000003M000                                 SA 000000000    00000000000000000000000000000    00000000000362000000000000000   
+IMD   F  A1 Xplore TV Box                                                                                                                                            
+TAXEURVAT0020000 00000000000000A2
+DTM   19420230813
+DTM   20620230912
+LIN   000003BVK.203927                         SA 000000000    00000000000000000000000000000          00000000001150000000000000000   
+PIA   5                                     SA C000                65             
+PIA   1  TEST                                                                     
+PIA   7                                                                                                           Für einen Teil Ihres Produktes gilt eine Umsatzsteuer von nur 10 %.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+IMD   F  Entgelte Online Dienste und Downloads                                                                                                                       
+SID   000003000001C000                                 SA 000000000    00000000000000000000000000000    00000000000575000000000000000   
+IMD   F  A1 Xplore TV Videothek Abruf HD                   30.07.2023                                                                                                
+TAXEURVAT0020000 00000000000000A2
+DTM   18320230730
+SID   000003000002C000                                 SA 000000000    00000000000000000000000000000    00000000000575000000000000000   
+IMD   F  A1 Xplore TV Videothek Abruf HD                   06.08.2023                                                                                                
+TAXEURVAT0020000 00000000000000A2
+DTM   18320230806
+LIN   00000409740/10848844                     SA 000000000    00000000000000000000000000000         -00000000002904000000000000000   
+PIA   5                                     SA G000                65             
+PIA   1  TEST2                                                                    
+IMD   F  Gutschriften                                                                                                                                                
+SID   000004000001E000                                 SA 000000000    00000000000000000000000000000   -00000000002283000000000000000   
+IMD   F  100% Team Rabatt auf A1 Kombi Basic                                                                                                                         
+TAXEURVAT0020000 00000000000000A2
+DTM   19420230813
+DTM   20620230912
+SID   000004000002E000                                 SA 000000000    00000000000000000000000000000   -00000000000621000000000000000   
+IMD   F  50% Team Rabatt auf A1 Internet Power 80 2018                                                                                                               
+TAXEURVAT0020000 00000000000000A2
+DTM   19420230813
+DTM   20620230912
+LIN   00000509740/10848844                     SA 000000000    00000000000000000000000000000          00000000003524000000000000000   
+PIA   5                                     SA M000                65             
+PIA   1  TEST2                                                                    
+IMD   F  Monatliche Entgelte                                                                                                                                         
+SID   000005000001M000                                 SA 000000000    00000000000000000000000000000    00000000002283000000000000000   
+IMD   F  A1 Kombi Basic                                                                A1 Kombi Basic                                                                
+TAXEURVAT0020000 00000000000000A2
+DTM   19420230813
+DTM   20620230912
+SID   000005000002M000                                 SA 000000000    00000000000000000000000000000    00000000001241000000000000000   
+IMD   F  A1 Internet Power 80 2018                                                                                                                                   
+TAXEURVAT0020000 00000000000000A2
+DTM   19420230813
+DTM   20620230912
+LIN   0000060664/4305112                       SA 000000000    00000000000000000000000000000         -00000000000957000000000000000   
+PIA   5                                     SA G000                65             
+PIA   3                                                                            0007295 0000244 0000201 0000262
+IMD   F  Gutschriften                                                                                                                                                
+SID   000006000001E000                                 SA 000000000    00000000000000000000000000000   -00000000000957000000000000000   
+IMD   F  50% Team Rabatt auf A1 Easy-SIM S+ (2018)                                                                                                                   
+TAXEURVAT0020000 00000000000000A2
+DTM   19420230813
+DTM   20620230912
+LIN   0000070664/4305112                       SA 000000000    00000000000000000000000000000          00000000001914000000000000000   
+PIA   5                                     SA M000                65             
+PIA   3                                                                            0007295 0000244 0000201 0000262
+IMD   F  Monatliche Entgelte                                                                                                                                         
+SID   000007000001M000                                 SA 000000000    00000000000000000000000000000    00000000001914000000000000000   
+IMD   F  A1 Easy-SIM S+ (2018)                                                         A1 Easy-SIM S+ (2018)                                                         
+TAXEURVAT0020000 00000000000000A2
+DTM   19420230813
+DTM   20620230912
+SID   000007000002M000                                 SA 000000000    00000000000000000000000000000    00000000000000000000000000000   
+IMD   F  10 GB Datenpaket                                                                                                                                            
+TAXEURVAT0020000 00000000000000A2
+DTM   19420230813
+DTM   20620230912
+LIN   0000080664/4305112                       SA 000010260SEC 00000000000000000000000000189NOC       000000000000000000000007683944L 
+PIA   5                                     SA V000                65             
+PIA   3                                                                            0007295 0000244 0000201 0000262
+IMD   F  Verbindungsentgelte                                                                                                                                         
+SID   000008000001V000                                 SA 000009900SEC 00000000000000000000000000051NOC 00000000000000000000000000000   
+IMD   F  A1 - A1                                                                       Österreich - A1 Telekom Austria                                               
+IMD   F  A1 Easy-SIM S+ (2018)                                                         Frei                                                                          
+TAXEURVAT0020000 00000000000000A2
+DTM   19420230713
+DTM   20620230809
+SID   000008000002V000                                 SA 000000060SEC 00000000000000000000000000001NOC 00000000000000000000000000000   
+IMD   F  Festnetz                                                                      Österreich - A1 Telekom Austria                                               
+IMD   F  A1 Easy-SIM S+ (2018)                                                         Frei                                                                          
+TAXEURVAT0020000 00000000000000A2
+DTM   19420230728
+DTM   20620230728
+SID   000008000003V000                                 SA 000000300SEC 00000000000000000000000000005NOC 00000000000000000000000000000   
+IMD   F  andere Mobilnetze                                                             Österreich - A1 Telekom Austria                                               
+IMD   F  A1 Easy-SIM S+ (2018)                                                         Frei                                                                          
+TAXEURVAT0020000 00000000000000A2
+DTM   19420230714
+DTM   20620230726
+SID   000008000004V000                                 SA 000000000    00000000000000000000000000129NOC 000000000000000000000007683944L 
+IMD   F  Datenvolumen                                                                  Österreich - A1 Telekom Austria                                               
+IMD   F  A1 Easy-SIM S+ (2018)                                                         Frei                                                                          
+TAXEURVAT0020000 00000000000000A2
+DTM   19420230713
+DTM   20620230812
+SID   000008000005V000                                 SA 000000000    00000000000000000000000000003NOC 00000000000000000000000000000   
+IMD   F  Datenvolumen                                                                  Österreich - A1 Telekom Austria                                               
+IMD   F  A1 Easy-SIM S+ (2018)                                                                                                                                       
+TAXEURVAT0020000 00000000000000A2
+DTM   19420230713
+DTM   20620230812
+UNS   S
+TMAEUR 00000000003272 00000000002727 00000000000545 00000000003272
+TXSEURVAT0010000 00000000000000 00000000000000A1
+TXSEURVAT0020000 00000000002727 00000000000545A2
+UNT   ETEB02     00000011207860300003
+FIL   E078008000112078603000000161

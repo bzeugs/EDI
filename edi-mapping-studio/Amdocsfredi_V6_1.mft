@@ -1,0 +1,2063 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexText>
+	<Commands>
+		<Project ByteOrderMark="0">
+			<Version/>
+			<RootName Value="AMDOCSFREDI"/>
+			<Connections>
+				<Connection>
+					<SplitSingle>
+						<Version/>
+						<Upper Offset="1"/>
+						<Lower/>
+						<Name Value="ANFANG"/>
+						<Connections>
+							<Connection>
+								<FLF RemoveEmpty="0">
+									<Version/>
+									<RecordName Value="FIL"/>
+									<Fields>
+										<Field Type="string" Size="3">
+											<Name Value="FILSA"/>
+											<Version/>
+										</Field>
+										<Field Type="string" Size="3">
+											<Name Value="FILLEER"/>
+											<Version/>
+										</Field>
+										<Field Type="string">
+											<Name Value="FILSI"/>
+											<Version/>
+										</Field>
+										<Field Type="string" Size="3">
+											<Name Value="FILPROV1"/>
+											<Version/>
+										</Field>
+										<Field Type="string" Size="4">
+											<Name Value="FILPROV2"/>
+											<Version/>
+										</Field>
+										<Field Type="integer" Size="11">
+											<Name Value="FILCUST"/>
+											<Version/>
+										</Field>
+										<Field Type="string" Size="9">
+											<Name Value="FILCNT"/>
+											<Version/>
+										</Field>
+										<Field Type="string" Size="7">
+											<Name Value="FILMAP"/>
+											<Version/>
+										</Field>
+									</Fields>
+									<Connections>
+										<Connection/>
+									</Connections>
+									<XData>
+										<OpenState Property="1" Preview="1" Connector="1"/>
+										<Dimension FullWidth="1021" TextHeight="140"/>
+									</XData>
+								</FLF>
+							</Connection>
+							<Connection>
+								<SplitSingle Mode="DynLS" Behavior="LineStartsWith">
+									<Version/>
+									<Separator Value="FIL"/>
+									<RegexPattern Value=","/>
+									<SeparatorForWriting/>
+									<Name Value="Einmal%20trennen"/>
+									<Connections>
+										<Connection>
+											<SplitSingle>
+												<Version/>
+												<Upper Offset="1"/>
+												<Lower/>
+												<Name Value="Einmal%20trennen"/>
+												<Connections>
+													<Connection>
+														<FLF RemoveEmpty="0">
+															<Version/>
+															<RecordName Value="UNH"/>
+															<Fields>
+																<Field Type="string" Size="3">
+																	<Name Value="UNHSA"/>
+																	<Version/>
+																</Field>
+																<Field Type="string" Size="3">
+																	<Name Value="UNHLEER1"/>
+																	<Version/>
+																</Field>
+																<Field Type="string" Size="11">
+																	<Name Value="UNHMREFNR1"/>
+																	<Version/>
+																</Field>
+																<Field Type="string" Size="3">
+																	<Name Value="UNHPROV1"/>
+																	<Version/>
+																</Field>
+																<Field Type="string" Size="4">
+																	<Name Value="UNHPROV2"/>
+																	<Version/>
+																</Field>
+																<Field Type="string" Size="20">
+																	<Name Value="UNHMREFNR2"/>
+																	<Version/>
+																</Field>
+																<Field Type="string" Size="6">
+																	<Name Value="UNHMTY"/>
+																	<Version/>
+																</Field>
+																<Field Type="string" Size="3">
+																	<Name Value="UNHMTVNR"/>
+																	<Version/>
+																</Field>
+																<Field Type="string" Size="3">
+																	<Name Value="UNHMRELNR"/>
+																	<Version/>
+																</Field>
+																<Field Type="string" Size="2">
+																	<Name Value="UNHCA"/>
+																	<Version/>
+																</Field>
+															</Fields>
+															<Connections>
+																<Connection/>
+															</Connections>
+															<XData>
+																<OpenState Property="1" Preview="1" Connector="1"/>
+																<Dimension FullWidth="685" FullHeight="18446744073709551615" TextHeight="166"/>
+															</XData>
+														</FLF>
+													</Connection>
+													<Connection>
+														<SplitSingle>
+															<Version/>
+															<Upper Offset="1"/>
+															<Lower/>
+															<Name Value="Einmal%20trennen"/>
+															<Connections>
+																<Connection>
+																	<FLF RemoveEmpty="0">
+																		<Version/>
+																		<RecordName Value="BGM"/>
+																		<Fields>
+																			<Field Type="string" Size="3">
+																				<Name Value="BGMSA"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string" Size="3">
+																				<Name Value="BGMLEER1"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string" Size="3">
+																				<Name Value="BGMDOCNAME"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string" Size="3">
+																				<Name Value="BGMPROV1"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string" Size="4">
+																				<Name Value="BGMPROV2"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string" Size="12">
+																				<Name Value="BGMDOCNR1"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string" Size="8">
+																				<Name Value="BGMDATE"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string" Size="2">
+																				<Name Value="BGMMFC"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string" Size="6">
+																				<Name Value="BGMPRIMREF"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string">
+																				<Name Value="BGMKENN"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string" Size="8">
+																				<Name Value="BGMDATESTART"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string" Size="8">
+																				<Name Value="BGMDATEEND"/>
+																				<Version/>
+																			</Field>
+																		</Fields>
+																		<Connections>
+																			<Connection/>
+																		</Connections>
+																		<XData>
+																			<OpenState Property="1" Preview="1" Connector="1"/>
+																			<Dimension FullWidth="1377" FullHeight="18446744073709551615" TextHeight="166"/>
+																		</XData>
+																	</FLF>
+																</Connection>
+																<Connection>
+																	<SplitSingle>
+																		<Version/>
+																		<Upper Offset="1"/>
+																		<Lower/>
+																		<Name Value="Einmal%20trennen"/>
+																		<Connections>
+																			<Connection>
+																				<FLF RemoveEmpty="0">
+																					<Version/>
+																					<RecordName Value="FTX"/>
+																					<Fields>
+																						<Field Type="string" Size="3">
+																							<Name Value="FTXSA"/>
+																							<Version/>
+																						</Field>
+																						<Field Type="string" Size="3">
+																							<Name Value="FTXLEER1"/>
+																							<Version/>
+																						</Field>
+																						<Field Type="string" Size="3">
+																							<Name Value="FTXBEZUG"/>
+																							<Version/>
+																						</Field>
+																						<Field Type="string" Size="3">
+																							<Name Value="FTXSPRACHE"/>
+																							<Version/>
+																						</Field>
+																						<Field Type="string" Size="512">
+																							<Name Value="FTXTEXT"/>
+																							<Version/>
+																						</Field>
+																						<Field Type="string" Size="512">
+																							<Name Value="FTXNOTE"/>
+																							<Version/>
+																						</Field>
+																						<Field Type="string" Size="512">
+																							<Name Value="FTXEINWA"/>
+																							<Version/>
+																						</Field>
+																						<Field Type="string" Size="512">
+																							<Name Value="FTXREVERS"/>
+																							<Version/>
+																						</Field>
+																						<Field Type="string" Size="512">
+																							<Name Value="FTXVORSTEU"/>
+																							<Version/>
+																						</Field>
+																						<Field Type="string" Size="2048">
+																							<Name Value="FTXFYI"/>
+																							<Version/>
+																						</Field>
+																					</Fields>
+																					<Connections>
+																						<Connection/>
+																					</Connections>
+																					<XData>
+																						<OpenState Property="1" Preview="1" Connector="1"/>
+																						<Dimension FullWidth="1131" FullHeight="18446744073709551615" TextHeight="173"/>
+																					</XData>
+																				</FLF>
+																			</Connection>
+																			<Connection>
+																				<SplitSingle>
+																					<Version/>
+																					<Upper Offset="1"/>
+																					<Lower/>
+																					<Name Value="Einmal%20trennen"/>
+																					<Connections>
+																						<Connection>
+																							<FLF RemoveEmpty="0">
+																								<Version/>
+																								<RecordName Value="NADSE"/>
+																								<Fields>
+																									<Field Type="string" Size="3">
+																										<Name Value="NADSE"/>
+																										<Version/>
+																									</Field>
+																									<Field Type="string" Size="3">
+																										<Name Value="NADPQ"/>
+																										<Version/>
+																									</Field>
+																									<Field Type="string" Size="11">
+																										<Name Value="NADCUST"/>
+																										<Version/>
+																									</Field>
+																									<Field Type="string" Size="35">
+																										<Name Value="NADNAME1"/>
+																										<Version/>
+																									</Field>
+																									<Field Type="string" Size="35">
+																										<Name Value="NADNAME2"/>
+																										<Version/>
+																									</Field>
+																									<Field Type="string" Size="35">
+																										<Name Value="NADSTR1"/>
+																										<Version/>
+																									</Field>
+																									<Field Type="string" Size="35">
+																										<Name Value="NADSTR2"/>
+																										<Version/>
+																									</Field>
+																									<Field Type="string" Size="35">
+																										<Name Value="NADORT"/>
+																										<Version/>
+																									</Field>
+																									<Field Type="string" Size="7">
+																										<Name Value="NADPC"/>
+																										<Version/>
+																									</Field>
+																									<Field Type="string" Size="2">
+																										<Name Value="NADCC"/>
+																										<Version/>
+																									</Field>
+																									<Field Type="string" Size="35">
+																										<Name Value="NADKD1"/>
+																										<Version/>
+																									</Field>
+																									<Field Type="string" Size="15">
+																										<Name Value="NADKD2"/>
+																										<Version/>
+																									</Field>
+																									<Field Type="string" Size="100">
+																										<Name Value="NADSUP1"/>
+																										<Version/>
+																									</Field>
+																									<Field Type="string" Size="20">
+																										<Name Value="NADSUP2"/>
+																										<Version/>
+																									</Field>
+																									<Field Type="string" Size="35">
+																										<Name Value="NADCID"/>
+																										<Version/>
+																									</Field>
+																									<Field Type="string" Size="12">
+																										<Name Value="NADFB"/>
+																										<Version/>
+																									</Field>
+																									<Field Type="string" Size="10">
+																										<Name Value="NADDVR"/>
+																										<Version/>
+																									</Field>
+																								</Fields>
+																								<Connections>
+																									<Connection/>
+																								</Connections>
+																								<XData>
+																									<OpenState Property="1" Preview="1" Connector="1"/>
+																									<Dimension FullWidth="1631" FullHeight="18446744073709550651" TextHeight="160"/>
+																								</XData>
+																							</FLF>
+																						</Connection>
+																						<Connection>
+																							<SplitSingle>
+																								<Version/>
+																								<Upper Offset="1"/>
+																								<Lower/>
+																								<Name Value="Einmal%20trennen"/>
+																								<Connections>
+																									<Connection>
+																										<FLF RemoveEmpty="0">
+																											<Version/>
+																											<RecordName Value="COM"/>
+																											<Fields>
+																												<Field Type="string" Size="3">
+																													<Name Value="COMSE"/>
+																													<Version/>
+																												</Field>
+																												<Field Type="string" Size="3">
+																													<Name Value="COMLEER1"/>
+																													<Version/>
+																												</Field>
+																												<Field Type="string" Size="2">
+																													<Name Value="COMCF"/>
+																													<Version/>
+																												</Field>
+																												<Field Type="string" Size="20">
+																													<Name Value="COMCCNR1"/>
+																													<Version/>
+																												</Field>
+																												<Field Type="string" Size="3">
+																													<Name Value="COMCCCI1"/>
+																													<Version/>
+																												</Field>
+																												<Field Type="string" Size="20">
+																													<Name Value="COMCCNR2"/>
+																													<Version/>
+																												</Field>
+																												<Field Type="string" Size="3">
+																													<Name Value="COMCCCI2"/>
+																													<Version/>
+																												</Field>
+																												<Field Type="string" Size="50">
+																													<Name Value="COMCCNR3"/>
+																													<Version/>
+																												</Field>
+																												<Field Type="string" Size="3">
+																													<Name Value="COMCCCI3"/>
+																													<Version/>
+																												</Field>
+																											</Fields>
+																											<Connections>
+																												<Connection/>
+																											</Connections>
+																											<XData>
+																												<OpenState Property="1" Preview="1" Connector="1"/>
+																												<Dimension FullWidth="691" FullHeight="18446744073709550390" TextHeight="152"/>
+																											</XData>
+																										</FLF>
+																									</Connection>
+																									<Connection>
+																										<SplitSingle>
+																											<Version/>
+																											<Upper Offset="2"/>
+																											<Lower/>
+																											<Name Value="Einmal%20trennen"/>
+																											<Connections>
+																												<Connection>
+																													<FLF RemoveEmpty="0">
+																														<Version/>
+																														<RecordName Value="FIISE"/>
+																														<Fields>
+																															<Field Type="string" Size="3">
+																																<Name Value="FIISA2"/>
+																																<Version/>
+																															</Field>
+																															<Field Type="string" Size="3">
+																																<Name Value="FIIPQ"/>
+																																<Version/>
+																															</Field>
+																															<Field Type="string" Size="35">
+																																<Name Value="FIIAIAHN"/>
+																																<Version/>
+																															</Field>
+																															<Field Type="string" Size="11">
+																																<Name Value="FIIFII"/>
+																																<Version/>
+																															</Field>
+																														</Fields>
+																														<Connections>
+																															<Connection/>
+																														</Connections>
+																														<XData>
+																															<OpenState Property="1" Preview="1" Connector="1"/>
+																															<Dimension FullWidth="844" FullHeight="18446744073709550169" TextHeight="195"/>
+																														</XData>
+																													</FLF>
+																												</Connection>
+																												<Connection>
+																													<SplitSingle>
+																														<Version/>
+																														<Upper Offset="1"/>
+																														<Lower/>
+																														<Name Value="Einmal%20trennen"/>
+																														<Connections>
+																															<Connection>
+																																<FLF RemoveEmpty="0">
+																																	<Version/>
+																																	<RecordName Value="UIDSE"/>
+																																	<Fields>
+																																		<Field Type="string" Size="3">
+																																			<Name Value="UIDSE"/>
+																																			<Version/>
+																																		</Field>
+																																		<Field Type="string" Size="3">
+																																			<Name Value="UIDPQ"/>
+																																			<Version/>
+																																		</Field>
+																																		<Field Type="string" Size="3">
+																																			<Name Value="UIDID"/>
+																																			<Version/>
+																																		</Field>
+																																		<Field Type="string" Size="20">
+																																			<Name Value="UIDVAL"/>
+																																			<Version/>
+																																		</Field>
+																																	</Fields>
+																																	<Connections>
+																																		<Connection/>
+																																	</Connections>
+																																	<XData>
+																																		<OpenState Property="1" Preview="1" Connector="1"/>
+																																		<Dimension FullWidth="623" FullHeight="18446744073709549896" TextHeight="140"/>
+																																	</XData>
+																																</FLF>
+																															</Connection>
+																															<Connection>
+																																<SplitSingle>
+																																	<Version/>
+																																	<Upper Offset="1"/>
+																																	<Lower/>
+																																	<Name Value="Einmal%20trennen"/>
+																																	<Connections>
+																																		<Connection>
+																																			<FLF RemoveEmpty="0">
+																																				<Version/>
+																																				<RecordName Value="NADBY"/>
+																																				<Fields>
+																																					<Field Type="string" Size="3">
+																																						<Name Value="NADSA"/>
+																																						<Version/>
+																																					</Field>
+																																					<Field Type="string" Size="3">
+																																						<Name Value="NADPQ"/>
+																																						<Version/>
+																																					</Field>
+																																					<Field Type="string" Size="11">
+																																						<Name Value="NADCUST"/>
+																																						<Version/>
+																																					</Field>
+																																					<Field Type="string" Size="35">
+																																						<Name Value="NADNAME1"/>
+																																						<Version/>
+																																					</Field>
+																																					<Field Type="string" Size="35">
+																																						<Name Value="NADNAME2"/>
+																																						<Version/>
+																																					</Field>
+																																					<Field Type="string" Size="35">
+																																						<Name Value="NADSTR1"/>
+																																						<Version/>
+																																					</Field>
+																																					<Field Type="string" Size="35">
+																																						<Name Value="NADSTR2"/>
+																																						<Version/>
+																																					</Field>
+																																					<Field Type="string" Size="35">
+																																						<Name Value="NADORT"/>
+																																						<Version/>
+																																					</Field>
+																																					<Field Type="string" Size="7">
+																																						<Name Value="NADPC"/>
+																																						<Version/>
+																																					</Field>
+																																					<Field Type="string" Size="2">
+																																						<Name Value="NADCC"/>
+																																						<Version/>
+																																					</Field>
+																																				</Fields>
+																																				<Connections>
+																																					<Connection/>
+																																				</Connections>
+																																				<XData>
+																																					<OpenState Property="1" Preview="1" Connector="1"/>
+																																					<Dimension TextHeight="140"/>
+																																				</XData>
+																																			</FLF>
+																																		</Connection>
+																																		<Connection>
+																																			<SplitSingle>
+																																				<Version/>
+																																				<Upper Offset="1"/>
+																																				<Lower/>
+																																				<Name Value="Einmal%20trennen"/>
+																																				<Connections>
+																																					<Connection>
+																																						<FLF RemoveEmpty="0">
+																																							<Version/>
+																																							<RecordName Value="NADIV"/>
+																																							<Fields>
+																																								<Field Type="string" Size="3">
+																																									<Name Value="NADSA"/>
+																																									<Version/>
+																																								</Field>
+																																								<Field Type="string" Size="3">
+																																									<Name Value="NADPQ"/>
+																																									<Version/>
+																																								</Field>
+																																								<Field Type="string" Size="11">
+																																									<Name Value="NADCUST"/>
+																																									<Version/>
+																																								</Field>
+																																								<Field Type="string" Size="35">
+																																									<Name Value="NADNAME1"/>
+																																									<Version/>
+																																								</Field>
+																																								<Field Type="string" Size="35">
+																																									<Name Value="NADNAME2"/>
+																																									<Version/>
+																																								</Field>
+																																								<Field Type="string" Size="35">
+																																									<Name Value="NADSTR1"/>
+																																									<Version/>
+																																								</Field>
+																																								<Field Type="string" Size="35">
+																																									<Name Value="NADSTR2"/>
+																																									<Version/>
+																																								</Field>
+																																								<Field Type="string" Size="35">
+																																									<Name Value="NADORT"/>
+																																									<Version/>
+																																								</Field>
+																																								<Field Type="string" Size="7">
+																																									<Name Value="NADPC"/>
+																																									<Version/>
+																																								</Field>
+																																								<Field Type="string" Size="2">
+																																									<Name Value="NADCC"/>
+																																									<Version/>
+																																								</Field>
+																																								<Field Type="string" Size="35">
+																																									<Name Value="NADKD4"/>
+																																									<Version/>
+																																								</Field>
+																																								<Field Type="string" Size="50">
+																																									<Name Value="NADKD5"/>
+																																									<Version/>
+																																								</Field>
+																																								<Field Type="string" Size="35">
+																																									<Name Value="NADKD6"/>
+																																									<Version/>
+																																								</Field>
+																																							</Fields>
+																																							<Connections>
+																																								<Connection/>
+																																							</Connections>
+																																							<XData>
+																																								<OpenState Property="1" Preview="1" Connector="1"/>
+																																								<Dimension FullWidth="793" FullHeight="18446744073709549414" TextHeight="165"/>
+																																							</XData>
+																																						</FLF>
+																																					</Connection>
+																																					<Connection>
+																																						<SplitSingle Mode="DynLS" Behavior="LineStartsWith">
+																																							<Version/>
+																																							<Separator Value="EMBIV"/>
+																																							<RegexPattern Value=","/>
+																																							<SeparatorForWriting/>
+																																							<Name Value="Einmal%20trennen"/>
+																																							<Connections>
+																																								<Connection>
+																																									<SplitSingle Mode="DynLS" Behavior="LineStartsWith">
+																																										<Version/>
+																																										<Separator Value="UIDIV"/>
+																																										<RegexPattern Value=","/>
+																																										<SeparatorForWriting/>
+																																										<Name Value="Einmal%20trennen"/>
+																																										<Connections>
+																																											<Connection>
+																																												<SplitMultiple Mode="DynL" Behavior="LineBased">
+																																													<Version/>
+																																													<Separator Value="%0A"/>
+																																													<RegexPattern Value=","/>
+																																													<SeparatorForWriting/>
+																																													<Name Value="FIIIV"/>
+																																													<Connections>
+																																														<Connection>
+																																															<Switch>
+																																																<Version/>
+																																																<Name Value="Aufteilen"/>
+																																																<Conditions>
+																																																	<Condition Mode="ContentContainsRegex">
+																																																		<Version/>
+																																																		<Value Value="FIIIV.%7B47,47%7D\r%7B0,1%7D\n"/>
+																																																		<Connections>
+																																																			<Connection>
+																																																				<FLF RemoveEmpty="0">
+																																																					<Version/>
+																																																					<RecordName Value="BankData_InvoiceReceiver"/>
+																																																					<Fields>
+																																																						<Field Type="string" Size="3">
+																																																							<Name Value="FIISA"/>
+																																																							<Version/>
+																																																						</Field>
+																																																						<Field Type="string" Size="3">
+																																																							<Name Value="FIIPQ_PartyQualifier_IV"/>
+																																																							<Version/>
+																																																						</Field>
+																																																						<Field Type="string" Size="35">
+																																																							<Name Value="FIIAIAHN_BankAcountNo_AN35"/>
+																																																							<Version/>
+																																																						</Field>
+																																																						<Field Type="string" Size="11">
+																																																							<Name Value="FIIFII_BankCode_AN11"/>
+																																																							<Version/>
+																																																						</Field>
+																																																					</Fields>
+																																																					<Connections>
+																																																						<Connection/>
+																																																					</Connections>
+																																																					<XData>
+																																																						<OpenState Property="1" Preview="1" Connector="1"/>
+																																																						<Dimension FullWidth="970" FullHeight="185" TextHeight="158"/>
+																																																					</XData>
+																																																				</FLF>
+																																																			</Connection>
+																																																		</Connections>
+																																																		<XData>
+																																																			<OpenState Property="1" Preview="1" Connector="1"/>
+																																																			<Dimension/>
+																																																		</XData>
+																																																	</Condition>
+																																																	<Condition Mode="ContentContainsRegex">
+																																																		<Version/>
+																																																		<Value Value="FIIIV.%7B75,75%7D\r%7B0,1%7D\n"/>
+																																																		<Connections>
+																																																			<Connection>
+																																																				<FLF RemoveEmpty="0">
+																																																					<Version/>
+																																																					<RecordName Value="SEPA_BankData_InvoiceReceiver"/>
+																																																					<Fields>
+																																																						<Field Type="string" Size="3">
+																																																							<Name Value="FIISA_"/>
+																																																							<Version/>
+																																																						</Field>
+																																																						<Field Type="string" Size="3">
+																																																							<Name Value="FIIPQ_PartyQualifier_IV"/>
+																																																							<Version/>
+																																																						</Field>
+																																																						<Field Type="string" Size="50">
+																																																							<Name Value="FIIAIAHN_IBAN_AN50"/>
+																																																							<Version/>
+																																																						</Field>
+																																																						<Field Type="string" Size="11">
+																																																							<Name Value="FIIFII_BIC_AN11"/>
+																																																							<Version/>
+																																																						</Field>
+																																																						<Field Type="string" Size="13">
+																																																							<Name Value="FIIMR_MandateReference_AN13"/>
+																																																							<Version/>
+																																																						</Field>
+																																																					</Fields>
+																																																					<Connections>
+																																																						<Connection/>
+																																																					</Connections>
+																																																					<XData>
+																																																						<OpenState Property="1" Preview="1" Connector="1"/>
+																																																						<Dimension FullWidth="970" FullHeight="185" TextHeight="158"/>
+																																																					</XData>
+																																																				</FLF>
+																																																			</Connection>
+																																																		</Connections>
+																																																		<XData>
+																																																			<OpenState Property="1" Preview="1" Connector="1"/>
+																																																			<Dimension/>
+																																																		</XData>
+																																																	</Condition>
+																																																	<Condition Mode="Default">
+																																																		<Version/>
+																																																		<Value/>
+																																																		<Connections>
+																																																			<Connection>
+																																																				<FLF>
+																																																					<Version/>
+																																																					<RecordName Value="Undefinded"/>
+																																																					<Fields>
+																																																						<Field Type="string" Size="3">
+																																																							<Name Value="FII"/>
+																																																							<Version/>
+																																																						</Field>
+																																																						<Field Type="string" Size="3">
+																																																							<Name Value="FIIAIAHN"/>
+																																																							<Version/>
+																																																						</Field>
+																																																						<Field Type="string" Size="35">
+																																																							<Name Value="AN35"/>
+																																																							<Version/>
+																																																						</Field>
+																																																						<Field Type="string" Size="11">
+																																																							<Name Value="AN11"/>
+																																																							<Version/>
+																																																						</Field>
+																																																					</Fields>
+																																																					<Connections>
+																																																						<Connection/>
+																																																					</Connections>
+																																																					<XData>
+																																																						<OpenState Property="1" Preview="1" Connector="1"/>
+																																																						<Dimension FullWidth="970" FullHeight="185" TextHeight="158"/>
+																																																					</XData>
+																																																				</FLF>
+																																																			</Connection>
+																																																		</Connections>
+																																																		<XData>
+																																																			<OpenState Property="1" Preview="1" Connector="1"/>
+																																																			<Dimension/>
+																																																		</XData>
+																																																	</Condition>
+																																																</Conditions>
+																																																<Connections>
+																																																	<Connection/>
+																																																</Connections>
+																																																<XData>
+																																																	<OpenState Property="1" Preview="1" Connector="1"/>
+																																																	<Dimension FullWidth="611" FullHeight="185" TextHeight="70"/>
+																																																</XData>
+																																															</Switch>
+																																														</Connection>
+																																													</Connections>
+																																													<XData>
+																																														<OpenState Property="1" Preview="1" Connector="1"/>
+																																														<Dimension FullWidth="791" FullHeight="18446744073709549148" TextHeight="70"/>
+																																													</XData>
+																																												</SplitMultiple>
+																																											</Connection>
+																																											<Connection>
+																																												<FLF RemoveEmpty="0">
+																																													<Version/>
+																																													<RecordName Value="UIDIV"/>
+																																													<Fields>
+																																														<Field Type="string" Size="3">
+																																															<Name Value="UIDSA"/>
+																																															<Version/>
+																																														</Field>
+																																														<Field Type="string" Size="3">
+																																															<Name Value="UIDPQ"/>
+																																															<Version/>
+																																														</Field>
+																																														<Field Type="string" Size="3">
+																																															<Name Value="UIDID"/>
+																																															<Version/>
+																																														</Field>
+																																														<Field Type="string" Size="20">
+																																															<Name Value="UIDVAL"/>
+																																															<Version/>
+																																														</Field>
+																																													</Fields>
+																																													<Connections>
+																																														<Connection/>
+																																													</Connections>
+																																													<XData>
+																																														<OpenState Property="1" Preview="1" Connector="1"/>
+																																														<Dimension FullWidth="957" FullHeight="18446744073709548889" TextHeight="140"/>
+																																													</XData>
+																																												</FLF>
+																																											</Connection>
+																																										</Connections>
+																																										<XData>
+																																											<OpenState Property="1" Preview="1" Connector="1"/>
+																																											<Dimension TextHeight="140"/>
+																																										</XData>
+																																									</SplitSingle>
+																																								</Connection>
+																																								<Connection>
+																																									<SplitSingle>
+																																										<Version/>
+																																										<Upper Offset="1"/>
+																																										<Lower/>
+																																										<Name Value="Einmal%20trennen2"/>
+																																										<Connections>
+																																											<Connection>
+																																												<FLF RemoveEmpty="0">
+																																													<Version/>
+																																													<RecordName Value="EMBIV"/>
+																																													<Fields>
+																																														<Field Type="string" Size="6">
+																																															<Name Value="EMBPQ"/>
+																																															<Version/>
+																																														</Field>
+																																														<Field Type="string" Size="3">
+																																															<Name Value="EMBID"/>
+																																															<Version/>
+																																														</Field>
+																																														<Field Type="string" Size="25">
+																																															<Name Value="EMBVAL"/>
+																																															<Version/>
+																																														</Field>
+																																													</Fields>
+																																													<Connections>
+																																														<Connection/>
+																																													</Connections>
+																																													<XData>
+																																														<OpenState Property="1" Preview="1" Connector="1"/>
+																																														<Dimension FullWidth="618" FullHeight="18446744073709548648" TextHeight="140"/>
+																																													</XData>
+																																												</FLF>
+																																											</Connection>
+																																											<Connection>
+																																												<SplitSingle>
+																																													<Version/>
+																																													<Upper Offset="1"/>
+																																													<Lower/>
+																																													<Name Value="Einmal%20trennen"/>
+																																													<Connections>
+																																														<Connection>
+																																															<FLF RemoveEmpty="0">
+																																																<Version/>
+																																																<RecordName Value="LENIV"/>
+																																																<Fields>
+																																																	<Field Type="string" Size="6">
+																																																		<Name Value="LENPQ"/>
+																																																		<Version/>
+																																																	</Field>
+																																																	<Field Type="string" Size="3">
+																																																		<Name Value="LENID"/>
+																																																		<Version/>
+																																																	</Field>
+																																																	<Field Type="string" Size="25">
+																																																		<Name Value="LENVAL"/>
+																																																		<Version/>
+																																																	</Field>
+																																																</Fields>
+																																																<Connections>
+																																																	<Connection/>
+																																																</Connections>
+																																																<XData>
+																																																	<OpenState Property="1" Preview="1" Connector="1"/>
+																																																	<Dimension FullWidth="690" FullHeight="18446744073709548407" TextHeight="140"/>
+																																																</XData>
+																																															</FLF>
+																																														</Connection>
+																																														<Connection>
+																																															<SplitSingle>
+																																																<Version/>
+																																																<Upper Offset="1"/>
+																																																<Lower/>
+																																																<Name Value="Einmal%20trennen"/>
+																																																<Connections>
+																																																	<Connection>
+																																																		<FLF RemoveEmpty="0">
+																																																			<Version/>
+																																																			<RecordName Value="CUXSA"/>
+																																																			<Fields>
+																																																				<Field Type="string" Size="3">
+																																																					<Name Value="CUXSA"/>
+																																																					<Version/>
+																																																				</Field>
+																																																				<Field Type="string" Size="3">
+																																																					<Name Value="CUXLEER1"/>
+																																																					<Version/>
+																																																				</Field>
+																																																				<Field Type="string" Size="3">
+																																																					<Name Value="CUXRCCC"/>
+																																																					<Version/>
+																																																				</Field>
+																																																				<Field Type="string" Size="3">
+																																																					<Name Value="CUXRCCQ"/>
+																																																					<Version/>
+																																																				</Field>
+																																																			</Fields>
+																																																			<Connections>
+																																																				<Connection/>
+																																																			</Connections>
+																																																			<XData>
+																																																				<OpenState Property="1" Preview="1" Connector="1"/>
+																																																				<Dimension TextHeight="140"/>
+																																																			</XData>
+																																																		</FLF>
+																																																	</Connection>
+																																																	<Connection>
+																																																		<SplitSingle>
+																																																			<Version/>
+																																																			<Upper Offset="1"/>
+																																																			<Lower/>
+																																																			<Name Value="Einmal%20trennen"/>
+																																																			<Connections>
+																																																				<Connection>
+																																																					<FLF RemoveEmpty="0">
+																																																						<Version/>
+																																																						<RecordName Value="PAT"/>
+																																																						<Fields>
+																																																							<Field Type="string" Size="3">
+																																																								<Name Value="PATSA"/>
+																																																								<Version/>
+																																																							</Field>
+																																																							<Field Type="string" Size="3">
+																																																								<Name Value="PATLEER1"/>
+																																																								<Version/>
+																																																							</Field>
+																																																							<Field Type="string" Size="2">
+																																																								<Name Value="PATDPIDTQ1"/>
+																																																								<Version/>
+																																																							</Field>
+																																																							<Field Type="string" Size="8">
+																																																								<Name Value="PATPTD"/>
+																																																								<Version/>
+																																																							</Field>
+																																																							<Field Type="string" Size="3">
+																																																								<Name Value="PATDPIDTQ2"/>
+																																																								<Version/>
+																																																							</Field>
+																																																						</Fields>
+																																																						<Connections>
+																																																							<Connection/>
+																																																						</Connections>
+																																																						<XData>
+																																																							<OpenState Property="1" Preview="1" Connector="1"/>
+																																																							<Dimension FullWidth="1530" FullHeight="18446744073709547186" TextHeight="172"/>
+																																																						</XData>
+																																																					</FLF>
+																																																				</Connection>
+																																																				<Connection>
+																																																					<SplitSingle Mode="DynLS" Behavior="LineStartsWith">
+																																																						<Version/>
+																																																						<Separator Value="UNS%20%20%20S"/>
+																																																						<RegexPattern Value=","/>
+																																																						<SeparatorForWriting/>
+																																																						<Name Value="Einmal%20trennen"/>
+																																																						<Connections>
+																																																							<Connection>
+																																																								<SplitSingle>
+																																																									<Version/>
+																																																									<Upper Offset="1"/>
+																																																									<Lower/>
+																																																									<Name Value="Einmal%20trennen"/>
+																																																									<Connections>
+																																																										<Connection>
+																																																											<FLF RemoveEmpty="0">
+																																																												<Version/>
+																																																												<RecordName Value="UNS"/>
+																																																												<Fields>
+																																																													<Field Type="string" Size="3">
+																																																														<Name Value="UNSSA"/>
+																																																														<Version/>
+																																																													</Field>
+																																																													<Field Type="string" Size="3">
+																																																														<Name Value="UNSLEER1"/>
+																																																														<Version/>
+																																																													</Field>
+																																																													<Field Type="string">
+																																																														<Name Value="UNSSI"/>
+																																																														<Version/>
+																																																													</Field>
+																																																												</Fields>
+																																																												<Connections>
+																																																													<Connection/>
+																																																												</Connections>
+																																																												<XData>
+																																																													<OpenState Property="1" Preview="1" Connector="1"/>
+																																																													<Dimension TextHeight="140"/>
+																																																												</XData>
+																																																											</FLF>
+																																																										</Connection>
+																																																										<Connection>
+																																																											<SplitMultiple Mode="DynLS" Behavior="LineStartsWith">
+																																																												<Version/>
+																																																												<Separator Value="LIN"/>
+																																																												<RegexPattern Value=","/>
+																																																												<SeparatorForWriting/>
+																																																												<Name Value="LIN-mehrmalsTrennen"/>
+																																																												<Connections>
+																																																													<Connection>
+																																																														<SplitSingle Mode="DynLS" Behavior="LineStartsWith">
+																																																															<Version/>
+																																																															<Separator Value="SID"/>
+																																																															<RegexPattern Value=","/>
+																																																															<SeparatorForWriting/>
+																																																															<Name Value="LIN-einmalTrennen"/>
+																																																															<Connections>
+																																																																<Connection>
+																																																																	<SplitSingle>
+																																																																		<Version/>
+																																																																		<Upper Offset="1"/>
+																																																																		<Lower/>
+																																																																		<Name Value="LIN"/>
+																																																																		<Connections>
+																																																																			<Connection>
+																																																																				<FLF RemoveEmpty="0">
+																																																																					<Version/>
+																																																																					<RecordName Value="LIN"/>
+																																																																					<Fields>
+																																																																						<Field Type="string" Size="3">
+																																																																							<Name Value="LINSA"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="3">
+																																																																							<Name Value="LINLEER1"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="6">
+																																																																							<Name Value="LINLIN"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="35">
+																																																																							<Name Value="LINPIAN1"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="3">
+																																																																							<Name Value="LINPIANI1"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="9">
+																																																																							<Name Value="LINNOPU"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="3">
+																																																																							<Name Value="LINMUQ1"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="15">
+																																																																							<Name Value="LINIA"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="15">
+																																																																							<Name Value="LINQ"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="3">
+																																																																							<Name Value="LINMUQ2"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="6">
+																																																																							<Name Value="LINTAR"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="15">
+																																																																							<Name Value="LINIAEURO"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="15">
+																																																																							<Name Value="LINVOL"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="3">
+																																																																							<Name Value="LINMUQ3"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																					</Fields>
+																																																																					<Connections>
+																																																																						<Connection/>
+																																																																					</Connections>
+																																																																					<XData>
+																																																																						<OpenState Preview="1" Connector="1"/>
+																																																																						<Dimension FullWidth="1145" FullHeight="18446744073709551615" TextHeight="171"/>
+																																																																					</XData>
+																																																																				</FLF>
+																																																																			</Connection>
+																																																																			<Connection>
+																																																																				<SplitSingle Mode="DynLS" Behavior="LineStartsWith">
+																																																																					<Version/>
+																																																																					<Separator Value="IMD"/>
+																																																																					<RegexPattern Value=","/>
+																																																																					<SeparatorForWriting/>
+																																																																					<Name Value="PIA-einmalTrennen"/>
+																																																																					<Connections>
+																																																																						<Connection>
+																																																																							<FLF RemoveEmpty="0">
+																																																																								<Version/>
+																																																																								<RecordName Value="PIA"/>
+																																																																								<Fields>
+																																																																									<Field Type="string" Size="3">
+																																																																										<Name Value="PIASA"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="3">
+																																																																										<Name Value="PIALEER"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="3">
+																																																																										<Name Value="PIAID"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="35">
+																																																																										<Name Value="PIAVAL"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="3">
+																																																																										<Name Value="PIAVALI"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="20">
+																																																																										<Name Value="PIAVAL1"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="15">
+																																																																										<Name Value="PIAVAL2"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="8">
+																																																																										<Name Value="PIAVAL3"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="8">
+																																																																										<Name Value="PIAVAL4"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="8">
+																																																																										<Name Value="PIAVAL5"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="8">
+																																																																										<Name Value="PIAVAL6"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="2048">
+																																																																										<Name Value="PIAVAL7"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																								</Fields>
+																																																																								<Connections>
+																																																																									<Connection/>
+																																																																								</Connections>
+																																																																								<XData>
+																																																																									<OpenState Preview="1" Connector="1"/>
+																																																																									<Dimension FullWidth="823" FullHeight="18446744073709551615" TextHeight="220"/>
+																																																																								</XData>
+																																																																							</FLF>
+																																																																						</Connection>
+																																																																						<Connection>
+																																																																							<FLF RemoveEmpty="0">
+																																																																								<Version/>
+																																																																								<RecordName Value="IMD"/>
+																																																																								<Fields>
+																																																																									<Field Type="string" Size="3">
+																																																																										<Name Value="IMDSA"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="3">
+																																																																										<Name Value="IMDLEER1"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="3">
+																																																																										<Name Value="IMDIDT"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="78">
+																																																																										<Name Value="IMDAD1"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="78">
+																																																																										<Name Value="IMDAD2"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																								</Fields>
+																																																																								<Connections>
+																																																																									<Connection/>
+																																																																								</Connections>
+																																																																								<XData>
+																																																																									<OpenState Preview="1" Connector="1"/>
+																																																																									<Dimension FullWidth="821" FullHeight="18446744073709551615" TextHeight="175"/>
+																																																																								</XData>
+																																																																							</FLF>
+																																																																						</Connection>
+																																																																					</Connections>
+																																																																					<XData>
+																																																																						<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																						<Dimension TextHeight="140"/>
+																																																																					</XData>
+																																																																				</SplitSingle>
+																																																																			</Connection>
+																																																																		</Connections>
+																																																																		<XData>
+																																																																			<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																			<Dimension FullWidth="231" FullHeight="18446744073709551615" TextHeight="140"/>
+																																																																		</XData>
+																																																																	</SplitSingle>
+																																																																</Connection>
+																																																																<Connection>
+																																																																	<SplitMultiple Mode="DynLS" Behavior="LineStartsWith">
+																																																																		<Version/>
+																																																																		<Separator Value="SID"/>
+																																																																		<RegexPattern Value=","/>
+																																																																		<SeparatorForWriting/>
+																																																																		<Name Value="SID-mehrmalsTrennen"/>
+																																																																		<Connections>
+																																																																			<Connection>
+																																																																				<SplitSingle>
+																																																																					<Version/>
+																																																																					<Upper Offset="1"/>
+																																																																					<Lower/>
+																																																																					<Name Value="SID-einmalTrennen"/>
+																																																																					<Connections>
+																																																																						<Connection>
+																																																																							<FLF RemoveEmpty="0">
+																																																																								<Version/>
+																																																																								<RecordName Value="SID"/>
+																																																																								<Fields>
+																																																																									<Field Type="string" Size="3">
+																																																																										<Name Value="SIDSA"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="3">
+																																																																										<Name Value="SIDLEER1"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="6">
+																																																																										<Name Value="SIDLRR"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="6">
+																																																																										<Name Value="SIDLIN"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="20">
+																																																																										<Name Value="SIDPIAN"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="15">
+																																																																										<Name Value="SIDPIAN1"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="2">
+																																																																										<Name Value="SIDLEER2"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="3">
+																																																																										<Name Value="SIDPIANI"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="9">
+																																																																										<Name Value="SIDNOPU"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="3">
+																																																																										<Name Value="SIDMUQ1"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="15">
+																																																																										<Name Value="SIDIA"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="15">
+																																																																										<Name Value="SIDQ"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="3">
+																																																																										<Name Value="SIDMUQ2"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="15">
+																																																																										<Name Value="SIDIAEURO"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="15">
+																																																																										<Name Value="SIDVOL"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="3">
+																																																																										<Name Value="SIDMUQ3"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																								</Fields>
+																																																																								<Connections>
+																																																																									<Connection/>
+																																																																								</Connections>
+																																																																								<XData>
+																																																																									<OpenState Preview="1" Connector="1"/>
+																																																																									<Dimension FullWidth="1451" FullHeight="18446744073709551615" TextHeight="161"/>
+																																																																								</XData>
+																																																																							</FLF>
+																																																																						</Connection>
+																																																																						<Connection>
+																																																																							<SplitSingle Mode="DynLS" Behavior="LineStartsWith">
+																																																																								<Version/>
+																																																																								<Separator Value="TAX"/>
+																																																																								<RegexPattern Value=","/>
+																																																																								<SeparatorForWriting/>
+																																																																								<Name Value="IMD-einmalTrennen"/>
+																																																																								<Connections>
+																																																																									<Connection>
+																																																																										<FLF RemoveEmpty="0">
+																																																																											<Version/>
+																																																																											<RecordName Value="IMD"/>
+																																																																											<Fields>
+																																																																												<Field Type="string" Size="3">
+																																																																													<Name Value="IMDSA"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																												<Field Type="string" Size="3">
+																																																																													<Name Value="IMDLEER1"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																												<Field Type="string" Size="3">
+																																																																													<Name Value="IMDIDT"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																												<Field Type="string" Size="78">
+																																																																													<Name Value="IMDAD1"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																												<Field Type="string" Size="78">
+																																																																													<Name Value="IMDAD2"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																											</Fields>
+																																																																											<Connections>
+																																																																												<Connection/>
+																																																																											</Connections>
+																																																																											<XData>
+																																																																												<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																												<Dimension FullWidth="524" FullHeight="18446744073709545841" TextHeight="166"/>
+																																																																											</XData>
+																																																																										</FLF>
+																																																																									</Connection>
+																																																																									<Connection>
+																																																																										<SplitSingle>
+																																																																											<Version/>
+																																																																											<Upper Offset="1"/>
+																																																																											<Lower/>
+																																																																											<Name Value="TAX-einmalTrennen"/>
+																																																																											<Connections>
+																																																																												<Connection>
+																																																																													<FLF RemoveEmpty="0">
+																																																																														<Version/>
+																																																																														<RecordName Value="TAX"/>
+																																																																														<Fields>
+																																																																															<Field Type="string" Size="3">
+																																																																																<Name Value="TAXSA"/>
+																																																																																<Version/>
+																																																																															</Field>
+																																																																															<Field Type="string" Size="3">
+																																																																																<Name Value="TAXLEER1"/>
+																																																																																<Version/>
+																																																																															</Field>
+																																																																															<Field Type="string" Size="3">
+																																																																																<Name Value="TAXTT"/>
+																																																																																<Version/>
+																																																																															</Field>
+																																																																															<Field Type="string" Size="7">
+																																																																																<Name Value="TAXDTRII"/>
+																																																																																<Version/>
+																																																																															</Field>
+																																																																															<Field Type="string" Size="15">
+																																																																																<Name Value="TAXAMO"/>
+																																																																																<Version/>
+																																																																															</Field>
+																																																																															<Field Type="string" Size="2">
+																																																																																<Name Value="TAXCOD"/>
+																																																																																<Version/>
+																																																																															</Field>
+																																																																														</Fields>
+																																																																														<Connections>
+																																																																															<Connection/>
+																																																																														</Connections>
+																																																																														<XData>
+																																																																															<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																															<Dimension FullWidth="1148" FullHeight="18446744073709551615" TextHeight="162"/>
+																																																																														</XData>
+																																																																													</FLF>
+																																																																												</Connection>
+																																																																												<Connection>
+																																																																													<FLF RemoveEmpty="0">
+																																																																														<Version/>
+																																																																														<RecordName Value="DTM"/>
+																																																																														<Fields>
+																																																																															<Field Type="string" Size="3">
+																																																																																<Name Value="DTMSA"/>
+																																																																																<Version/>
+																																																																															</Field>
+																																																																															<Field Type="string" Size="3">
+																																																																																<Name Value="DTMLEER1"/>
+																																																																																<Version/>
+																																																																															</Field>
+																																																																															<Field Type="string" Size="3">
+																																																																																<Name Value="DTMDTQ"/>
+																																																																																<Version/>
+																																																																															</Field>
+																																																																															<Field Type="string" Size="8">
+																																																																																<Name Value="DTMDC"/>
+																																																																																<Version/>
+																																																																															</Field>
+																																																																														</Fields>
+																																																																														<Connections>
+																																																																															<Connection/>
+																																																																														</Connections>
+																																																																														<XData>
+																																																																															<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																															<Dimension FullWidth="484" FullHeight="18446744073709551615" TextHeight="171"/>
+																																																																														</XData>
+																																																																													</FLF>
+																																																																												</Connection>
+																																																																											</Connections>
+																																																																											<XData>
+																																																																												<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																												<Dimension TextHeight="140"/>
+																																																																											</XData>
+																																																																										</SplitSingle>
+																																																																									</Connection>
+																																																																								</Connections>
+																																																																								<XData>
+																																																																									<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																									<Dimension TextHeight="140"/>
+																																																																								</XData>
+																																																																							</SplitSingle>
+																																																																						</Connection>
+																																																																					</Connections>
+																																																																					<XData>
+																																																																						<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																						<Dimension TextHeight="140"/>
+																																																																					</XData>
+																																																																				</SplitSingle>
+																																																																			</Connection>
+																																																																		</Connections>
+																																																																		<XData>
+																																																																			<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																			<Dimension TextHeight="140"/>
+																																																																		</XData>
+																																																																	</SplitMultiple>
+																																																																</Connection>
+																																																															</Connections>
+																																																															<XData>
+																																																																<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																<Dimension TextHeight="186"/>
+																																																															</XData>
+																																																														</SplitSingle>
+																																																													</Connection>
+																																																												</Connections>
+																																																												<XData>
+																																																													<OpenState Property="1" Preview="1" Connector="1"/>
+																																																													<Dimension TextHeight="70"/>
+																																																												</XData>
+																																																											</SplitMultiple>
+																																																										</Connection>
+																																																									</Connections>
+																																																									<XData>
+																																																										<OpenState Property="1" Preview="1" Connector="1"/>
+																																																										<Dimension TextHeight="140"/>
+																																																									</XData>
+																																																								</SplitSingle>
+																																																							</Connection>
+																																																							<Connection>
+																																																								<SplitSingle>
+																																																									<Version/>
+																																																									<Upper Offset="1"/>
+																																																									<Lower/>
+																																																									<Name Value="UNSS-einmalTrennen"/>
+																																																									<Connections>
+																																																										<Connection>
+																																																											<FLF>
+																																																												<Version/>
+																																																												<RecordName Value="UNS"/>
+																																																												<Fields>
+																																																													<Field Type="string" Size="3">
+																																																														<Name Value="UNSSA"/>
+																																																														<Version/>
+																																																													</Field>
+																																																													<Field Type="string" Size="3">
+																																																														<Name Value="UNSLEER1"/>
+																																																														<Version/>
+																																																													</Field>
+																																																													<Field Type="string">
+																																																														<Name Value="UNSSI"/>
+																																																														<Version/>
+																																																													</Field>
+																																																												</Fields>
+																																																												<Connections>
+																																																													<Connection/>
+																																																												</Connections>
+																																																												<XData>
+																																																													<OpenState Property="1" Preview="1" Connector="1"/>
+																																																													<Dimension TextHeight="140"/>
+																																																												</XData>
+																																																											</FLF>
+																																																										</Connection>
+																																																										<Connection>
+																																																											<SplitSingle Mode="DynLS" Behavior="LineStartsWith">
+																																																												<Version/>
+																																																												<Separator Value="UNT"/>
+																																																												<RegexPattern Value=","/>
+																																																												<SeparatorForWriting/>
+																																																												<Name Value="UNT-ET"/>
+																																																												<Connections>
+																																																													<Connection>
+																																																														<SplitSingle Mode="DynLS" Behavior="LineStartsWith">
+																																																															<Version/>
+																																																															<Separator Value="CBB"/>
+																																																															<RegexPattern Value=","/>
+																																																															<SeparatorForWriting/>
+																																																															<Name Value="CBB-ET"/>
+																																																															<Connections>
+																																																																<Connection>
+																																																																	<SplitSingle Mode="DynLS" Behavior="LineStartsWith">
+																																																																		<Version/>
+																																																																		<Separator Value="KAZ"/>
+																																																																		<RegexPattern Value=","/>
+																																																																		<SeparatorForWriting/>
+																																																																		<Name Value="KAZ-ET"/>
+																																																																		<Connections>
+																																																																			<Connection>
+																																																																				<SplitSingle Mode="DynLS" Behavior="LineStartsWith">
+																																																																					<Version/>
+																																																																					<Separator Value="TXS"/>
+																																																																					<RegexPattern Value=","/>
+																																																																					<SeparatorForWriting/>
+																																																																					<Name Value="TXS-ET"/>
+																																																																					<Connections>
+																																																																						<Connection>
+																																																																							<SplitSingle Mode="DynLS" Behavior="LineStartsWith">
+																																																																								<Version/>
+																																																																								<Separator Value="TMF"/>
+																																																																								<RegexPattern Value=","/>
+																																																																								<SeparatorForWriting/>
+																																																																								<Name Value="TMF-ET"/>
+																																																																								<Connections>
+																																																																									<Connection>
+																																																																										<FLF RemoveEmpty="0">
+																																																																											<Version/>
+																																																																											<RecordName Value="TMA"/>
+																																																																											<Fields>
+																																																																												<Field Type="string" Size="3">
+																																																																													<Name Value="TMASA"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																												<Field Type="string" Size="3">
+																																																																													<Name Value="TMALEER1"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																												<Field Type="string" Size="15">
+																																																																													<Name Value="TMAMMAG"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																												<Field Type="string" Size="15">
+																																																																													<Name Value="TMAMMAN"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																												<Field Type="string" Size="15">
+																																																																													<Name Value="TMAMMAT"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																												<Field Type="string" Size="15">
+																																																																													<Name Value="TMAMMAD"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																											</Fields>
+																																																																											<Connections>
+																																																																												<Connection/>
+																																																																											</Connections>
+																																																																											<XData>
+																																																																												<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																												<Dimension FullWidth="675" FullHeight="192" TextHeight="165"/>
+																																																																											</XData>
+																																																																										</FLF>
+																																																																									</Connection>
+																																																																									<Connection>
+																																																																										<FLF RemoveEmpty="0">
+																																																																											<Version/>
+																																																																											<RecordName Value="TMF"/>
+																																																																											<Fields>
+																																																																												<Field Type="string" Size="3">
+																																																																													<Name Value="TMFSA"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																												<Field Type="string" Size="3">
+																																																																													<Name Value="TMFLEER1"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																												<Field Type="string" Size="15">
+																																																																													<Name Value="TMFMMAG"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																												<Field Type="string" Size="15">
+																																																																													<Name Value="TMFMMAN"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																												<Field Type="string" Size="15">
+																																																																													<Name Value="TMFMMAT"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																												<Field Type="string" Size="15">
+																																																																													<Name Value="TMFMMAD"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																												<Field Type="string" Size="3">
+																																																																													<Name Value="TMFCODE"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																												<Field Type="string" Size="35">
+																																																																													<Name Value="TMFNAME"/>
+																																																																													<Version/>
+																																																																												</Field>
+																																																																											</Fields>
+																																																																											<Connections>
+																																																																												<Connection/>
+																																																																											</Connections>
+																																																																											<XData>
+																																																																												<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																												<Dimension FullWidth="1110" FullHeight="252" TextHeight="165"/>
+																																																																											</XData>
+																																																																										</FLF>
+																																																																									</Connection>
+																																																																								</Connections>
+																																																																								<XData>
+																																																																									<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																									<Dimension FullWidth="675" FullHeight="18446744073709551615" TextHeight="165"/>
+																																																																								</XData>
+																																																																							</SplitSingle>
+																																																																						</Connection>
+																																																																						<Connection>
+																																																																							<FLF RemoveEmpty="0">
+																																																																								<Version/>
+																																																																								<RecordName Value="TXS"/>
+																																																																								<Fields>
+																																																																									<Field Type="string" Size="3">
+																																																																										<Name Value="TXSSA"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="3">
+																																																																										<Name Value="TXSLEER"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="3">
+																																																																										<Name Value="TXSTT"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="7">
+																																																																										<Name Value="TXSDTRII"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="15">
+																																																																										<Name Value="TXSBAS"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="15">
+																																																																										<Name Value="TXSAMO"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																									<Field Type="string" Size="2">
+																																																																										<Name Value="TAXCOD"/>
+																																																																										<Version/>
+																																																																									</Field>
+																																																																								</Fields>
+																																																																								<Connections>
+																																																																									<Connection/>
+																																																																								</Connections>
+																																																																								<XData>
+																																																																									<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																									<Dimension FullWidth="662" FullHeight="18446744073709544422" TextHeight="199"/>
+																																																																								</XData>
+																																																																							</FLF>
+																																																																						</Connection>
+																																																																					</Connections>
+																																																																					<XData>
+																																																																						<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																						<Dimension TextHeight="140"/>
+																																																																					</XData>
+																																																																				</SplitSingle>
+																																																																			</Connection>
+																																																																			<Connection>
+																																																																				<FLF RemoveEmpty="0">
+																																																																					<Version/>
+																																																																					<RecordName Value="KAZ"/>
+																																																																					<Fields>
+																																																																						<Field Type="string" Size="3">
+																																																																							<Name Value="KAZSA"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="3">
+																																																																							<Name Value="KAZLEER"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="35">
+																																																																							<Name Value="KAZAD1"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="35">
+																																																																							<Name Value="KAZAD2"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="12">
+																																																																							<Name Value="KAZDOCNR"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="8">
+																																																																							<Name Value="KAZDOCDT"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="8">
+																																																																							<Name Value="KAZPTD"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																						<Field Type="string" Size="15">
+																																																																							<Name Value="KAZAMT"/>
+																																																																							<Version/>
+																																																																						</Field>
+																																																																					</Fields>
+																																																																					<Connections>
+																																																																						<Connection/>
+																																																																					</Connections>
+																																																																					<XData>
+																																																																						<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																						<Dimension FullWidth="1242" FullHeight="18446744073709544181" TextHeight="209"/>
+																																																																					</XData>
+																																																																				</FLF>
+																																																																			</Connection>
+																																																																		</Connections>
+																																																																		<XData>
+																																																																			<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																			<Dimension TextHeight="140"/>
+																																																																		</XData>
+																																																																	</SplitSingle>
+																																																																</Connection>
+																																																																<Connection>
+																																																																	<FLF RemoveEmpty="0">
+																																																																		<Version/>
+																																																																		<RecordName Value="CBB"/>
+																																																																		<Fields>
+																																																																			<Field Type="string" Size="3">
+																																																																				<Name Value="CBBSA"/>
+																																																																				<Version/>
+																																																																			</Field>
+																																																																			<Field Type="string" Size="3">
+																																																																				<Name Value="CBBEUR"/>
+																																																																				<Version/>
+																																																																			</Field>
+																																																																			<Field Type="string" Size="100">
+																																																																				<Name Value="CBBAD1"/>
+																																																																				<Version/>
+																																																																			</Field>
+																																																																			<Field Type="string" Size="15">
+																																																																				<Name Value="CBBAMT"/>
+																																																																				<Version/>
+																																																																			</Field>
+																																																																		</Fields>
+																																																																		<Connections>
+																																																																			<Connection/>
+																																																																		</Connections>
+																																																																		<XData>
+																																																																			<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																			<Dimension FullWidth="1363" FullHeight="18446744073709551615" TextHeight="185"/>
+																																																																		</XData>
+																																																																	</FLF>
+																																																																</Connection>
+																																																															</Connections>
+																																																															<XData>
+																																																																<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																<Dimension TextHeight="140"/>
+																																																															</XData>
+																																																														</SplitSingle>
+																																																													</Connection>
+																																																													<Connection>
+																																																														<FLF RemoveEmpty="0">
+																																																															<Version/>
+																																																															<RecordName Value="UNT"/>
+																																																															<Fields>
+																																																																<Field Type="string" Size="3">
+																																																																	<Name Value="UNTSA"/>
+																																																																	<Version/>
+																																																																</Field>
+																																																																<Field Type="string" Size="3">
+																																																																	<Name Value="UNTLEER1"/>
+																																																																	<Version/>
+																																																																</Field>
+																																																																<Field Type="string" Size="11">
+																																																																	<Name Value="UNTMREFNR1"/>
+																																																																	<Version/>
+																																																																</Field>
+																																																																<Field Type="decimal" Size="20">
+																																																																	<Name Value="UNTMREFNR2"/>
+																																																																	<Version/>
+																																																																</Field>
+																																																															</Fields>
+																																																															<Connections>
+																																																																<Connection/>
+																																																															</Connections>
+																																																															<XData>
+																																																																<OpenState Property="1" Preview="1" Connector="1"/>
+																																																																<Dimension TextHeight="140"/>
+																																																															</XData>
+																																																														</FLF>
+																																																													</Connection>
+																																																												</Connections>
+																																																												<XData>
+																																																													<OpenState Property="1" Preview="1" Connector="1"/>
+																																																													<Dimension TextHeight="140"/>
+																																																												</XData>
+																																																											</SplitSingle>
+																																																										</Connection>
+																																																									</Connections>
+																																																									<XData>
+																																																										<OpenState Property="1" Preview="1" Connector="1"/>
+																																																										<Dimension TextHeight="140"/>
+																																																									</XData>
+																																																								</SplitSingle>
+																																																							</Connection>
+																																																						</Connections>
+																																																						<XData>
+																																																							<OpenState Property="1" Preview="1" Connector="1"/>
+																																																							<Dimension TextHeight="140"/>
+																																																						</XData>
+																																																					</SplitSingle>
+																																																				</Connection>
+																																																			</Connections>
+																																																			<XData>
+																																																				<OpenState Property="1" Preview="1" Connector="1"/>
+																																																				<Dimension TextHeight="140"/>
+																																																			</XData>
+																																																		</SplitSingle>
+																																																	</Connection>
+																																																</Connections>
+																																																<XData>
+																																																	<OpenState Property="1" Preview="1" Connector="1"/>
+																																																	<Dimension TextHeight="140"/>
+																																																</XData>
+																																															</SplitSingle>
+																																														</Connection>
+																																													</Connections>
+																																													<XData>
+																																														<OpenState Property="1" Preview="1" Connector="1"/>
+																																														<Dimension TextHeight="140"/>
+																																													</XData>
+																																												</SplitSingle>
+																																											</Connection>
+																																										</Connections>
+																																										<XData>
+																																											<OpenState Property="1" Preview="1" Connector="1"/>
+																																											<Dimension TextHeight="140"/>
+																																										</XData>
+																																									</SplitSingle>
+																																								</Connection>
+																																							</Connections>
+																																							<XData>
+																																								<OpenState Property="1" Preview="1" Connector="1"/>
+																																								<Dimension TextHeight="140"/>
+																																							</XData>
+																																						</SplitSingle>
+																																					</Connection>
+																																				</Connections>
+																																				<XData>
+																																					<OpenState Property="1" Preview="1" Connector="1"/>
+																																					<Dimension TextHeight="140"/>
+																																				</XData>
+																																			</SplitSingle>
+																																		</Connection>
+																																	</Connections>
+																																	<XData>
+																																		<OpenState Property="1" Preview="1" Connector="1"/>
+																																		<Dimension TextHeight="140"/>
+																																	</XData>
+																																</SplitSingle>
+																															</Connection>
+																														</Connections>
+																														<XData>
+																															<OpenState Property="1" Preview="1" Connector="1"/>
+																															<Dimension TextHeight="140"/>
+																														</XData>
+																													</SplitSingle>
+																												</Connection>
+																											</Connections>
+																											<XData>
+																												<OpenState Property="1" Preview="1" Connector="1"/>
+																												<Dimension TextHeight="199"/>
+																											</XData>
+																										</SplitSingle>
+																									</Connection>
+																								</Connections>
+																								<XData>
+																									<OpenState Property="1" Preview="1" Connector="1"/>
+																									<Dimension TextHeight="140"/>
+																								</XData>
+																							</SplitSingle>
+																						</Connection>
+																					</Connections>
+																					<XData>
+																						<OpenState Property="1" Preview="1" Connector="1"/>
+																						<Dimension TextHeight="140"/>
+																					</XData>
+																				</SplitSingle>
+																			</Connection>
+																		</Connections>
+																		<XData>
+																			<OpenState Property="1" Preview="1" Connector="1"/>
+																			<Dimension TextHeight="140"/>
+																		</XData>
+																	</SplitSingle>
+																</Connection>
+															</Connections>
+															<XData>
+																<OpenState Property="1" Preview="1" Connector="1"/>
+																<Dimension TextHeight="140"/>
+															</XData>
+														</SplitSingle>
+													</Connection>
+												</Connections>
+												<XData>
+													<OpenState Property="1" Preview="1" Connector="1"/>
+													<Dimension TextHeight="140"/>
+												</XData>
+											</SplitSingle>
+										</Connection>
+										<Connection>
+											<SplitSingle>
+												<Version/>
+												<Upper Offset="1"/>
+												<Lower/>
+												<Name Value="FIL"/>
+												<Connections>
+													<Connection>
+														<FLF RemoveEmpty="0">
+															<Version/>
+															<RecordName Value="FIL"/>
+															<Fields>
+																<Field Type="string" Size="3">
+																	<Name Value="FILSA"/>
+																	<Version/>
+																</Field>
+																<Field Type="string" Size="3">
+																	<Name Value="FILLEER"/>
+																	<Version/>
+																</Field>
+																<Field Type="string">
+																	<Name Value="FILSI"/>
+																	<Version/>
+																</Field>
+																<Field Type="string" Size="3">
+																	<Name Value="FILPROV1"/>
+																	<Version/>
+																</Field>
+																<Field Type="string" Size="4">
+																	<Name Value="FILPROV2"/>
+																	<Version/>
+																</Field>
+																<Field Type="integer" Size="11">
+																	<Name Value="FILCUST"/>
+																	<Version/>
+																</Field>
+																<Field Type="string" Size="9">
+																	<Name Value="FILCNT"/>
+																	<Version/>
+																</Field>
+															</Fields>
+															<Connections>
+																<Connection/>
+															</Connections>
+															<XData>
+																<OpenState Property="1" Preview="1" Connector="1"/>
+																<Dimension FullWidth="870" FullHeight="18446744073709551615" TextHeight="140"/>
+															</XData>
+														</FLF>
+													</Connection>
+													<Connection>
+														<FLF RemoveEmpty="0">
+															<Version/>
+															<RecordName Value="ADDINFO"/>
+															<Fields>
+																<Field Type="string" Size="7">
+																	<Name Value="ADDINFO"/>
+																	<Version/>
+																</Field>
+																<Field Type="string" Size="35">
+																	<Name Value="UNB_ID"/>
+																	<Version/>
+																</Field>
+															</Fields>
+															<Connections>
+																<Connection/>
+															</Connections>
+															<XData>
+																<OpenState Property="1" Preview="1" Connector="1"/>
+																<Dimension FullWidth="867" FullHeight="18446744073709551615" TextHeight="140"/>
+															</XData>
+														</FLF>
+													</Connection>
+												</Connections>
+												<XData>
+													<OpenState Property="1" Preview="1" Connector="1"/>
+													<Dimension TextHeight="140"/>
+												</XData>
+											</SplitSingle>
+										</Connection>
+									</Connections>
+									<XData>
+										<OpenState Property="1" Preview="1" Connector="1"/>
+										<Dimension TextHeight="140"/>
+									</XData>
+								</SplitSingle>
+							</Connection>
+						</Connections>
+						<XData>
+							<OpenState Property="1" Preview="1" Connector="1"/>
+							<Dimension FullWidth="600" FullHeight="400" TextHeight="200"/>
+						</XData>
+					</SplitSingle>
+				</Connection>
+			</Connections>
+			<XData>
+				<OpenState Property="1" Preview="1" Connector="1"/>
+				<Dimension/>
+			</XData>
+		</Project>
+		<Functions/>
+	</Commands>
+</FlexText>

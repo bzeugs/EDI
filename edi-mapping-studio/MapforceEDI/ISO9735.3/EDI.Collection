@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Messages Version="3">
+	<Meta>
+		<Version>D</Version>
+		<Release>3</Release>
+		<Agency>UN</Agency>
+	</Meta>
+	<Root File="Envelope.Config"/>
+	<Message Type="CONTRL" File="CONTRL.Config" Description="Control message"/>
+</Messages>

@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FlexText Flatfile Viewer </title>
+<style>
+:root {
+    --bg:#f6f7f9;
+    --panel:#fff;
+    --text:#1f2328;
+    --muted:#667085;
+    --line:#d9dee7;
+    --accent:#b00000;
+    --accent2:#7a0000;
+    --soft:#f1f3f6;
+    --code:#eef3f8;
+    --ok:#16794b;
+    --warn:#9a6700;
+    --shadow:0 5px 18px rgba(0,0,0,.08);
+}
+* { box-sizing:border-box; }
+body {
+    margin:0;
+    font-family:Segoe UI,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
+header {
+    background:#fff;
+    border-bottom:4px solid var(--accent);
+    padding:18px 24px;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+header h1 {
+    margin:0;
+    font-size:23px;
+    color:var(--accent);
+    font-weight:700;
+}
+header p {
+    margin:5px 0 0;
+    color:var(--muted);
+    font-size:13px;
+}
+main {
+    max-width:1500px;
+    margin:20px auto;
+    padding:0 18px 40px;
+}
+.controls,.status,.viewer,.notice {
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:10px;
+    box-shadow:var(--shadow);
+}
+.controls {
+    padding:16px;
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:12px 16px;
+    align-items:center;
+}
+.rowlabel { font-weight:600; }
+.path {
+    font-family:Consolas,monospace;
+    color:var(--muted);
+    font-size:12px;
+    overflow-wrap:anywhere;
+    margin-top:4px;
+}
+.small {
+    font-size:12px;
+    color:var(--muted);
+    line-height:1.45;
+}
+button,.filebtn,select {
+    border:0;
+    border-radius:7px;
+    padding:10px 14px;
+    font-weight:600;
+}
+button,.filebtn {
+    cursor:pointer;
+    background:var(--accent);
+    color:white;
+}
+.ghost { background:#eef0f3; color:#222; }
+.filebtn { display:inline-block; }
+input[type=file] { display:none; }
+select {
+    width:min(620px,100%);
+    border:1px solid var(--line);
+    background:#fff;
+    color:var(--text);
+}
+.status {
+    margin-top:14px;
+    padding:14px 16px;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(180px,1fr));
+    gap:12px;
+}
+.kv {
+    background:var(--soft);
+    border-radius:7px;
+    padding:9px 11px;
+}
+.kv b {
+    display:block;
+    font-size:11px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:4px;
+}
+.ok { color:var(--ok); }
+.warn { color:var(--warn); }
+.notice {
+    margin-top:14px;
+    padding:12px 14px;
+    font-size:12px;
+    color:#475467;
+}
+.notice strong { color:var(--text); }
+.toolbar {
+    margin-top:14px;
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+.viewer {
+    margin-top:10px;
+    overflow:hidden;
+}
+.viewerhead {
+    padding:11px 14px;
+    background:#f8f9fb;
+    border-bottom:1px solid var(--line);
+    font-weight:600;
+}
+details.viewer > summary.viewerhead {
+    list-style:none;
+    cursor:pointer;
+    border-radius:0;
+}
+details.viewer[open] > summary.viewerhead {
+    border-bottom:1px solid var(--line);
+}
+.tree {
+    padding:12px 12px 25px;
+    overflow:auto;
+    max-height:calc(100vh - 360px);
+}
+details { margin:2px 0; }
+summary {
+    cursor:pointer;
+    list-style:none;
+    border-radius:5px;
+    padding:4px 7px;
+}
+summary::-webkit-details-marker { display:none; }
+summary:before {
+    content:'▸';
+    display:inline-block;
+    width:18px;
+    color:#666;
+}
+details[open]>summary:before { content:'▾'; }
+summary:hover { background:#f2f4f7; }
+.group>summary {
+    font-weight:700;
+    color:#344054;
+}
+.segment>summary { font-weight:700; }
+.segmenttag {
+    display:inline-block;
+    min-width:150px;
+    color:var(--accent);
+}
+.info {
+    color:var(--muted);
+    font-weight:400;
+}
+.badge {
+    font-size:11px;
+    padding:2px 6px;
+    border-radius:10px;
+    background:#eee;
+    color:#555;
+    margin-left:6px;
+}
+.children {
+    margin-left:20px;
+    border-left:1px dashed #d3d8df;
+    padding-left:10px;
+}
+.field {
+    display:grid;
+    grid-template-columns:180px minmax(140px,260px) minmax(200px,1fr);
+    gap:10px;
+    align-items:start;
+    padding:5px 8px;
+    margin:1px 0;
+    border-radius:5px;
+}
+.field:hover { background:#f8f9fb; }
+.fid {
+    font-family:Consolas,monospace;
+    color:#475467;
+}
+.fname { color:#344054; }
+.fval {
+    font-family:Consolas,monospace;
+    white-space:pre-wrap;
+    overflow-wrap:anywhere;
+}
+.empty { color:#98a2b3; }
+.raw {
+    font-family:Consolas,monospace;
+    color:#475467;
+    font-size:12px;
+    margin:5px 0 7px 8px;
+    overflow-wrap:anywhere;
+    white-space:pre-wrap;
+}
+.error {
+    color:#b42318;
+    white-space:pre-wrap;
+}
+.sourcecard {
+    margin-top:14px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:10px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+}
+.sourcecard>summary {
+    padding:11px 14px;
+    background:#f8f9fb;
+    border-radius:0;
+    font-weight:600;
+    border-bottom:1px solid transparent;
+}
+.sourcecard[open]>summary { border-bottom-color:var(--line); }
+.sourcewrap {
+    max-height:380px;
+    overflow:auto;
+    background:#fbfcfd;
+}
+.source-line {
+    display:grid;
+    grid-template-columns:58px minmax(0,1fr);
+    font-family:Consolas,monospace;
+    font-size:12px;
+    line-height:1.5;
+    border-bottom:1px solid #eef1f4;
+    cursor:pointer;
+}
+.source-line:hover { background:#f3f5f8; }
+.source-line .ln {
+    padding:4px 10px;
+    text-align:right;
+    color:#98a2b3;
+    background:#f6f7f9;
+    border-right:1px solid #e4e7ec;
+    user-select:none;
+}
+.source-line .src {
+    padding:4px 10px;
+    white-space:pre;
+    overflow-x:auto;
+}
+.source-line.active {
+    background:#fff3cd;
+    box-shadow:inset 4px 0 0 var(--accent);
+}
+.source-line.active .ln {
+    background:#ffe69c;
+    color:#664d03;
+    font-weight:700;
+}
+.clickline { cursor:pointer; }
+.clickline:hover {
+    outline:1px solid #e2e6ea;
+    background:#f8f9fb;
+}
+.selected-structured {
+    background:#fff7e6!important;
+    outline:1px solid #ffd591;
+}
+@media(max-width:900px) {
+    .controls { grid-template-columns:1fr; }
+    .status { grid-template-columns:1fr; }
+    .field { grid-template-columns:150px 1fr; }
+    .fval { grid-column:2; }
+    .tree { max-height:none; }
+}
+
+/* V+1: vertically center the red selection button against the complete text block */
+.controls > .action-cell {
+    align-self:stretch;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+}
+</style>
+</head>
+<body>
+<header>
+    <h1>FlexText Flatfile Viewer</h1>
+    <p>Visualization of a Flatfile based on its corresponding Altova FlexText structure (*.mft)</p>
+</header>
+
+<main>
+<section class="controls">
+    <div>
+       <div class="rowlabel">1. Altova FlexText Structure</div><br>
+       <div id="mftPath" class="path">Not selected yet</div>
+       <div class="small">
+            Select the Altova FlexText File (*.mft) that describes the Flatfile's structure and fields.
+            (Previously selected FlexText Files can be remembered in this browser.)
+        </div>
+        <div style="margin-top:8px">
+            <select id="savedMfts">
+                <option value="">Remembered FlexText structures…</option>
+            </select>
+        </div>
+    </div>
+    <div class="action-cell">
+        <label class="filebtn" for="mftFile">Select FlexText File</label>
+        <input id="mftFile" type="file" accept=".mft,.xml,text/xml,application/xml,*/*">
+    </div>
+
+    <div>
+        <div class="rowlabel">2. Flatfile</div><br>
+        <div id="flatPath" class="path">Not selected yet</div>
+       <div class="small">
+            Select the Flatfile (*.txt) you want to visualize based on its corresponding Altova FlexText structure.
+        </div>
+    </div>
+    <div class="action-cell">
+        <label class="filebtn" for="flatFile">Select Flatfile</label>
+        <input id="flatFile" type="file" accept=".txt,text/plain,*/*">
+    </div>
+</section>
+
+<section class="status">
+    <div class="kv"><b>Used FlexText structure:</b><span id="sMft">–</span></div>
+    <div class="kv"><b>FlexText root:</b><span id="sRoot">–</span></div>
+    <div class="kv"><b>Detected record definitions:</b><span id="sRecords">–</span></div>
+</section>
+
+<div class="notice" id="rememberNotice">
+    <strong>FlexText structure storage:</strong> uploaded *.mft files are remembered in this browser so that they can be selected again later.
+</div>
+
+<div class="toolbar">
+    <button class="ghost" id="expand">Expand all</button>
+    <button class="ghost" id="collapse">Collapse all</button>
+    <button class="ghost" id="rawBtn">Toggle raw records</button>
+</div>
+
+<details class="viewer" id="viewerCard" open>
+    <summary class="viewerhead" id="viewerHead">Visualized-Tree-View</summary>
+    <div id="tree" class="tree">
+        <div class="small">
+            Select an Altova FlexText structure (*.mft) and a matching flat file (*.txt).
+        </div>
+    </div>
+</details>
+
+<details class="sourcecard" id="sourceCard">
+    <summary id="sourceHead">Text-Editor-View (with Line Numbers)</summary>
+    <div class="sourcewrap" id="sourceLines">
+        <div class="small" style="padding:12px 14px">No flat file loaded yet.</div>
+    </div>
+</details>
+</main>
+
+<script>
+'use strict';
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+const state = {
+    mft:null,
+    mftText:'',
+    mftName:'',
+    flat:null,
+    parsed:null,
+    records:[],
+    raw:true,
+    selectedLine:null
+};
+
+function setStatus(id,text,cls=''){
+    const el=$(id);
+    if(!el)return;
+    el.textContent=text;
+    el.className=cls;
+}
+
+function readText(file){
+    return file.arrayBuffer().then(buf=>{
+        let t=new TextDecoder('utf-8',{fatal:false}).decode(buf);
+        if(t.includes('\uFFFD')) t=new TextDecoder('windows-1252').decode(buf);
+        return t.replace(/^\uFEFF/,'');
+    });
+}
+
+/* ---------- FlexText parser ---------- */
+
+function directChild(el,name){
+    return [...el.children].find(x=>x.tagName===name)||null;
+}
+
+function childTextValue(el,tag){
+    const x=directChild(el,tag);
+    return x?.getAttribute('Value') ?? '';
+}
+
+function getConnectionCommands(conns){
+    if(!conns)return [];
+    const out=[];
+    for(const conn of [...conns.children].filter(x=>x.tagName==='Connection')){
+        for(const ch of [...conn.children]){
+            if(['SplitSingle','SplitMultiple','Switch','FLF'].includes(ch.tagName)) out.push(ch);
+        }
+    }
+    return out;
+}
+
+function getCommandChildren(el){
+    return getConnectionCommands(directChild(el,'Connections'));
+}
+
+function switchPrefixFromCondition(condition){
+    const v=directChild(condition,'Value')?.getAttribute('Value')||'';
+    const decoded=decodeURIComponentSafe(v);
+    // Altova Switch conditions in this MFT start with the physical record identifier,
+    // e.g. "FIIIV.{47,47}...". Keep only the initial literal token.
+    const m=decoded.match(/^([A-Za-z0-9_]+)/);
+    return m ? m[1] : '';
+}
+
+function parseFlexText(text){
+    const doc=new DOMParser().parseFromString(text,'application/xml');
+    const pe=doc.querySelector('parsererror');
+    if(pe) throw new Error('The selected file is not a valid Altova FlexText XML file.');
+
+    const project=doc.querySelector('FlexText > Commands > Project');
+    if(!project) throw new Error('No FlexText/Commands/Project structure was found in the selected *.mft file.');
+
+    const rootName=project.querySelector(':scope > RootName')?.getAttribute('Value') || 'FlexText';
+    const definitions=[];
+    let order=0;
+
+    function walk(cmd, context){
+        const nextCtx={...context};
+
+        if(cmd.tagName==='SplitMultiple'){
+            const sep=childTextValue(cmd,'Separator');
+            const behavior=cmd.getAttribute('Behavior')||'';
+            if(sep && behavior==='LineStartsWith'){
+                nextCtx.repeatAnchors=[...(context.repeatAnchors||[]), decodeURIComponentSafe(sep)];
+            }
+        }
+
+        if(cmd.tagName==='SplitSingle'){
+            const sep=childTextValue(cmd,'Separator');
+            const behavior=cmd.getAttribute('Behavior')||'';
+            if(sep && behavior==='LineStartsWith'){
+                nextCtx.splitHints=[...(context.splitHints||[]), decodeURIComponentSafe(sep)];
+            }
+        }
+
+        if(cmd.tagName==='FLF'){
+            const rec=directChild(cmd,'RecordName');
+            if(rec){
+                const name=rec.getAttribute('Value')||'';
+                const fields=[];
+                let pos=1;
+                const fieldsEl=directChild(cmd,'Fields');
+                if(fieldsEl){
+                    for(const f of [...fieldsEl.children].filter(x=>x.tagName==='Field')){
+                        const fname=childTextValue(f,'Name') || `Field ${fields.length+1}`;
+                        const sizeAttr=f.getAttribute('Size');
+                        // Altova FlexText default: if Size is omitted for an FLF field,
+                        // the field occupies exactly one character.
+                        const size=sizeAttr ? Number(sizeAttr) : 1;
+                        const first=pos;
+                        const last=pos+size-1;
+                        fields.push({
+                            name:fname,
+                            type:f.getAttribute('Type')||'string',
+                            size,
+                            first,
+                            last,
+                            sizeWasImplicit:!sizeAttr
+                        });
+                        pos=last+1;
+                    }
+                }
+
+                // RecordName is a logical MapForce node name and is not always identical
+                // to the physical record identifier in the flat file (e.g. CUXSA -> CUX).
+                const aliases=new Set(context.matchPrefixes||[]);
+                aliases.add(name);
+                if(fields.length && fields[0].name){
+                    const m=fields[0].name.match(/^([A-Z]{3,6})/);
+                    if(m) aliases.add(m[1].slice(0,3));
+                }
+
+                definitions.push({
+                    id:`def-${order++}`,
+                    name,
+                    fields,
+                    matchPrefixes:[...aliases].filter(Boolean),
+                    repeatAnchors:[...(context.repeatAnchors||[])],
+                    splitHints:[...(context.splitHints||[])],
+                    order:order
+                });
+            }
+        }
+
+        if(cmd.tagName==='Switch'){
+            const conditions=directChild(cmd,'Conditions');
+            if(conditions){
+                for(const condition of [...conditions.children].filter(x=>x.tagName==='Condition')){
+                    const prefix=switchPrefixFromCondition(condition);
+                    const cctx={...nextCtx,matchPrefixes:[
+                        ...(nextCtx.matchPrefixes||[]),
+                        ...(prefix?[prefix]:[])
+                    ]};
+                    const conns=directChild(condition,'Connections');
+                    for(const ch of getConnectionCommands(conns)) walk(ch,cctx);
+                }
+                return;
+            }
+        }
+
+        for(const ch of getCommandChildren(cmd)){
+            walk(ch,nextCtx);
+        }
+    }
+
+    for(const ch of getCommandChildren(project)){
+        walk(ch,{repeatAnchors:[],splitHints:[]});
+    }
+
+    if(!definitions.length) throw new Error('No FLF record definitions were found in the FlexText structure.');
+
+    return {doc,rootName,definitions};
+}
+
+function decodeURIComponentSafe(s){
+    try{return decodeURIComponent(s)}catch(e){return s}
+}
+
+function defSpecificity(def, activeAnchors){
+    const reps=def.repeatAnchors||[];
+    let score=0;
+    for(let i=0;i<reps.length;i++){
+        if(activeAnchors[i]===reps[i]) score+=10;
+        else score-=10;
+    }
+    score += reps.length*2;
+    score += def.name.length/100;
+    return score;
+}
+
+function chooseDefinition(line, defs, activeAnchors){
+    // Prefer an exact logical RecordName match first.
+    let candidates=defs.filter(d=>d.name && line.startsWith(d.name));
+
+    // If RecordName is only a logical MapForce node name, use physical aliases
+    // derived from Switch conditions / the first fixed-width field.
+    if(!candidates.length){
+        candidates=defs.filter(d=>(d.matchPrefixes||[]).some(p=>p && line.startsWith(p)));
+    }
+    if(!candidates.length)return null;
+
+    candidates.sort((a,b)=>{
+        const exactA=a.name && line.startsWith(a.name) ? 1 : 0;
+        const exactB=b.name && line.startsWith(b.name) ? 1 : 0;
+        if(exactB!==exactA)return exactB-exactA;
+
+        const bestPrefix=d=>Math.max(0,...(d.matchPrefixes||[]).filter(p=>line.startsWith(p)).map(p=>p.length));
+        const pa=bestPrefix(a), pb=bestPrefix(b);
+        if(pb!==pa)return pb-pa;
+
+        const sa=defSpecificity(a,activeAnchors);
+        const sb=defSpecificity(b,activeAnchors);
+        if(sb!==sa)return sb-sa;
+        if(b.repeatAnchors.length!==a.repeatAnchors.length)return b.repeatAnchors.length-a.repeatAnchors.length;
+        if(b.name.length!==a.name.length)return b.name.length-a.name.length;
+        return a.order-b.order;
+    });
+    return candidates[0];
+}
+
+function extractFields(line,def){
+    return def.fields.map((f,i)=>{
+        let value='';
+        if(f.first){
+            if(f.last) value=line.slice(f.first-1,f.last);
+            else value=line.slice(f.first-1);
+        }
+        return {...f,value:value.replace(/\s+$/,'')};
+    });
+}
+
+function parseFlatfile(text){
+    const lines=text.replace(/\r\n?/g,'\n').split('\n');
+    if(lines.length && lines[lines.length-1]==='') lines.pop();
+
+    const records=[];
+    const roots=[];
+    const activeNodes=new Map();
+    let activeAnchors=[];
+
+    for(let i=0;i<lines.length;i++){
+        const raw=lines[i];
+        const lineNo=i+1;
+
+        // First choose a definition using the current repeat context.
+        let def=chooseDefinition(raw,state.mft.definitions,activeAnchors);
+
+        // If the current line starts a repeating anchor, prefer the definition whose
+        // repeat path ends with that anchor.
+        const anchorDefs=state.mft.definitions.filter(d=>
+            d.name && raw.startsWith(d.name) &&
+            d.repeatAnchors.length &&
+            d.repeatAnchors[d.repeatAnchors.length-1]===d.name
+        );
+        if(anchorDefs.length){
+            anchorDefs.sort((a,b)=>a.repeatAnchors.length-b.repeatAnchors.length);
+            def=anchorDefs[anchorDefs.length-1];
+        }
+
+        const physicalTag=(raw.match(/^\S+/)?.[0] || '').trim();
+        const matchedPrefix=def ? (def.matchPrefixes||[])
+            .filter(p=>p && raw.startsWith(p))
+            .sort((a,b)=>b.length-a.length)[0] : '';
+        const recordName=def ? (matchedPrefix && !raw.startsWith(def.name) ? matchedPrefix : def.name) : (physicalTag || '(unmatched)');
+        const repeatPath=def?.repeatAnchors || [];
+
+        // Close repeat contexts that are no longer part of this definition.
+        const keep=[];
+        for(let k=0;k<repeatPath.length;k++){
+            keep.push(repeatPath[k]);
+        }
+        activeAnchors=keep;
+
+        const node={
+            lineNo,
+            raw,
+            recordName,
+            def,
+            fields:def ? extractFields(raw,def) : [],
+            children:[],
+            parent:null,
+            unmatched:!def
+        };
+
+        // A line which itself is the last repeat anchor opens/replaces that group level.
+        const isAnchor=repeatPath.length && repeatPath[repeatPath.length-1]===recordName;
+        if(isAnchor){
+            const parentAnchor=repeatPath.length>1 ? activeNodes.get(repeatPath[repeatPath.length-2]) : null;
+            if(parentAnchor){
+                node.parent=parentAnchor;
+                parentAnchor.children.push(node);
+            }else{
+                roots.push(node);
+            }
+            activeNodes.set(recordName,node);
+
+            // Remove deeper active nodes.
+            const idx=repeatPath.indexOf(recordName);
+            for(const key of [...activeNodes.keys()]){
+                const p=repeatPath.indexOf(key);
+                if(p>idx || p<0) activeNodes.delete(key);
+            }
+            activeAnchors=[...repeatPath];
+        }else if(repeatPath.length){
+            const parent=activeNodes.get(repeatPath[repeatPath.length-1]);
+            if(parent){
+                node.parent=parent;
+                parent.children.push(node);
+            }else{
+                roots.push(node);
+            }
+        }else{
+            roots.push(node);
+            activeAnchors=[];
+            activeNodes.clear();
+        }
+
+        records.push(node);
+    }
+
+    return {records,roots};
+}
+
+/* ---------- IndexedDB remembered MFTs ---------- */
+
+function openDB(){
+    return new Promise((resolve,reject)=>{
+        const req=indexedDB.open('flextext-flatfile-viewer',1);
+        req.onupgradeneeded=()=>{
+            const db=req.result;
+            if(!db.objectStoreNames.contains('mfts')) db.createObjectStore('mfts',{keyPath:'name'});
+        };
+        req.onsuccess=()=>resolve(req.result);
+        req.onerror=()=>reject(req.error);
+    });
+}
+async function dbPut(value){
+    const db=await openDB();
+    return new Promise((resolve,reject)=>{
+        const tx=db.transaction('mfts','readwrite');
+        tx.objectStore('mfts').put(value);
+        tx.oncomplete=()=>resolve();
+        tx.onerror=()=>reject(tx.error);
+    });
+}
+async function dbGet(name){
+    const db=await openDB();
+    return new Promise((resolve,reject)=>{
+        const req=db.transaction('mfts','readonly').objectStore('mfts').get(name);
+        req.onsuccess=()=>resolve(req.result);
+        req.onerror=()=>reject(req.error);
+    });
+}
+async function dbAll(){
+    const db=await openDB();
+    return new Promise((resolve,reject)=>{
+        const req=db.transaction('mfts','readonly').objectStore('mfts').getAll();
+        req.onsuccess=()=>resolve(req.result||[]);
+        req.onerror=()=>reject(req.error);
+    });
+}
+async function refreshSavedMfts(){
+    const sel=$('#savedMfts');
+    sel.innerHTML='<option value="">Remembered FlexText structures…</option>';
+    const list=await dbAll().catch(()=>[]);
+    list.sort((a,b)=>a.name.localeCompare(b.name,undefined,{numeric:true}));
+    for(const r of list){
+        const o=document.createElement('option');
+        o.value=r.name;
+        o.textContent=r.name;
+        sel.appendChild(o);
+    }
+}
+async function rememberMft(name,text){
+    await dbPut({name,text,savedAt:new Date().toISOString()}).catch(()=>{});
+    await refreshSavedMfts();
+    $('#rememberNotice').innerHTML=`<strong>FlexText structure remembered:</strong> ${esc(name)} is stored in this browser and can be selected again from the list above.`;
+}
+
+/* ---------- Rendering ---------- */
+
+function renderField(f,lineNo){
+    const pos=f.first ? `chars ${f.first}-${f.last}` : '';
+    const value=f.value==='' ? '<span class="empty">(empty)</span>' : esc(f.value);
+    const implicit=f.sizeWasImplicit ? ' · default size from FlexText' : '';
+    return `<div class="field clickline" data-line="${lineNo}">
+        <div class="fid">${esc(f.name)}${pos?`<div class="small">${esc(pos)}</div>`:''}</div>
+        <div class="fname">${esc(f.type)} · length ${f.size}${implicit}</div>
+        <div class="fval">${value}</div>
+    </div>`;
+}
+
+function renderRecord(r,depth=0){
+    const meta=r.def
+        ? `${r.def.fields.length} fields${r.def.repeatAnchors.length?` · repeat path ${r.def.repeatAnchors.join(' / ')}`:''}`
+        : 'No matching FLF record definition found';
+
+    return `<details class="segment clickline" data-line="${r.lineNo}" ${depth<1?'open':''}>
+        <summary>
+            <span class="segmenttag">${esc(r.recordName)}</span>
+            <span class="info">${esc(meta)}</span>
+            ${r.unmatched?'<span class="badge">unmatched</span>':''}
+        </summary>
+        <div class="children">
+            ${r.fields.length ? r.fields.map(f=>renderField(f,r.lineNo)).join('') : '<div class="small">No fields available for this record.</div>'}
+            <div class="raw" ${state.raw?'':'hidden'}>${esc(r.raw)}</div>
+            ${r.children.map(c=>renderRecord(c,depth+1)).join('')}
+        </div>
+    </details>`;
+}
+
+function renderTree(parsed){
+    const fileName=state.flat?.file?.name||'Flatfile';
+    $('#tree').innerHTML=`<details class="group" open>
+        <summary class="clickline" data-line="${parsed.records[0]?.lineNo||1}">${esc(fileName)}</summary>
+        <div class="children">
+            ${parsed.roots.map(r=>renderRecord(r,0)).join('')}
+        </div>
+    </details>`;
+}
+
+function renderSourceLines(){
+    const box=$('#sourceLines');
+    box.innerHTML=state.records.map(r=>`<div class="source-line" id="src-line-${r.lineNo}" data-line="${r.lineNo}">
+        <div class="ln">${r.lineNo}</div>
+        <div class="src">${esc(r.raw)}</div>
+    </div>`).join('');
+}
+
+function openStructuredPath(el){
+    if(!el)return;
+    let p=el.parentElement;
+    while(p){
+        if(p.tagName==='DETAILS') p.open=true;
+        if(p.id==='tree') break;
+        p=p.parentElement;
+    }
+}
+
+function structuredTargetForLine(lineNo){
+    const seg=document.querySelector(`#tree details.segment[data-line="${lineNo}"]`);
+    if(seg)return seg.querySelector(':scope > summary')||seg;
+    return document.querySelector(`#tree [data-line="${lineNo}"]`);
+}
+
+function selectLine(lineNo,sourceEl=null,fromSource=false){
+    lineNo=Number(lineNo);
+    if(!lineNo)return;
+    state.selectedLine=lineNo;
+
+    document.querySelectorAll('.source-line.active').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.selected-structured').forEach(x=>x.classList.remove('selected-structured'));
+
+    const src=$(`#src-line-${lineNo}`);
+    if(src){
+        src.classList.add('active');
+        if(!fromSource){
+            $('#sourceCard').open=true;
+            src.scrollIntoView({behavior:'smooth',block:'center'});
+        }
+    }
+
+    if(fromSource){
+        const target=structuredTargetForLine(lineNo);
+        if(target){
+            openStructuredPath(target);
+            target.classList.add('selected-structured');
+            setTimeout(()=>target.scrollIntoView({behavior:'smooth',block:'center'}),0);
+        }
+    }else{
+        const target=sourceEl?.closest?.('[data-line]');
+        if(target && target.closest('#tree')) target.classList.add('selected-structured');
+    }
+}
+
+function bindLineNavigation(){
+    document.querySelectorAll('#tree [data-line]').forEach(el=>{
+        el.addEventListener('click',e=>{
+            const ln=el.dataset.line;
+            if(!ln)return;
+            e.stopPropagation();
+            selectLine(ln,el,false);
+        });
+    });
+    document.querySelectorAll('#sourceLines .source-line').forEach(el=>{
+        el.addEventListener('click',()=>selectLine(el.dataset.line,null,true));
+    });
+}
+
+async function processFlatfile(){
+    if(!state.mft || !state.flat)return;
+
+    const parsed=parseFlatfile(state.flat.text);
+    state.parsed=parsed;
+    state.records=parsed.records;
+
+    renderTree(parsed);
+    renderSourceLines();
+    bindLineNavigation();
+
+    setStatus('#sMft',state.mftName,'ok');
+    setStatus('#sRoot',state.mft.rootName,'ok');
+    setStatus('#sRecords',`${state.mft.definitions.length} FLF definitions · ${parsed.records.length} file lines`,'ok');
+
+    const heading=`${state.flat.file.name} · FlexText-Structure: ${state.mftName}`;
+    $('#viewerHead').textContent=`FlexText Flatfile Visualized-Tree-View: ${heading}`;
+    $('#sourceHead').textContent=`Flatfile Text-Editor-View with Line Numbers: ${heading}`;
+}
+
+function showError(e){
+    console.error(e);
+    $('#tree').innerHTML=`<div class="error"><b>Error:</b> ${esc(e.message||e)}</div>`;
+}
+
+/* ---------- Events ---------- */
+
+$('#mftFile').onchange=async e=>{
+    const f=e.target.files[0];
+    if(!f)return;
+    try{
+        const text=await readText(f);
+        state.mft=parseFlexText(text);
+        state.mftText=text;
+        state.mftName=f.name;
+        $('#mftPath').textContent=f.name;
+        setStatus('#sMft',f.name,'ok');
+        setStatus('#sRoot',state.mft.rootName,'ok');
+        setStatus('#sRecords',`${state.mft.definitions.length} FLF definitions`,'ok');
+        await rememberMft(f.name,text);
+        if(state.flat) await processFlatfile();
+    }catch(err){showError(err)}
+};
+
+$('#savedMfts').onchange=async e=>{
+    const name=e.target.value;
+    if(!name)return;
+    try{
+        const saved=await dbGet(name);
+        if(!saved)throw new Error('The remembered FlexText structure could not be loaded.');
+        state.mft=parseFlexText(saved.text);
+        state.mftText=saved.text;
+        state.mftName=saved.name;
+        $('#mftPath').textContent=`${saved.name} (remembered)`;
+        setStatus('#sMft',saved.name,'ok');
+        setStatus('#sRoot',state.mft.rootName,'ok');
+        setStatus('#sRecords',`${state.mft.definitions.length} FLF definitions`,'ok');
+        if(state.flat) await processFlatfile();
+    }catch(err){showError(err)}
+};
+
+$('#flatFile').onchange=async e=>{
+    const f=e.target.files[0];
+    if(!f)return;
+    try{
+        state.flat={file:f,text:await readText(f)};
+        $('#flatPath').textContent=f.name;
+        if(!state.mft){
+            $('#viewerHead').textContent='FlexText Flatfile Visualized-Tree-View';
+            $('#sourceHead').textContent='Flatfile Text-Editor-View with Line Numbers';
+            throw new Error('Please select the matching Altova FlexText structure (*.mft) before loading the flat file.');
+        }
+        await processFlatfile();
+    }catch(err){showError(err)}
+};
+
+$('#expand').onclick=()=>document.querySelectorAll('#tree details').forEach(d=>d.open=true);
+$('#collapse').onclick=()=>document.querySelectorAll('#tree details').forEach(d=>d.open=false);
+$('#rawBtn').onclick=()=>{
+    state.raw=!state.raw;
+    document.querySelectorAll('.raw').forEach(x=>x.hidden=!state.raw);
+};
+
+(async function init(){
+    await refreshSavedMfts();
+})();
+</script>
+</body>
+</html>

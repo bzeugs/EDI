@@ -1,0 +1,2560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../EDIConfig5.xsd" Version="5">
+	<Elements>
+		<Data name="F1000" type="string" maxLength="35" info="Document name"/>
+		<Data name="F1001" type="string" maxLength="3" info="Document name code"/>
+		<Data name="F1003" type="string" maxLength="6" info="Message type code"/>
+		<Data name="F1004" type="string" maxLength="70" info="Document identifier"/>
+		<Data name="F1049" type="string" maxLength="3" info="Message section code"/>
+		<Data name="F1050" type="string" maxLength="10" info="Sequence position identifier"/>
+		<Data name="F1052" type="string" maxLength="35" info="Message item identifier"/>
+		<Data name="F1054" type="decimal" maxLength="6" info="Message sub-item identifier"/>
+		<Data name="F1056" type="string" maxLength="9" info="Version identifier"/>
+		<Data name="F1058" type="string" maxLength="9" info="Release identifier"/>
+		<Data name="F1060" type="string" maxLength="6" info="Revision identifier"/>
+		<Data name="F1073" type="string" maxLength="3" info="DOCUMENT LINE ACTION CODE"/>
+		<Data name="F1082" type="string" maxLength="6" info="LINE ITEM IDENTIFIER"/>
+		<Data name="F1131" type="string" maxLength="17" info="Code list identification code"/>
+		<Data name="F1146" type="string" maxLength="35" info="Account name"/>
+		<Data name="F1147" type="string" maxLength="35" info="Account identifier"/>
+		<Data name="F1148" type="string" maxLength="17" info="Account abbreviated name"/>
+		<Data name="F1153" type="string" maxLength="3" info="Reference code qualifier"/>
+		<Data name="F1154" type="string" maxLength="70" info="Reference identifier"/>
+		<Data name="F1156" type="string" maxLength="6" info="Document line identifier"/>
+		<Data name="F1159" type="string" maxLength="3" info="Sequence identifier source code"/>
+		<Data name="F1170" type="string" maxLength="35" info="Accounting journal name"/>
+		<Data name="F1171" type="string" maxLength="17" info="Accounting journal identifier"/>
+		<Data name="F1218" type="decimal" maxLength="2" info="DOCUMENT ORIGINALS REQUIRED QUANTITY"/>
+		<Data name="F1220" type="decimal" maxLength="2" info="DOCUMENT COPIES REQUIRED QUANTITY"/>
+		<Data name="F1222" type="decimal" maxLength="2" info="CONFIGURATION LEVEL NUMBER"/>
+		<Data name="F1225" type="string" maxLength="3" info="MESSAGE FUNCTION CODE"/>
+		<Data name="F1227" type="string" maxLength="3" info="CALCULATION SEQUENCE CODE"/>
+		<Data name="F1228" type="string" maxLength="35" info="Action description"/>
+		<Data name="F1229" type="string" maxLength="3" info="Action code"/>
+		<Data name="F1230" type="string" maxLength="35" info="Allowance or charge identifier"/>
+		<Data name="F1312" type="decimal" maxLength="4" info="CONSIGNMENT LOAD SEQUENCE IDENTIFIER"/>
+		<Data name="F1366" type="string" maxLength="70" info="Document source description"/>
+		<Data name="F1373" type="string" maxLength="3" info="DOCUMENT STATUS CODE"/>
+		<Data name="F1476" type="string" maxLength="2" info="CONTROLLING AGENCY IDENTIFIER"/>
+		<Data name="F1490" type="decimal" maxLength="5" info="CONSOLIDATION ITEM NUMBER"/>
+		<Data name="F1496" type="string" maxLength="6" info="GOODS ITEM NUMBER"/>
+		<Data name="F1501" type="string" maxLength="3" info="COMPUTER ENVIRONMENT DETAILS CODE QUALIFIER"/>
+		<Data name="F1502" type="string" maxLength="35" info="Data format description"/>
+		<Data name="F1503" type="string" maxLength="3" info="Data format description code"/>
+		<Data name="F1505" type="string" maxLength="3" info="VALUE LIST TYPE CODE"/>
+		<Data name="F1507" type="string" maxLength="3" info="DESIGNATED CLASS CODE"/>
+		<Data name="F1508" type="string" maxLength="35" info="File name"/>
+		<Data name="F1510" type="string" maxLength="35" info="Computer environment name"/>
+		<Data name="F1511" type="string" maxLength="3" info="Computer environment name code"/>
+		<Data name="F1514" type="string" maxLength="70" info="VALUE LIST NAME"/>
+		<Data name="F1516" type="string" maxLength="17" info="File format name"/>
+		<Data name="F1518" type="string" maxLength="35" info="Value list identifier"/>
+		<Data name="F1520" type="string" maxLength="35" info="Data set identifier"/>
+		<Data name="F1523" type="string" maxLength="6" info="Message implementation identification code"/>
+		<Data name="F2005" type="string" maxLength="3" info="Date or time or period function code qualifier"/>
+		<Data name="F2009" type="string" maxLength="3" info="TERMS TIME RELATION CODE"/>
+		<Data name="F2013" type="string" maxLength="3" info="Frequency code"/>
+		<Data name="F2015" type="string" maxLength="3" info="Despatch pattern code"/>
+		<Data name="F2017" type="string" maxLength="3" info="Despatch pattern timing code"/>
+		<Data name="F2023" type="string" maxLength="3" info="PERIOD TYPE CODE QUALIFIER"/>
+		<Data name="F2118" type="string" maxLength="35" info="Period detail description"/>
+		<Data name="F2119" type="string" maxLength="3" info="Period detail description code"/>
+		<Data name="F2151" type="string" maxLength="3" info="PERIOD TYPE CODE"/>
+		<Data name="F2152" type="decimal" maxLength="3" info="PERIOD COUNT QUANTITY"/>
+		<Data name="F2379" type="string" maxLength="3" info="Date or time or period format code"/>
+		<Data name="F2380" type="string" maxLength="35" info="Date or time or period text"/>
+		<Data name="F2475" type="string" maxLength="3" info="EVENT TIME REFERENCE CODE"/>
+		<Data name="F3005" type="string" maxLength="3" info="MAINTENANCE OPERATION OPERATOR CODE"/>
+		<Data name="F3009" type="string" maxLength="3" info="MAINTENANCE OPERATION PAYER CODE"/>
+		<Data name="F3035" type="string" maxLength="3" info="PARTY FUNCTION CODE QUALIFIER"/>
+		<Data name="F3036" type="string" maxLength="70" info="Party name"/>
+		<Data name="F3039" type="string" maxLength="35" info="Party identifier"/>
+		<Data name="F3042" type="string" maxLength="35" info="Street and number or post office box identifier"/>
+		<Data name="F3045" type="string" maxLength="3" info="Party name format code"/>
+		<Data name="F3055" type="string" maxLength="3" info="Code list responsible agency code"/>
+		<Data name="F3077" type="string" maxLength="3" info="TEST MEDIUM CODE"/>
+		<Data name="F3079" type="string" maxLength="3" info="ORGANISATION CLASSIFICATION CODE"/>
+		<Data name="F3082" type="string" maxLength="70" info="Organisational class name"/>
+		<Data name="F3083" type="string" maxLength="17" info="Organisational class name code"/>
+		<Data name="F3124" type="string" maxLength="35" info="Name and address description"/>
+		<Data name="F3126" type="string" maxLength="35" info="Carrier name"/>
+		<Data name="F3127" type="string" maxLength="17" info="Carrier identifier"/>
+		<Data name="F3131" type="string" maxLength="3" info="Address type code"/>
+		<Data name="F3139" type="string" maxLength="3" info="CONTACT FUNCTION CODE"/>
+		<Data name="F3148" type="string" maxLength="512" info="Communication address identifier"/>
+		<Data name="F3153" type="string" maxLength="3" info="COMMUNICATION MEDIUM TYPE CODE"/>
+		<Data name="F3155" type="string" maxLength="3" info="Communication means type code"/>
+		<Data name="F3164" type="string" maxLength="35" info="CITY NAME"/>
+		<Data name="F3192" type="string" maxLength="35" info="Account holder name"/>
+		<Data name="F3194" type="string" maxLength="35" info="Account holder identifier"/>
+		<Data name="F3207" type="string" maxLength="3" info="COUNTRY IDENTIFIER"/>
+		<Data name="F3222" type="string" maxLength="70" info="First related location name"/>
+		<Data name="F3223" type="string" maxLength="35" info="First related location identifier"/>
+		<Data name="F3224" type="string" maxLength="256" info="Location name"/>
+		<Data name="F3225" type="string" maxLength="35" info="Location identifier"/>
+		<Data name="F3227" type="string" maxLength="3" info="LOCATION FUNCTION CODE QUALIFIER"/>
+		<Data name="F3228" type="string" maxLength="70" info="Country subdivision name"/>
+		<Data name="F3229" type="string" maxLength="9" info="Country subdivision identifier"/>
+		<Data name="F3232" type="string" maxLength="70" info="Second related location name"/>
+		<Data name="F3233" type="string" maxLength="35" info="Second related location identifier"/>
+		<Data name="F3236" type="string" maxLength="35" info="Sample location description"/>
+		<Data name="F3237" type="string" maxLength="3" info="Sample location description code"/>
+		<Data name="F3239" type="string" maxLength="3" info="COUNTRY OF ORIGIN IDENTIFIER"/>
+		<Data name="F3251" type="string" maxLength="17" info="POSTAL IDENTIFICATION CODE"/>
+		<Data name="F3279" type="string" maxLength="3" info="GEOGRAPHIC AREA CODE"/>
+		<Data name="F3285" type="string" maxLength="35" info="Instruction receiving party identifier"/>
+		<Data name="F3286" type="string" maxLength="70" info="Address component description"/>
+		<Data name="F3289" type="string" maxLength="3" info="PERSON CHARACTERISTIC CODE QUALIFIER"/>
+		<Data name="F3292" type="string" maxLength="35" info="Nationality name"/>
+		<Data name="F3293" type="string" maxLength="3" info="Nationality name code"/>
+		<Data name="F3295" type="string" maxLength="3" info="Name original alphabet code"/>
+		<Data name="F3299" type="string" maxLength="3" info="Address purpose code"/>
+		<Data name="F3301" type="string" maxLength="35" info="Enacting party identifier"/>
+		<Data name="F3310" type="string" maxLength="70" info="Inherited characteristic description"/>
+		<Data name="F3311" type="string" maxLength="8" info="Inherited characteristic description code"/>
+		<Data name="F3397" type="string" maxLength="3" info="NAME STATUS CODE"/>
+		<Data name="F3398" type="string" maxLength="256" info="Name component description"/>
+		<Data name="F3401" type="string" maxLength="3" info="Name component usage code"/>
+		<Data name="F3403" type="string" maxLength="3" info="NAME TYPE CODE"/>
+		<Data name="F3405" type="string" maxLength="3" info="Name component type code qualifier"/>
+		<Data name="F3412" type="string" maxLength="256" info="Contact name"/>
+		<Data name="F3413" type="string" maxLength="17" info="Contact identifier"/>
+		<Data name="F3432" type="string" maxLength="70" info="Institution name"/>
+		<Data name="F3433" type="string" maxLength="11" info="Institution name code"/>
+		<Data name="F3434" type="string" maxLength="17" info="Institution branch identifier"/>
+		<Data name="F3436" type="string" maxLength="70" info="Institution branch location name"/>
+		<Data name="F3446" type="string" maxLength="20" info="PARTY TAX IDENTIFIER"/>
+		<Data name="F3452" type="string" maxLength="35" info="Language name"/>
+		<Data name="F3453" type="string" maxLength="3" info="LANGUAGE NAME CODE"/>
+		<Data name="F3455" type="string" maxLength="3" info="LANGUAGE CODE QUALIFIER"/>
+		<Data name="F3475" type="string" maxLength="3" info="Address status code"/>
+		<Data name="F3477" type="string" maxLength="3" info="Address format code"/>
+		<Data name="F3478" type="string" maxLength="35" info="Marital status description"/>
+		<Data name="F3479" type="string" maxLength="3" info="Marital status description code"/>
+		<Data name="F3480" type="string" maxLength="35" info="PERSON JOB TITLE"/>
+		<Data name="F3482" type="string" maxLength="35" info="Religion name"/>
+		<Data name="F3483" type="string" maxLength="3" info="Religion name code"/>
+		<Data name="F3493" type="string" maxLength="3" info="NATIONALITY CODE QUALIFIER"/>
+		<Data name="F3496" type="string" maxLength="17" info="Sales channel identifier"/>
+		<Data name="F3499" type="string" maxLength="3" info="GENDER CODE"/>
+		<Data name="F4017" type="string" maxLength="3" info="DELIVERY PLAN COMMITMENT LEVEL CODE"/>
+		<Data name="F4022" type="string" maxLength="70" info="Business description"/>
+		<Data name="F4025" type="string" maxLength="3" info="Business function code"/>
+		<Data name="F4027" type="string" maxLength="3" info="Business function type code qualifier"/>
+		<Data name="F4035" type="string" maxLength="3" info="PRIORITY TYPE CODE QUALIFIER"/>
+		<Data name="F4036" type="string" maxLength="35" info="Priority description"/>
+		<Data name="F4037" type="string" maxLength="3" info="Priority description code"/>
+		<Data name="F4038" type="string" maxLength="35" info="Additional safety information description"/>
+		<Data name="F4039" type="string" maxLength="3" info="Additional safety information description code"/>
+		<Data name="F4043" type="string" maxLength="3" info="TRADE CLASS CODE"/>
+		<Data name="F4044" type="string" maxLength="70" info="Safety section name"/>
+		<Data name="F4046" type="decimal" maxLength="2" info="Safety section number"/>
+		<Data name="F4048" type="string" maxLength="35" info="Certainty description"/>
+		<Data name="F4049" type="string" maxLength="3" info="Certainty description code"/>
+		<Data name="F4051" type="string" maxLength="3" info="CHARACTERISTIC RELEVANCE CODE"/>
+		<Data name="F4052" type="string" maxLength="70" info="Delivery or transport terms description"/>
+		<Data name="F4053" type="string" maxLength="3" info="Delivery or transport terms description code"/>
+		<Data name="F4055" type="string" maxLength="3" info="DELIVERY OR TRANSPORT TERMS FUNCTION CODE"/>
+		<Data name="F4056" type="string" maxLength="256" info="Question description"/>
+		<Data name="F4057" type="string" maxLength="3" info="Question description code"/>
+		<Data name="F4059" type="string" maxLength="3" info="CLAUSE CODE QUALIFIER"/>
+		<Data name="F4065" type="string" maxLength="3" info="Contract and carriage condition code"/>
+		<Data name="F4068" type="string" maxLength="70" info="Clause name"/>
+		<Data name="F4069" type="string" maxLength="17" info="Clause name code"/>
+		<Data name="F4071" type="string" maxLength="3" info="PROVISO CODE QUALIFIER"/>
+		<Data name="F4072" type="string" maxLength="35" info="Proviso type description"/>
+		<Data name="F4073" type="string" maxLength="3" info="Proviso type description code"/>
+		<Data name="F4074" type="string" maxLength="35" info="Proviso calculation description"/>
+		<Data name="F4075" type="string" maxLength="3" info="Proviso calculation description code"/>
+		<Data name="F4078" type="string" maxLength="512" info="Handling instruction description"/>
+		<Data name="F4079" type="string" maxLength="3" info="Handling instruction description code"/>
+		<Data name="F4148" type="string" maxLength="70" info="Information category description"/>
+		<Data name="F4149" type="string" maxLength="3" info="Information category description code"/>
+		<Data name="F4150" type="string" maxLength="256" info="Information detail description"/>
+		<Data name="F4151" type="string" maxLength="17" info="Information detail description code"/>
+		<Data name="F4153" type="string" maxLength="3" info="INFORMATION DETAILS CODE QUALIFIER"/>
+		<Data name="F4183" type="string" maxLength="3" info="SPECIAL CONDITION CODE"/>
+		<Data name="F4215" type="string" maxLength="3" info="Transport charges payment method code"/>
+		<Data name="F4219" type="string" maxLength="3" info="Transport service priority code"/>
+		<Data name="F4221" type="string" maxLength="3" info="DISCREPANCY NATURE IDENTIFICATION CODE"/>
+		<Data name="F4233" type="string" maxLength="3" info="MARKING INSTRUCTIONS CODE"/>
+		<Data name="F4237" type="string" maxLength="3" info="PAYMENT ARRANGEMENT CODE"/>
+		<Data name="F4276" type="string" maxLength="35" info="Payment terms description"/>
+		<Data name="F4277" type="string" maxLength="17" info="Payment terms description identifier"/>
+		<Data name="F4279" type="string" maxLength="3" info="PAYMENT TERMS TYPE CODE QUALIFIER"/>
+		<Data name="F4294" type="string" maxLength="35" info="Change reason description"/>
+		<Data name="F4295" type="string" maxLength="3" info="Change reason description code"/>
+		<Data name="F4343" type="string" maxLength="3" info="RESPONSE TYPE CODE"/>
+		<Data name="F4344" type="string" maxLength="256" info="Response description"/>
+		<Data name="F4345" type="string" maxLength="3" info="Response description code"/>
+		<Data name="F4347" type="string" maxLength="3" info="PRODUCT IDENTIFIER CODE QUALIFIER"/>
+		<Data name="F4383" type="string" maxLength="3" info="Bank operation code"/>
+		<Data name="F4400" type="string" maxLength="35" info="Instruction description"/>
+		<Data name="F4401" type="string" maxLength="3" info="Instruction description code"/>
+		<Data name="F4403" type="string" maxLength="3" info="Instruction type code qualifier"/>
+		<Data name="F4404" type="string" maxLength="35" info="Status description"/>
+		<Data name="F4405" type="string" maxLength="3" info="STATUS DESCRIPTION CODE"/>
+		<Data name="F4407" type="string" maxLength="3" info="SAMPLE PROCESS STEP CODE"/>
+		<Data name="F4415" type="string" maxLength="17" info="Test method identifier"/>
+		<Data name="F4416" type="string" maxLength="70" info="Test description"/>
+		<Data name="F4419" type="string" maxLength="3" info="TEST ADMINISTRATION METHOD CODE"/>
+		<Data name="F4424" type="string" maxLength="35" info="Test reason name"/>
+		<Data name="F4425" type="string" maxLength="17" info="Test reason name code"/>
+		<Data name="F4431" type="string" maxLength="3" info="Payment guarantee means code"/>
+		<Data name="F4435" type="string" maxLength="3" info="Payment channel code"/>
+		<Data name="F4437" type="string" maxLength="3" info="ACCOUNT TYPE CODE QUALIFIER"/>
+		<Data name="F4439" type="string" maxLength="3" info="Payment conditions code"/>
+		<Data name="F4440" type="string" maxLength="512" info="FREE TEXT"/>
+		<Data name="F4441" type="string" maxLength="17" info="Free text description code"/>
+		<Data name="F4447" type="string" maxLength="3" info="FREE TEXT FORMAT CODE"/>
+		<Data name="F4451" type="string" maxLength="3" info="TEXT SUBJECT CODE QUALIFIER"/>
+		<Data name="F4453" type="string" maxLength="3" info="FREE TEXT FUNCTION CODE"/>
+		<Data name="F4455" type="string" maxLength="3" info="BACK ORDER ARRANGEMENT TYPE CODE"/>
+		<Data name="F4457" type="string" maxLength="3" info="SUBSTITUTION CONDITION CODE"/>
+		<Data name="F4461" type="string" maxLength="3" info="Payment means code"/>
+		<Data name="F4463" type="string" maxLength="3" info="INTRA-COMPANY PAYMENT INDICATOR CODE"/>
+		<Data name="F4465" type="string" maxLength="3" info="ADJUSTMENT REASON DESCRIPTION CODE"/>
+		<Data name="F4471" type="string" maxLength="3" info="SETTLEMENT MEANS CODE"/>
+		<Data name="F4472" type="string" maxLength="35" info="Information type"/>
+		<Data name="F4473" type="string" maxLength="4" info="Information type code"/>
+		<Data name="F4474" type="string" maxLength="35" info="Accounting entry type name"/>
+		<Data name="F4475" type="string" maxLength="17" info="Accounting entry type name code"/>
+		<Data name="F4487" type="string" maxLength="3" info="FINANCIAL TRANSACTION TYPE CODE"/>
+		<Data name="F4493" type="string" maxLength="3" info="DELIVERY INSTRUCTION CODE"/>
+		<Data name="F4494" type="string" maxLength="35" info="Insurance cover description"/>
+		<Data name="F4495" type="string" maxLength="17" info="Insurance cover description code"/>
+		<Data name="F4497" type="string" maxLength="3" info="Insurance cover type code"/>
+		<Data name="F4499" type="string" maxLength="3" info="INVENTORY MOVEMENT REASON CODE"/>
+		<Data name="F4501" type="string" maxLength="3" info="INVENTORY MOVEMENT DIRECTION CODE"/>
+		<Data name="F4503" type="string" maxLength="3" info="INVENTORY BALANCE METHOD CODE"/>
+		<Data name="F4505" type="string" maxLength="3" info="CREDIT COVER REQUEST TYPE CODE"/>
+		<Data name="F4507" type="string" maxLength="3" info="CREDIT COVER RESPONSE TYPE CODE"/>
+		<Data name="F4509" type="string" maxLength="3" info="CREDIT COVER RESPONSE REASON CODE"/>
+		<Data name="F4510" type="string" maxLength="35" info="Requested information description"/>
+		<Data name="F4511" type="string" maxLength="3" info="Requested information description code"/>
+		<Data name="F4513" type="string" maxLength="3" info="MAINTENANCE OPERATION CODE"/>
+		<Data name="F4517" type="string" maxLength="3" info="SEAL CONDITION CODE"/>
+		<Data name="F4519" type="string" maxLength="35" info="DEFINITION IDENTIFIER"/>
+		<Data name="F4521" type="string" maxLength="17" info="Premium calculation component identifier"/>
+		<Data name="F4522" type="string" maxLength="35" info="PREMIUM CALCULATION COMPONENT VALUE CATEGORY IDENTIFIER"/>
+		<Data name="F4525" type="string" maxLength="3" info="SEAL TYPE CODE"/>
+		<Data name="F5004" type="decimal" maxLength="35" info="Monetary amount"/>
+		<Data name="F5006" type="string" maxLength="70" info="Monetary amount function description"/>
+		<Data name="F5007" type="string" maxLength="3" info="Monetary amount function description code"/>
+		<Data name="F5013" type="string" maxLength="3" info="Index code qualifier"/>
+		<Data name="F5025" type="string" maxLength="3" info="Monetary amount type code qualifier"/>
+		<Data name="F5027" type="string" maxLength="17" info="Index type identifier"/>
+		<Data name="F5030" type="string" maxLength="35" info="Index text"/>
+		<Data name="F5039" type="string" maxLength="3" info="Index representation code"/>
+		<Data name="F5047" type="string" maxLength="3" info="CONTRIBUTION CODE QUALIFIER"/>
+		<Data name="F5048" type="string" maxLength="35" info="Contribution type description"/>
+		<Data name="F5049" type="string" maxLength="3" info="Contribution type description code"/>
+		<Data name="F5104" type="string" maxLength="70" info="Monetary amount function detail description"/>
+		<Data name="F5105" type="string" maxLength="17" info="Monetary amount function detail description code"/>
+		<Data name="F5118" type="decimal" maxLength="15" info="Price amount"/>
+		<Data name="F5125" type="string" maxLength="3" info="Price code qualifier"/>
+		<Data name="F5152" type="string" maxLength="35" info="Duty or tax or fee type name"/>
+		<Data name="F5153" type="string" maxLength="3" info="Duty or tax or fee type name code"/>
+		<Data name="F5189" type="string" maxLength="3" info="Allowance or charge identification code"/>
+		<Data name="F5213" type="string" maxLength="3" info="SUB-LINE ITEM PRICE CHANGE OPERATION CODE"/>
+		<Data name="F5237" type="string" maxLength="3" info="Charge category code"/>
+		<Data name="F5242" type="string" maxLength="35" info="Rate or tariff class description"/>
+		<Data name="F5243" type="string" maxLength="9" info="Rate or tariff class description code"/>
+		<Data name="F5245" type="string" maxLength="3" info="Percentage type code qualifier"/>
+		<Data name="F5249" type="string" maxLength="3" info="Percentage basis identification code"/>
+		<Data name="F5273" type="string" maxLength="12" info="Duty or tax or fee rate basis code"/>
+		<Data name="F5275" type="string" maxLength="6" info="Supplementary rate or tariff code"/>
+		<Data name="F5278" type="string" maxLength="17" info="Duty or tax or fee rate"/>
+		<Data name="F5279" type="string" maxLength="7" info="Duty or tax or fee rate code"/>
+		<Data name="F5283" type="string" maxLength="3" info="DUTY OR TAX OR FEE FUNCTION CODE QUALIFIER"/>
+		<Data name="F5284" type="decimal" maxLength="9" info="Unit price basis quantity"/>
+		<Data name="F5286" type="string" maxLength="15" info="DUTY OR TAX OR FEE ASSESSMENT BASIS QUANTITY"/>
+		<Data name="F5289" type="string" maxLength="6" info="Duty or tax or fee account code"/>
+		<Data name="F5305" type="string" maxLength="3" info="DUTY OR TAX OR FEE CATEGORY CODE"/>
+		<Data name="F5307" type="string" maxLength="3" info="TAX OR DUTY OR FEE PAYMENT DUE DATE CODE"/>
+		<Data name="F5314" type="string" maxLength="35" info="Remuneration type name"/>
+		<Data name="F5315" type="string" maxLength="3" info="Remuneration type name code"/>
+		<Data name="F5375" type="string" maxLength="3" info="Price type code"/>
+		<Data name="F5379" type="string" maxLength="3" info="PRODUCT GROUP TYPE CODE"/>
+		<Data name="F5387" type="string" maxLength="3" info="Price specification code"/>
+		<Data name="F5388" type="string" maxLength="35" info="Product group name"/>
+		<Data name="F5389" type="string" maxLength="25" info="Product group name code"/>
+		<Data name="F5393" type="string" maxLength="3" info="Price multiplier type code qualifier"/>
+		<Data name="F5394" type="decimal" maxLength="12" info="Price multiplier rate"/>
+		<Data name="F5402" type="decimal" maxLength="12" info="CURRENCY EXCHANGE RATE"/>
+		<Data name="F5419" type="string" maxLength="3" info="Rate type code qualifier"/>
+		<Data name="F5420" type="decimal" maxLength="15" info="Unit price basis rate"/>
+		<Data name="F5463" type="string" maxLength="3" info="ALLOWANCE OR CHARGE CODE QUALIFIER"/>
+		<Data name="F5479" type="string" maxLength="3" info="RELATION CODE"/>
+		<Data name="F5482" type="decimal" maxLength="10" info="Percentage"/>
+		<Data name="F5495" type="string" maxLength="3" info="Sub-line indicator code"/>
+		<Data name="F6000" type="string" maxLength="10" info="LATITUDE DEGREE"/>
+		<Data name="F6002" type="string" maxLength="11" info="LONGITUDE DEGREE"/>
+		<Data name="F6008" type="decimal" maxLength="15" info="Height measure"/>
+		<Data name="F6029" type="string" maxLength="3" info="GEOGRAPHICAL POSITION CODE QUALIFIER"/>
+		<Data name="F6060" type="string" maxLength="35" info="Quantity"/>
+		<Data name="F6063" type="string" maxLength="3" info="Quantity type code qualifier"/>
+		<Data name="F6064" type="decimal" maxLength="15" info="Variance quantity"/>
+		<Data name="F6066" type="decimal" maxLength="18" info="Control total quantity"/>
+		<Data name="F6069" type="string" maxLength="3" info="Control total type code qualifier"/>
+		<Data name="F6071" type="string" maxLength="3" info="Frequency code qualifier"/>
+		<Data name="F6072" type="decimal" maxLength="9" info="Frequency rate"/>
+		<Data name="F6074" type="decimal" maxLength="6" info="CONFIDENCE PERCENT"/>
+		<Data name="F6077" type="string" maxLength="3" info="RESULT REPRESENTATION CODE"/>
+		<Data name="F6079" type="string" maxLength="3" info="RESULT NORMALCY CODE"/>
+		<Data name="F6082" type="string" maxLength="70" info="Dosage description"/>
+		<Data name="F6083" type="string" maxLength="8" info="Dosage description identifier"/>
+		<Data name="F6085" type="string" maxLength="3" info="DOSAGE ADMINISTRATION CODE QUALIFIER"/>
+		<Data name="F6087" type="string" maxLength="3" info="RESULT VALUE TYPE CODE QUALIFIER"/>
+		<Data name="F6096" type="decimal" maxLength="18" info="ALTITUDE"/>
+		<Data name="F6113" type="string" maxLength="3" info="LENGTH TYPE CODE"/>
+		<Data name="F6140" type="decimal" maxLength="15" info="Width measure"/>
+		<Data name="F6145" type="string" maxLength="3" info="DIMENSION TYPE CODE QUALIFIER"/>
+		<Data name="F6152" type="decimal" maxLength="18" info="Range maximum quantity"/>
+		<Data name="F6154" type="string" maxLength="70" info="Non-discrete measurement name"/>
+		<Data name="F6155" type="string" maxLength="17" info="Non-discrete measurement name code"/>
+		<Data name="F6162" type="decimal" maxLength="18" info="Range minimum quantity"/>
+		<Data name="F6167" type="string" maxLength="3" info="RANGE TYPE CODE QUALIFIER"/>
+		<Data name="F6168" type="decimal" maxLength="15" info="Length measure"/>
+		<Data name="F6173" type="string" maxLength="3" info="Size type code qualifier"/>
+		<Data name="F6174" type="decimal" maxLength="15" info="SIZE MEASURE"/>
+		<Data name="F6176" type="decimal" maxLength="7" info="OCCURRENCES MAXIMUM NUMBER"/>
+		<Data name="F6178" type="decimal" maxLength="3" info="EDIT FIELD LENGTH MEASURE"/>
+		<Data name="F6182" type="decimal" maxLength="15" info="Diameter measure"/>
+		<Data name="F6245" type="string" maxLength="3" info="TEMPERATURE TYPE CODE QUALIFIER"/>
+		<Data name="F6246" type="decimal" maxLength="15" info="Temperature degree"/>
+		<Data name="F6311" type="string" maxLength="3" info="MEASUREMENT PURPOSE CODE QUALIFIER"/>
+		<Data name="F6313" type="string" maxLength="3" info="Measured attribute code"/>
+		<Data name="F6314" type="string" maxLength="18" info="Measure"/>
+		<Data name="F6321" type="string" maxLength="3" info="Measurement significance code"/>
+		<Data name="F6331" type="string" maxLength="3" info="STATISTIC TYPE CODE QUALIFIER"/>
+		<Data name="F6341" type="string" maxLength="3" info="EXCHANGE RATE CURRENCY MARKET IDENTIFIER"/>
+		<Data name="F6343" type="string" maxLength="3" info="Currency type code qualifier"/>
+		<Data name="F6345" type="string" maxLength="3" info="Currency identification code"/>
+		<Data name="F6347" type="string" maxLength="3" info="Currency usage code qualifier"/>
+		<Data name="F6348" type="decimal" maxLength="4" info="Currency rate"/>
+		<Data name="F6350" type="decimal" maxLength="15" info="Units quantity"/>
+		<Data name="F6353" type="string" maxLength="3" info="Unit type code qualifier"/>
+		<Data name="F6410" type="string" maxLength="35" info="Measurement unit name"/>
+		<Data name="F6411" type="string" maxLength="8" info="Measurement unit code"/>
+		<Data name="F6412" type="string" maxLength="70" info="Clinical information description"/>
+		<Data name="F6413" type="string" maxLength="17" info="Clinical information description identifier"/>
+		<Data name="F6415" type="string" maxLength="3" info="CLINICAL INFORMATION TYPE CODE QUALIFIER"/>
+		<Data name="F6426" type="decimal" maxLength="2" info="PROCESS STAGES QUANTITY"/>
+		<Data name="F6428" type="decimal" maxLength="2" info="PROCESS STAGES ACTUAL QUANTITY"/>
+		<Data name="F6432" type="decimal" maxLength="2" info="SIGNIFICANT DIGITS QUANTITY"/>
+		<Data name="F6434" type="string" maxLength="35" info="Statistical concept identifier"/>
+		<Data name="F7001" type="string" maxLength="3" info="PHYSICAL OR LOGICAL STATE TYPE CODE QUALIFIER"/>
+		<Data name="F7006" type="string" maxLength="70" info="Physical or logical state description"/>
+		<Data name="F7007" type="string" maxLength="3" info="Physical or logical state description code"/>
+		<Data name="F7008" type="string" maxLength="256" info="Item description"/>
+		<Data name="F7009" type="string" maxLength="17" info="Item description code"/>
+		<Data name="F7036" type="string" maxLength="35" info="Characteristic description"/>
+		<Data name="F7037" type="string" maxLength="17" info="Characteristic description code"/>
+		<Data name="F7039" type="string" maxLength="3" info="SAMPLE SELECTION METHOD CODE"/>
+		<Data name="F7040" type="string" maxLength="17" info="Power type description"/>
+		<Data name="F7041" type="string" maxLength="3" info="Power type code"/>
+		<Data name="F7045" type="string" maxLength="3" info="SAMPLE STATE CODE"/>
+		<Data name="F7047" type="string" maxLength="3" info="SAMPLE DIRECTION CODE"/>
+		<Data name="F7059" type="string" maxLength="3" info="CLASS TYPE CODE"/>
+		<Data name="F7064" type="string" maxLength="35" info="Type of packages"/>
+		<Data name="F7065" type="string" maxLength="17" info="Package type description code"/>
+		<Data name="F7073" type="string" maxLength="3" info="Packaging terms and conditions code"/>
+		<Data name="F7075" type="string" maxLength="3" info="PACKAGING LEVEL CODE"/>
+		<Data name="F7077" type="string" maxLength="3" info="DESCRIPTION FORMAT CODE"/>
+		<Data name="F7081" type="string" maxLength="3" info="Item characteristic code"/>
+		<Data name="F7083" type="string" maxLength="3" info="CONFIGURATION OPERATION CODE"/>
+		<Data name="F7085" type="string" maxLength="3" info="Cargo type classification code"/>
+		<Data name="F7088" type="string" maxLength="8" info="Dangerous goods flashpoint description"/>
+		<Data name="F7102" type="string" maxLength="35" info="Shipping marks description"/>
+		<Data name="F7106" type="decimal" minLength="3" maxLength="3" info="Shipment flashpoint degree"/>
+		<Data name="F7110" type="string" maxLength="35" info="Characteristic value description"/>
+		<Data name="F7111" type="string" maxLength="3" info="Characteristic value description code"/>
+		<Data name="F7124" type="decimal" minLength="4" maxLength="4" info="United Nations Dangerous Goods (UNDG) identifier"/>
+		<Data name="F7130" type="string" maxLength="17" info="Customer shipment authorisation identifier"/>
+		<Data name="F7140" type="string" maxLength="35" info="ITEM IDENTIFIER"/>
+		<Data name="F7143" type="string" maxLength="3" info="Item type identification code"/>
+		<Data name="F7160" type="string" maxLength="35" info="Special service description"/>
+		<Data name="F7161" type="string" maxLength="3" info="Special service description code"/>
+		<Data name="F7164" type="string" maxLength="35" info="Hierarchical structure level identifier"/>
+		<Data name="F7166" type="string" maxLength="35" info="HIERARCHICAL STRUCTURE PARENT IDENTIFIER"/>
+		<Data name="F7168" type="decimal" maxLength="3" info="LEVEL NUMBER"/>
+		<Data name="F7171" type="string" maxLength="3" info="HIERARCHICAL STRUCTURE RELATIONSHIP CODE"/>
+		<Data name="F7173" type="string" maxLength="3" info="HIERARCHY OBJECT CODE QUALIFIER"/>
+		<Data name="F7175" type="string" maxLength="7" info="RULE PART IDENTIFIER"/>
+		<Data name="F7176" type="string" maxLength="70" info="Risk object sub-type description"/>
+		<Data name="F7177" type="string" maxLength="17" info="Risk object sub-type description identifier"/>
+		<Data name="F7179" type="string" maxLength="17" info="Risk object type identifier"/>
+		<Data name="F7186" type="string" maxLength="35" info="Process type description"/>
+		<Data name="F7187" type="string" maxLength="17" info="PROCESS TYPE DESCRIPTION CODE"/>
+		<Data name="F7188" type="string" maxLength="30" info="TEST METHOD REVISION IDENTIFIER"/>
+		<Data name="F7190" type="string" maxLength="70" info="Process description"/>
+		<Data name="F7191" type="string" maxLength="17" info="Process description code"/>
+		<Data name="F7224" type="decimal" maxLength="8" info="Package quantity"/>
+		<Data name="F7233" type="string" maxLength="3" info="Packaging related description code"/>
+		<Data name="F7240" type="decimal" maxLength="15" info="ITEM TOTAL QUANTITY"/>
+		<Data name="F7273" type="string" maxLength="3" info="Service requirement code"/>
+		<Data name="F7293" type="string" maxLength="3" info="SECTOR AREA IDENTIFICATION CODE QUALIFIER"/>
+		<Data name="F7294" type="string" maxLength="35" info="Requirement or condition description"/>
+		<Data name="F7295" type="string" maxLength="17" info="Requirement or condition description identifier"/>
+		<Data name="F7297" type="string" maxLength="3" info="SET TYPE CODE QUALIFIER"/>
+		<Data name="F7299" type="string" maxLength="3" info="REQUIREMENT DESIGNATOR CODE"/>
+		<Data name="F7357" type="string" maxLength="18" info="Commodity identification code"/>
+		<Data name="F7361" type="string" maxLength="18" info="Customs goods identifier"/>
+		<Data name="F7364" type="string" maxLength="35" info="Processing indicator description"/>
+		<Data name="F7365" type="string" maxLength="3" info="Processing indicator description code"/>
+		<Data name="F7383" type="string" maxLength="3" info="SURFACE OR LAYER CODE"/>
+		<Data name="F7402" type="string" maxLength="35" info="Object identifier"/>
+		<Data name="F7405" type="string" maxLength="3" info="Object identification code qualifier"/>
+		<Data name="F7418" type="string" maxLength="35" info="Hazardous material category name"/>
+		<Data name="F7419" type="string" maxLength="7" info="Hazardous material category name code"/>
+		<Data name="F7429" type="string" maxLength="3" info="INDEXING STRUCTURE CODE QUALIFIER"/>
+		<Data name="F7431" type="string" maxLength="3" info="Agreement type code qualifier"/>
+		<Data name="F7433" type="string" maxLength="3" info="Agreement type description code"/>
+		<Data name="F7434" type="string" maxLength="70" info="Agreement type description"/>
+		<Data name="F7436" type="string" maxLength="17" info="Level one identifier"/>
+		<Data name="F7438" type="string" maxLength="17" info="Level two identifier"/>
+		<Data name="F7440" type="string" maxLength="17" info="Level three identifier"/>
+		<Data name="F7442" type="string" maxLength="17" info="Level four identifier"/>
+		<Data name="F7444" type="string" maxLength="17" info="Level five identifier"/>
+		<Data name="F7446" type="string" maxLength="17" info="Level six identifier"/>
+		<Data name="F7449" type="string" maxLength="3" info="MEMBERSHIP TYPE CODE QUALIFIER"/>
+		<Data name="F7450" type="string" maxLength="35" info="Membership category description"/>
+		<Data name="F7451" type="string" maxLength="4" info="Membership category description code"/>
+		<Data name="F7452" type="string" maxLength="35" info="Membership status description"/>
+		<Data name="F7453" type="string" maxLength="3" info="Membership status description code"/>
+		<Data name="F7455" type="string" maxLength="3" info="Membership level code qualifier"/>
+		<Data name="F7456" type="string" maxLength="35" info="Membership level description"/>
+		<Data name="F7457" type="string" maxLength="9" info="Membership level description code"/>
+		<Data name="F7458" type="string" maxLength="35" info="Attendee category description"/>
+		<Data name="F7459" type="string" maxLength="3" info="Attendee category description code"/>
+		<Data name="F7491" type="string" maxLength="3" info="INVENTORY TYPE CODE"/>
+		<Data name="F7493" type="string" maxLength="3" info="DAMAGE DETAILS CODE QUALIFIER"/>
+		<Data name="F7495" type="string" maxLength="3" info="OBJECT TYPE CODE QUALIFIER"/>
+		<Data name="F7497" type="string" maxLength="3" info="STRUCTURE COMPONENT FUNCTION CODE QUALIFIER"/>
+		<Data name="F7500" type="string" maxLength="35" info="Damage type description"/>
+		<Data name="F7501" type="string" maxLength="3" info="Damage type description code"/>
+		<Data name="F7502" type="string" maxLength="35" info="Damage area description"/>
+		<Data name="F7503" type="string" maxLength="4" info="Damage area description code"/>
+		<Data name="F7504" type="string" maxLength="35" info="Unit or component type description"/>
+		<Data name="F7505" type="string" maxLength="3" info="Unit or component type description code"/>
+		<Data name="F7506" type="string" maxLength="35" info="Component material description"/>
+		<Data name="F7507" type="string" maxLength="3" info="Component material description code"/>
+		<Data name="F7508" type="string" maxLength="35" info="Damage severity description"/>
+		<Data name="F7509" type="string" maxLength="3" info="Damage severity description code"/>
+		<Data name="F7511" type="string" maxLength="3" info="Marking type code"/>
+		<Data name="F7512" type="string" maxLength="35" info="STRUCTURE COMPONENT IDENTIFIER"/>
+		<Data name="F7515" type="string" maxLength="3" info="STRUCTURE TYPE CODE"/>
+		<Data name="F8022" type="string" maxLength="26" info="Freight and other charges description"/>
+		<Data name="F8023" type="string" maxLength="17" info="Freight and other charges description identifier"/>
+		<Data name="F8024" type="string" maxLength="35" info="Conveyance call purpose description"/>
+		<Data name="F8025" type="string" maxLength="3" info="Conveyance call purpose description code"/>
+		<Data name="F8028" type="string" maxLength="17" info="MEANS OF TRANSPORT JOURNEY IDENTIFIER"/>
+		<Data name="F8051" type="string" maxLength="3" info="TRANSPORT STAGE CODE QUALIFIER"/>
+		<Data name="F8053" type="string" maxLength="3" info="EQUIPMENT TYPE CODE QUALIFIER"/>
+		<Data name="F8066" type="string" maxLength="17" info="Transport mode name"/>
+		<Data name="F8067" type="string" maxLength="3" info="Transport mode name code"/>
+		<Data name="F8077" type="string" maxLength="3" info="EQUIPMENT SUPPLIER CODE"/>
+		<Data name="F8078" type="string" maxLength="7" info="Additional hazard classification identifier"/>
+		<Data name="F8092" type="string" maxLength="10" info="Hazard code version identifier"/>
+		<Data name="F8101" type="string" maxLength="3" info="TRANSIT DIRECTION INDICATOR CODE"/>
+		<Data name="F8126" type="string" maxLength="10" info="TRANSPORT EMERGENCY CARD IDENTIFIER"/>
+		<Data name="F8154" type="string" maxLength="35" info="Equipment size and type description"/>
+		<Data name="F8155" type="string" maxLength="10" info="Equipment size and type description code"/>
+		<Data name="F8158" type="string" maxLength="4" info="Orange hazard placard upper part identifier"/>
+		<Data name="F8169" type="string" maxLength="3" info="FULL OR EMPTY INDICATOR CODE"/>
+		<Data name="F8178" type="string" maxLength="17" info="Transport means description"/>
+		<Data name="F8179" type="string" maxLength="8" info="TRANSPORT MEANS DESCRIPTION CODE"/>
+		<Data name="F8186" type="string" minLength="4" maxLength="4" info="Orange hazard placard lower part identifier"/>
+		<Data name="F8211" type="string" maxLength="3" info="HAZARDOUS CARGO TRANSPORT AUTHORISATION CODE"/>
+		<Data name="F8212" type="string" maxLength="70" info="Transport means identification name"/>
+		<Data name="F8213" type="string" maxLength="35" info="Transport means identification name identifier"/>
+		<Data name="F8246" type="string" maxLength="4" info="Dangerous goods marking identifier"/>
+		<Data name="F8249" type="string" maxLength="3" info="EQUIPMENT STATUS CODE"/>
+		<Data name="F8255" type="string" maxLength="3" info="PACKING INSTRUCTION TYPE CODE"/>
+		<Data name="F8260" type="string" maxLength="17" info="Equipment identifier"/>
+		<Data name="F8273" type="string" maxLength="3" info="DANGEROUS GOODS REGULATIONS CODE"/>
+		<Data name="F8281" type="string" maxLength="3" info="TRANSPORT MEANS OWNERSHIP INDICATOR CODE"/>
+		<Data name="F8323" type="string" maxLength="3" info="TRANSPORT MOVEMENT CODE"/>
+		<Data name="F8332" type="string" maxLength="26" info="EQUIPMENT PLAN DESCRIPTION"/>
+		<Data name="F8334" type="string" maxLength="35" info="Movement type description"/>
+		<Data name="F8335" type="string" maxLength="3" info="Movement type description code"/>
+		<Data name="F8339" type="string" maxLength="3" info="PACKAGING DANGER LEVEL CODE"/>
+		<Data name="F8341" type="string" maxLength="3" info="HAULAGE ARRANGEMENTS CODE"/>
+		<Data name="F8351" type="string" maxLength="7" info="Hazard identification code"/>
+		<Data name="F8364" type="string" maxLength="8" info="EMERGENCY PROCEDURE FOR SHIPS IDENTIFIER"/>
+		<Data name="F8393" type="string" maxLength="3" info="Returnable package load contents code"/>
+		<Data name="F8395" type="string" maxLength="3" info="Returnable package freight payment responsibility code"/>
+		<Data name="F8410" type="string" maxLength="4" info="HAZARD MEDICAL FIRST AID GUIDE IDENTIFIER"/>
+		<Data name="F8453" type="string" maxLength="3" info="Transport means nationality code"/>
+		<Data name="F8457" type="string" maxLength="3" info="Excess transportation reason code"/>
+		<Data name="F8459" type="string" maxLength="3" info="Excess transportation responsibility code"/>
+		<Data name="F8461" type="string" maxLength="6" info="Tunnel Restriction Code"/>
+		<Data name="F9003" type="string" maxLength="3" info="EMPLOYMENT DETAILS CODE QUALIFIER"/>
+		<Data name="F9004" type="string" maxLength="35" info="Employment category description"/>
+		<Data name="F9005" type="string" maxLength="3" info="Employment category description code"/>
+		<Data name="F9006" type="string" maxLength="35" info="Qualification classification description"/>
+		<Data name="F9007" type="string" maxLength="3" info="Qualification classification description code"/>
+		<Data name="F9008" type="string" maxLength="35" info="Occupation description"/>
+		<Data name="F9009" type="string" maxLength="3" info="Occupation description code"/>
+		<Data name="F9012" type="string" maxLength="256" info="Status reason description"/>
+		<Data name="F9013" type="string" maxLength="3" info="Status reason description code"/>
+		<Data name="F9015" type="string" maxLength="3" info="Status category code"/>
+		<Data name="F9017" type="string" maxLength="3" info="ATTRIBUTE FUNCTION CODE QUALIFIER"/>
+		<Data name="F9018" type="string" maxLength="256" info="Attribute description"/>
+		<Data name="F9019" type="string" maxLength="17" info="Attribute description code"/>
+		<Data name="F9020" type="string" maxLength="70" info="Attribute type description"/>
+		<Data name="F9021" type="string" maxLength="17" info="Attribute type description code"/>
+		<Data name="F9023" type="string" maxLength="3" info="DEFINITION FUNCTION CODE"/>
+		<Data name="F9025" type="string" maxLength="3" info="DEFINITION EXTENT CODE"/>
+		<Data name="F9026" type="string" maxLength="35" info="EDIT MASK FORMAT IDENTIFIER"/>
+		<Data name="F9029" type="string" maxLength="3" info="VALUE DEFINITION CODE QUALIFIER"/>
+		<Data name="F9031" type="string" maxLength="3" info="EDIT MASK REPRESENTATION CODE"/>
+		<Data name="F9035" type="string" maxLength="3" info="QUALIFICATION APPLICATION AREA CODE"/>
+		<Data name="F9037" type="string" maxLength="3" info="QUALIFICATION TYPE CODE QUALIFIER"/>
+		<Data name="F9045" type="string" maxLength="3" info="BASIS CODE QUALIFIER"/>
+		<Data name="F9046" type="string" maxLength="35" info="Basis type description"/>
+		<Data name="F9047" type="string" maxLength="3" info="Basis type description code"/>
+		<Data name="F9048" type="string" maxLength="35" info="Applicability type description"/>
+		<Data name="F9049" type="string" maxLength="3" info="Applicability type description code"/>
+		<Data name="F9051" type="string" maxLength="3" info="APPLICABILITY CODE QUALIFIER"/>
+		<Data name="F9141" type="string" maxLength="3" info="RELATIONSHIP TYPE CODE QUALIFIER"/>
+		<Data name="F9142" type="string" maxLength="35" info="Relationship description"/>
+		<Data name="F9143" type="string" maxLength="3" info="Relationship description code"/>
+		<Data name="F9146" type="string" maxLength="4" info="COMPOSITE DATA ELEMENT TAG IDENTIFIER"/>
+		<Data name="F9148" type="string" maxLength="3" info="DIRECTORY STATUS IDENTIFIER"/>
+		<Data name="F9150" type="string" maxLength="4" info="Simple data element tag identifier"/>
+		<Data name="F9153" type="string" maxLength="3" info="SIMPLE DATA ELEMENT CHARACTER REPRESENTATION CODE"/>
+		<Data name="F9156" type="decimal" maxLength="3" info="SIMPLE DATA ELEMENT MAXIMUM LENGTH MEASURE"/>
+		<Data name="F9158" type="decimal" maxLength="3" info="SIMPLE DATA ELEMENT MINIMUM LENGTH MEASURE"/>
+		<Data name="F9161" type="string" maxLength="3" info="CODE SET INDICATOR CODE"/>
+		<Data name="F9162" type="string" maxLength="4" info="DATA ELEMENT TAG IDENTIFIER"/>
+		<Data name="F9164" type="string" maxLength="4" info="GROUP IDENTIFIER"/>
+		<Data name="F9166" type="string" maxLength="3" info="Segment tag identifier"/>
+		<Data name="F9169" type="string" maxLength="3" info="DATA REPRESENTATION TYPE CODE"/>
+		<Data name="F9170" type="string" maxLength="70" info="Event type description"/>
+		<Data name="F9171" type="string" maxLength="3" info="Event type description code"/>
+		<Data name="F9172" type="string" maxLength="256" info="Event"/>
+		<Data name="F9173" type="string" maxLength="35" info="Event description code"/>
+		<Data name="F9175" type="string" maxLength="3" info="DATA ELEMENT USAGE TYPE CODE"/>
+		<Data name="F9213" type="string" maxLength="3" info="DUTY REGIME TYPE CODE"/>
+		<Data name="F9280" type="string" maxLength="35" info="VALIDATION RESULT TEXT"/>
+		<Data name="F9282" type="string" maxLength="35" info="VALIDATION KEY IDENTIFIER"/>
+		<Data name="F9285" type="string" maxLength="3" info="VALIDATION CRITERIA CODE"/>
+		<Data name="F9302" type="string" maxLength="35" info="Sealing party name"/>
+		<Data name="F9303" type="string" maxLength="3" info="Sealing party name code"/>
+		<Data name="F9308" type="string" maxLength="35" info="TRANSPORT UNIT SEAL IDENTIFIER"/>
+		<Data name="F9321" type="string" maxLength="8" info="Application error code"/>
+		<Data name="F9353" type="string" maxLength="3" info="Government procedure code"/>
+		<Data name="F9411" type="string" maxLength="3" info="Government involvement code"/>
+		<Data name="F9415" type="string" maxLength="3" info="Government agency identification code"/>
+		<Data name="F9417" type="string" maxLength="3" info="Government action code"/>
+		<Data name="F9419" type="string" maxLength="3" info="SERVICE LAYER CODE"/>
+		<Data name="F9421" type="string" maxLength="3" info="PROCESS STAGE CODE QUALIFIER"/>
+		<Data name="F9422" type="string" maxLength="512" info="VALUE TEXT"/>
+		<Data name="F9424" type="string" maxLength="512" info="Array cell data description"/>
+		<Data name="F9426" type="string" maxLength="35" info="CODE VALUE TEXT"/>
+		<Data name="F9428" type="string" maxLength="35" info="Array cell structure identifier"/>
+		<Data name="F9430" type="string" maxLength="35" info="Footnote set identifier"/>
+		<Data name="F9432" type="string" maxLength="35" info="Footnote identifier"/>
+		<Data name="F9434" type="string" maxLength="70" info="CODE NAME"/>
+		<Data name="F9436" type="string" maxLength="70" info="Clinical intervention description"/>
+		<Data name="F9437" type="string" maxLength="17" info="Clinical intervention description code"/>
+		<Data name="F9441" type="string" maxLength="3" info="CLINICAL INTERVENTION TYPE CODE QUALIFIER"/>
+		<Data name="F9443" type="string" maxLength="3" info="ATTENDANCE TYPE CODE QUALIFIER"/>
+		<Data name="F9444" type="string" maxLength="35" info="Admission type description"/>
+		<Data name="F9445" type="string" maxLength="3" info="Admission type description code"/>
+		<Data name="F9446" type="string" maxLength="35" info="Discharge type description"/>
+		<Data name="F9447" type="string" maxLength="3" info="Discharge type description code"/>
+		<Data name="F9448" type="string" maxLength="35" info="FILE GENERATION COMMAND NAME"/>
+		<Data name="F9450" type="string" maxLength="35" info="FILE COMPRESSION TECHNIQUE NAME"/>
+		<Data name="F9453" type="string" maxLength="3" info="CODE VALUE SOURCE CODE"/>
+		<Data name="F9501" type="string" maxLength="3" info="FORMULA TYPE CODE QUALIFIER"/>
+		<Data name="F9502" type="string" maxLength="35" info="FORMULA NAME"/>
+		<Data name="F9505" type="string" maxLength="3" info="Formula complexity code"/>
+		<Data name="F9507" type="string" maxLength="3" info="FORMULA SEQUENCE CODE QUALIFIER"/>
+		<Data name="F9509" type="string" maxLength="17" info="FORMULA SEQUENCE OPERAND CODE"/>
+		<Data name="F9510" type="string" maxLength="35" info="FORMULA SEQUENCE NAME"/>
+		<Data name="F9635" type="string" maxLength="3" info="EVENT DETAILS CODE QUALIFIER"/>
+		<Data name="F9636" type="string" maxLength="70" info="Event category description"/>
+		<Data name="F9637" type="string" maxLength="3" info="Event category description code"/>
+		<Data name="F9649" type="string" maxLength="3" info="PROCESSING INFORMATION CODE QUALIFIER"/>
+		<Composite name="C001" info="TRANSPORT MEANS">
+			<Data ref="F8179" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F8178" minOccurs="0"/>
+		</Composite>
+		<Composite name="C002" info="DOCUMENT/MESSAGE NAME">
+			<Data ref="F1001" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F1000" minOccurs="0"/>
+		</Composite>
+		<Composite name="C003" info="POWER TYPE">
+			<Data ref="F7041" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7040" minOccurs="0"/>
+		</Composite>
+		<Composite name="C004" info="EVENT CATEGORY">
+			<Data ref="F9637" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F9636" minOccurs="0"/>
+		</Composite>
+		<Composite name="C008" info="MONETARY AMOUNT FUNCTION DETAIL">
+			<Data ref="F5105" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F5104" minOccurs="0"/>
+		</Composite>
+		<Composite name="C009" info="INFORMATION CATEGORY">
+			<Data ref="F4149" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4148" minOccurs="0"/>
+		</Composite>
+		<Composite name="C010" info="INFORMATION TYPE">
+			<Data ref="F4473" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4472" minOccurs="0"/>
+		</Composite>
+		<Composite name="C011" info="INFORMATION DETAIL">
+			<Data ref="F4151" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4150" minOccurs="0"/>
+		</Composite>
+		<Composite name="C012" info="PROCESSING INDICATOR">
+			<Data ref="F7365" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7364" minOccurs="0"/>
+		</Composite>
+		<Composite name="C019" info="PAYMENT TERMS">
+			<Data ref="F4277" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4276" minOccurs="0"/>
+		</Composite>
+		<Composite name="C030" info="EVENT TYPE">
+			<Data ref="F9171" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F9170" minOccurs="0"/>
+		</Composite>
+		<Composite name="C040" info="CARRIER">
+			<Data ref="F3127" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F3126" minOccurs="0"/>
+		</Composite>
+		<Composite name="C042" info="NATIONALITY DETAILS">
+			<Data ref="F3293" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F3292" minOccurs="0"/>
+		</Composite>
+		<Composite name="C045" info="BILL LEVEL IDENTIFICATION">
+			<Data ref="F7436" minOccurs="0"/>
+			<Data ref="F7438" minOccurs="0"/>
+			<Data ref="F7440" minOccurs="0"/>
+			<Data ref="F7442" minOccurs="0"/>
+			<Data ref="F7444" minOccurs="0"/>
+			<Data ref="F7446" minOccurs="0"/>
+		</Composite>
+		<Composite name="C049" info="REMUNERATION TYPE IDENTIFICATION">
+			<Data ref="F5315" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F5314" minOccurs="0" mergedEntries="2"/>
+		</Composite>
+		<Composite name="C056" info="CONTACT DETAILS">
+			<Data ref="F3413" minOccurs="0"/>
+			<Data ref="F3412" minOccurs="0"/>
+		</Composite>
+		<Composite name="C058" info="NAME AND ADDRESS">
+			<Data ref="F3124" mergedEntries="5"/>
+		</Composite>
+		<Composite name="C059" info="STREET">
+			<Data ref="F3042" mergedEntries="4"/>
+		</Composite>
+		<Composite name="C063" info="EVENT IDENTIFICATION">
+			<Data ref="F9173" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F9172" minOccurs="0"/>
+		</Composite>
+		<Composite name="C076" info="COMMUNICATION CONTACT">
+			<Data ref="F3148"/>
+			<Data ref="F3155"/>
+		</Composite>
+		<Composite name="C077" info="FILE IDENTIFICATION">
+			<Data ref="F1508" minOccurs="0"/>
+			<Data ref="F7008" minOccurs="0"/>
+		</Composite>
+		<Composite name="C078" info="ACCOUNT HOLDER IDENTIFICATION">
+			<Data ref="F3194" minOccurs="0"/>
+			<Data ref="F3192" minOccurs="0" mergedEntries="2"/>
+			<Data ref="F6345" minOccurs="0"/>
+		</Composite>
+		<Composite name="C079" info="COMPUTER ENVIRONMENT IDENTIFICATION">
+			<Data ref="F1511" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F1510" minOccurs="0"/>
+			<Data ref="F1056" minOccurs="0"/>
+			<Data ref="F1058" minOccurs="0"/>
+			<Data ref="F7402" minOccurs="0"/>
+		</Composite>
+		<Composite name="C080" info="PARTY NAME">
+			<Data ref="F3036" mergedEntries="5"/>
+			<Data ref="F3045" minOccurs="0"/>
+		</Composite>
+		<Composite name="C082" info="PARTY IDENTIFICATION DETAILS">
+			<Data ref="F3039"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C085" info="MARITAL STATUS DETAILS">
+			<Data ref="F3479" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F3478" minOccurs="0"/>
+		</Composite>
+		<Composite name="C088" info="INSTITUTION IDENTIFICATION">
+			<Data ref="F3433" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0" nodeName="F1131_1"/>
+			<Data ref="F3055" minOccurs="0" nodeName="F3055_1"/>
+			<Data ref="F3434" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0" nodeName="F1131_2"/>
+			<Data ref="F3055" minOccurs="0" nodeName="F3055_2"/>
+			<Data ref="F3432" minOccurs="0"/>
+			<Data ref="F3436" minOccurs="0"/>
+		</Composite>
+		<Composite name="C090" info="ADDRESS DETAILS">
+			<Data ref="F3477"/>
+			<Data ref="F3286" mergedEntries="5"/>
+		</Composite>
+		<Composite name="C099" info="FILE DETAILS">
+			<Data ref="F1516"/>
+			<Data ref="F1056" minOccurs="0"/>
+			<Data ref="F1503" minOccurs="0"/>
+			<Data ref="F1502" minOccurs="0"/>
+		</Composite>
+		<Composite name="C100" info="TERMS OF DELIVERY OR TRANSPORT">
+			<Data ref="F4053" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4052" minOccurs="0" mergedEntries="2"/>
+		</Composite>
+		<Composite name="C101" info="RELIGION DETAILS">
+			<Data ref="F3483" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F3482" minOccurs="0"/>
+		</Composite>
+		<Composite name="C106" info="DOCUMENT/MESSAGE IDENTIFICATION">
+			<Data ref="F1004" minOccurs="0"/>
+			<Data ref="F1056" minOccurs="0"/>
+			<Data ref="F1060" minOccurs="0"/>
+		</Composite>
+		<Composite name="C107" info="TEXT REFERENCE">
+			<Data ref="F4441"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C108" info="TEXT LITERAL">
+			<Data ref="F4440" mergedEntries="5"/>
+		</Composite>
+		<Composite name="C128" info="RATE DETAILS">
+			<Data ref="F5419"/>
+			<Data ref="F5420"/>
+			<Data ref="F5284" minOccurs="0"/>
+			<Data ref="F6411" minOccurs="0"/>
+		</Composite>
+		<Composite name="C138" info="PRICE MULTIPLIER INFORMATION">
+			<Data ref="F5394"/>
+			<Data ref="F5393" minOccurs="0"/>
+		</Composite>
+		<Composite name="C174" info="VALUE/RANGE">
+			<Data ref="F6411" minOccurs="0"/>
+			<Data ref="F6314" minOccurs="0"/>
+			<Data ref="F6162" minOccurs="0"/>
+			<Data ref="F6152" minOccurs="0"/>
+			<Data ref="F6432" minOccurs="0"/>
+		</Composite>
+		<Composite name="C186" info="QUANTITY DETAILS">
+			<Data ref="F6063"/>
+			<Data ref="F6060"/>
+			<Data ref="F6411" minOccurs="0"/>
+		</Composite>
+		<Composite name="C200" info="CHARGE">
+			<Data ref="F8023" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F8022" minOccurs="0"/>
+			<Data ref="F4237" minOccurs="0"/>
+			<Data ref="F7140" minOccurs="0"/>
+		</Composite>
+		<Composite name="C202" info="PACKAGE TYPE">
+			<Data ref="F7065" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7064" minOccurs="0"/>
+		</Composite>
+		<Composite name="C203" info="RATE/TARIFF CLASS">
+			<Data ref="F5243"/>
+			<Data ref="F1131" minOccurs="0" nodeName="F1131_1"/>
+			<Data ref="F3055" minOccurs="0" nodeName="F3055_1"/>
+			<Data ref="F5242" minOccurs="0"/>
+			<Data ref="F5275" minOccurs="0" nodeName="F5275_1"/>
+			<Data ref="F1131" minOccurs="0" nodeName="F1131_2"/>
+			<Data ref="F3055" minOccurs="0" nodeName="F3055_2"/>
+			<Data ref="F5275" minOccurs="0" nodeName="F5275_2"/>
+			<Data ref="F1131" minOccurs="0" nodeName="F1131_3"/>
+			<Data ref="F3055" minOccurs="0" nodeName="F3055_3"/>
+		</Composite>
+		<Composite name="C205" info="HAZARD CODE">
+			<Data ref="F8351"/>
+			<Data ref="F8078" minOccurs="0"/>
+			<Data ref="F8092" minOccurs="0"/>
+		</Composite>
+		<Composite name="C206" info="IDENTIFICATION NUMBER">
+			<Data ref="F7402"/>
+			<Data ref="F7405" minOccurs="0"/>
+			<Data ref="F4405" minOccurs="0"/>
+		</Composite>
+		<Composite name="C208" info="IDENTITY NUMBER RANGE">
+			<Data ref="F7402" mergedEntries="2"/>
+		</Composite>
+		<Composite name="C210" info="MARKS &amp; LABELS">
+			<Data ref="F7102" mergedEntries="10"/>
+		</Composite>
+		<Composite name="C211" info="DIMENSIONS">
+			<Data ref="F6411"/>
+			<Data ref="F6168" minOccurs="0"/>
+			<Data ref="F6140" minOccurs="0"/>
+			<Data ref="F6008" minOccurs="0"/>
+			<Data ref="F6182" minOccurs="0"/>
+		</Composite>
+		<Composite name="C212" info="ITEM NUMBER IDENTIFICATION">
+			<Data ref="F7140" minOccurs="0"/>
+			<Data ref="F7143" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C213" info="NUMBER AND TYPE OF PACKAGES">
+			<Data ref="F7224" minOccurs="0"/>
+			<Data ref="F7065" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7064" minOccurs="0"/>
+			<Data ref="F7233" minOccurs="0"/>
+		</Composite>
+		<Composite name="C214" info="SPECIAL SERVICES IDENTIFICATION">
+			<Data ref="F7161" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7160" minOccurs="0" mergedEntries="2"/>
+		</Composite>
+		<Composite name="C215" info="SEAL ISSUER">
+			<Data ref="F9303" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F9302" minOccurs="0"/>
+		</Composite>
+		<Composite name="C218" info="HAZARDOUS MATERIAL">
+			<Data ref="F7419" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7418" minOccurs="0"/>
+		</Composite>
+		<Composite name="C219" info="MOVEMENT TYPE">
+			<Data ref="F8335" minOccurs="0"/>
+			<Data ref="F8334" minOccurs="0"/>
+		</Composite>
+		<Composite name="C220" info="MODE OF TRANSPORT">
+			<Data ref="F8067" minOccurs="0"/>
+			<Data ref="F8066" minOccurs="0"/>
+		</Composite>
+		<Composite name="C222" info="TRANSPORT IDENTIFICATION">
+			<Data ref="F8213" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F8212" minOccurs="0"/>
+			<Data ref="F8453" minOccurs="0"/>
+		</Composite>
+		<Composite name="C223" info="DANGEROUS GOODS SHIPMENT FLASHPOINT">
+			<Data ref="F7106" minOccurs="0"/>
+			<Data ref="F6411" minOccurs="0"/>
+		</Composite>
+		<Composite name="C224" info="EQUIPMENT SIZE AND TYPE">
+			<Data ref="F8155" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F8154" minOccurs="0"/>
+		</Composite>
+		<Composite name="C229" info="CHARGE CATEGORY">
+			<Data ref="F5237"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C231" info="METHOD OF PAYMENT">
+			<Data ref="F4215"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C232" info="GOVERNMENT ACTION">
+			<Data ref="F9415" minOccurs="0"/>
+			<Data ref="F9411" minOccurs="0"/>
+			<Data ref="F9417" minOccurs="0"/>
+			<Data ref="F9353" minOccurs="0"/>
+		</Composite>
+		<Composite name="C233" info="SERVICE">
+			<Data ref="F7273" nodeName="F7273_1"/>
+			<Data ref="F1131" minOccurs="0" nodeName="F1131_1"/>
+			<Data ref="F3055" minOccurs="0" nodeName="F3055_1"/>
+			<Data ref="F7273" minOccurs="0" nodeName="F7273_2"/>
+			<Data ref="F1131" minOccurs="0" nodeName="F1131_2"/>
+			<Data ref="F3055" minOccurs="0" nodeName="F3055_2"/>
+		</Composite>
+		<Composite name="C234" info="UNDG INFORMATION">
+			<Data ref="F7124" minOccurs="0"/>
+			<Data ref="F7088" minOccurs="0"/>
+		</Composite>
+		<Composite name="C235" info="HAZARD IDENTIFICATION PLACARD DETAILS">
+			<Data ref="F8158" minOccurs="0"/>
+			<Data ref="F8186" minOccurs="0"/>
+		</Composite>
+		<Composite name="C236" info="DANGEROUS GOODS LABEL">
+			<Data ref="F8246" minOccurs="0" mergedEntries="4"/>
+		</Composite>
+		<Composite name="C237" info="EQUIPMENT IDENTIFICATION">
+			<Data ref="F8260" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F3207" minOccurs="0"/>
+		</Composite>
+		<Composite name="C239" info="TEMPERATURE SETTING">
+			<Data ref="F6246" minOccurs="0"/>
+			<Data ref="F6411" minOccurs="0"/>
+		</Composite>
+		<Composite name="C240" info="CHARACTERISTIC DESCRIPTION">
+			<Data ref="F7037"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7036" minOccurs="0" mergedEntries="2"/>
+		</Composite>
+		<Composite name="C241" info="DUTY/TAX/FEE TYPE">
+			<Data ref="F5153" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F5152" minOccurs="0"/>
+		</Composite>
+		<Composite name="C242" info="PROCESS TYPE AND DESCRIPTION">
+			<Data ref="F7187"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7186" minOccurs="0" mergedEntries="2"/>
+		</Composite>
+		<Composite name="C243" info="DUTY/TAX/FEE DETAIL">
+			<Data ref="F5279" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0" nodeName="F1131_1"/>
+			<Data ref="F3055" minOccurs="0" nodeName="F3055_1"/>
+			<Data ref="F5278" minOccurs="0"/>
+			<Data ref="F5273" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0" nodeName="F1131_2"/>
+			<Data ref="F3055" minOccurs="0" nodeName="F3055_2"/>
+		</Composite>
+		<Composite name="C244" info="TEST METHOD">
+			<Data ref="F4415" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4416" minOccurs="0"/>
+		</Composite>
+		<Composite name="C246" info="CUSTOMS IDENTITY CODES">
+			<Data ref="F7361"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C270" info="CONTROL">
+			<Data ref="F6069"/>
+			<Data ref="F6066"/>
+			<Data ref="F6411" minOccurs="0"/>
+		</Composite>
+		<Composite name="C272" info="ITEM CHARACTERISTIC">
+			<Data ref="F7081" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C273" info="ITEM DESCRIPTION">
+			<Data ref="F7009" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7008" minOccurs="0" mergedEntries="2"/>
+			<Data ref="F3453" minOccurs="0"/>
+		</Composite>
+		<Composite name="C279" info="QUANTITY DIFFERENCE INFORMATION">
+			<Data ref="F6064"/>
+			<Data ref="F6063" minOccurs="0"/>
+		</Composite>
+		<Composite name="C280" info="RANGE">
+			<Data ref="F6411"/>
+			<Data ref="F6162" minOccurs="0"/>
+			<Data ref="F6152" minOccurs="0"/>
+		</Composite>
+		<Composite name="C286" info="SEQUENCE INFORMATION">
+			<Data ref="F1050"/>
+			<Data ref="F1159" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C288" info="PRODUCT GROUP">
+			<Data ref="F5389" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F5388" minOccurs="0"/>
+		</Composite>
+		<Composite name="C289" info="TUNNEL RESTRICTION">
+			<Data ref="F8461" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C329" info="PATTERN DESCRIPTION">
+			<Data ref="F2013" minOccurs="0"/>
+			<Data ref="F2015" minOccurs="0"/>
+			<Data ref="F2017" minOccurs="0"/>
+		</Composite>
+		<Composite name="C330" info="INSURANCE COVER TYPE">
+			<Data ref="F4497"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C331" info="INSURANCE COVER DETAILS">
+			<Data ref="F4495" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4494" minOccurs="0" mergedEntries="2"/>
+		</Composite>
+		<Composite name="C332" info="SALES CHANNEL IDENTIFICATION">
+			<Data ref="F3496"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C333" info="INFORMATION REQUEST">
+			<Data ref="F4511" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4510" minOccurs="0"/>
+		</Composite>
+		<Composite name="C401" info="EXCESS TRANSPORTATION INFORMATION">
+			<Data ref="F8457"/>
+			<Data ref="F8459"/>
+			<Data ref="F7130" minOccurs="0"/>
+		</Composite>
+		<Composite name="C402" info="PACKAGE TYPE IDENTIFICATION">
+			<Data ref="F7077"/>
+			<Data ref="F7064" nodeName="F7064_1"/>
+			<Data ref="F7143" minOccurs="0" nodeName="F7143_1"/>
+			<Data ref="F7064" minOccurs="0" nodeName="F7064_2"/>
+			<Data ref="F7143" minOccurs="0" nodeName="F7143_2"/>
+		</Composite>
+		<Composite name="C501" info="PERCENTAGE DETAILS">
+			<Data ref="F5245"/>
+			<Data ref="F5482" minOccurs="0"/>
+			<Data ref="F5249" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C502" info="MEASUREMENT DETAILS">
+			<Data ref="F6313" minOccurs="0"/>
+			<Data ref="F6321" minOccurs="0"/>
+			<Data ref="F6155" minOccurs="0"/>
+			<Data ref="F6154" minOccurs="0"/>
+		</Composite>
+		<Composite name="C503" info="DOCUMENT/MESSAGE DETAILS">
+			<Data ref="F1004" minOccurs="0"/>
+			<Data ref="F1373" minOccurs="0"/>
+			<Data ref="F1366" minOccurs="0"/>
+			<Data ref="F3453" minOccurs="0"/>
+			<Data ref="F1056" minOccurs="0"/>
+			<Data ref="F1060" minOccurs="0"/>
+		</Composite>
+		<Composite name="C504" info="CURRENCY DETAILS">
+			<Data ref="F6347"/>
+			<Data ref="F6345" minOccurs="0"/>
+			<Data ref="F6343" minOccurs="0"/>
+			<Data ref="F6348" minOccurs="0"/>
+		</Composite>
+		<Composite name="C506" info="REFERENCE">
+			<Data ref="F1153"/>
+			<Data ref="F1154" minOccurs="0"/>
+			<Data ref="F1156" minOccurs="0"/>
+			<Data ref="F1056" minOccurs="0"/>
+			<Data ref="F1060" minOccurs="0"/>
+		</Composite>
+		<Composite name="C507" info="DATE/TIME/PERIOD">
+			<Data ref="F2005"/>
+			<Data ref="F2380" minOccurs="0"/>
+			<Data ref="F2379" minOccurs="0"/>
+		</Composite>
+		<Composite name="C508" info="LANGUAGE DETAILS">
+			<Data ref="F3453" minOccurs="0"/>
+			<Data ref="F3452" minOccurs="0"/>
+		</Composite>
+		<Composite name="C509" info="PRICE INFORMATION">
+			<Data ref="F5125"/>
+			<Data ref="F5118" minOccurs="0"/>
+			<Data ref="F5375" minOccurs="0"/>
+			<Data ref="F5387" minOccurs="0"/>
+			<Data ref="F5284" minOccurs="0"/>
+			<Data ref="F6411" minOccurs="0"/>
+		</Composite>
+		<Composite name="C512" info="SIZE DETAILS">
+			<Data ref="F6173" minOccurs="0"/>
+			<Data ref="F6174" minOccurs="0"/>
+		</Composite>
+		<Composite name="C514" info="SAMPLE LOCATION DETAILS">
+			<Data ref="F3237" minOccurs="0"/>
+			<Data ref="F3236" minOccurs="0"/>
+		</Composite>
+		<Composite name="C515" info="TEST REASON">
+			<Data ref="F4425" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4424" minOccurs="0"/>
+		</Composite>
+		<Composite name="C516" info="MONETARY AMOUNT">
+			<Data ref="F5025"/>
+			<Data ref="F5004" minOccurs="0"/>
+			<Data ref="F6345" minOccurs="0"/>
+			<Data ref="F6343" minOccurs="0"/>
+			<Data ref="F4405" minOccurs="0"/>
+		</Composite>
+		<Composite name="C517" info="LOCATION IDENTIFICATION">
+			<Data ref="F3225" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F3224" minOccurs="0"/>
+		</Composite>
+		<Composite name="C519" info="RELATED LOCATION ONE IDENTIFICATION">
+			<Data ref="F3223" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F3222" minOccurs="0"/>
+		</Composite>
+		<Composite name="C521" info="BUSINESS FUNCTION">
+			<Data ref="F4027"/>
+			<Data ref="F4025"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4022" minOccurs="0"/>
+		</Composite>
+		<Composite name="C522" info="INSTRUCTION">
+			<Data ref="F4403"/>
+			<Data ref="F4401" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4400" minOccurs="0"/>
+		</Composite>
+		<Composite name="C523" info="NUMBER OF UNIT DETAILS">
+			<Data ref="F6350" minOccurs="0"/>
+			<Data ref="F6353" minOccurs="0"/>
+		</Composite>
+		<Composite name="C524" info="HANDLING INSTRUCTIONS">
+			<Data ref="F4079" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4078" minOccurs="0"/>
+		</Composite>
+		<Composite name="C525" info="PURPOSE OF CONVEYANCE CALL">
+			<Data ref="F8025" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F8024" minOccurs="0"/>
+		</Composite>
+		<Composite name="C526" info="FREQUENCY DETAILS">
+			<Data ref="F6071"/>
+			<Data ref="F6072" minOccurs="0"/>
+			<Data ref="F6411" minOccurs="0"/>
+		</Composite>
+		<Composite name="C527" info="STATISTICAL DETAILS">
+			<Data ref="F6314" minOccurs="0"/>
+			<Data ref="F6411" minOccurs="0"/>
+			<Data ref="F6313" minOccurs="0"/>
+			<Data ref="F6321" minOccurs="0"/>
+		</Composite>
+		<Composite name="C528" info="COMMODITY/RATE DETAIL">
+			<Data ref="F7357" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C531" info="PACKAGING DETAILS">
+			<Data ref="F7075" minOccurs="0"/>
+			<Data ref="F7233" minOccurs="0"/>
+			<Data ref="F7073" minOccurs="0"/>
+		</Composite>
+		<Composite name="C532" info="RETURNABLE PACKAGE DETAILS">
+			<Data ref="F8395" minOccurs="0"/>
+			<Data ref="F8393" minOccurs="0"/>
+		</Composite>
+		<Composite name="C533" info="DUTY/TAX/FEE ACCOUNT DETAIL">
+			<Data ref="F5289"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C534" info="PAYMENT INSTRUCTION DETAILS">
+			<Data ref="F4439" minOccurs="0"/>
+			<Data ref="F4431" minOccurs="0"/>
+			<Data ref="F4461" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4435" minOccurs="0"/>
+		</Composite>
+		<Composite name="C536" info="CONTRACT AND CARRIAGE CONDITION">
+			<Data ref="F4065"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C537" info="TRANSPORT PRIORITY">
+			<Data ref="F4219"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C543" info="AGREEMENT TYPE IDENTIFICATION">
+			<Data ref="F7431"/>
+			<Data ref="F7433" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7434" minOccurs="0"/>
+		</Composite>
+		<Composite name="C545" info="INDEX IDENTIFICATION">
+			<Data ref="F5013"/>
+			<Data ref="F5027" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C546" info="INDEX VALUE">
+			<Data ref="F5030"/>
+			<Data ref="F5039" minOccurs="0"/>
+		</Composite>
+		<Composite name="C549" info="MONETARY AMOUNT FUNCTION">
+			<Data ref="F5007" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F5006" minOccurs="0"/>
+		</Composite>
+		<Composite name="C550" info="REQUIREMENT/CONDITION IDENTIFICATION">
+			<Data ref="F7295"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7294" minOccurs="0"/>
+		</Composite>
+		<Composite name="C551" info="BANK OPERATION">
+			<Data ref="F4383"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C552" info="ALLOWANCE/CHARGE INFORMATION">
+			<Data ref="F1230" minOccurs="0"/>
+			<Data ref="F5189" minOccurs="0"/>
+		</Composite>
+		<Composite name="C553" info="RELATED LOCATION TWO IDENTIFICATION">
+			<Data ref="F3233" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F3232" minOccurs="0"/>
+		</Composite>
+		<Composite name="C554" info="RATE/TARIFF CLASS DETAIL">
+			<Data ref="F5243" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C555" info="STATUS">
+			<Data ref="F4405"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4404" minOccurs="0"/>
+		</Composite>
+		<Composite name="C556" info="STATUS REASON">
+			<Data ref="F9013"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F9012" minOccurs="0"/>
+		</Composite>
+		<Composite name="C564" info="PHYSICAL OR LOGICAL STATE INFORMATION">
+			<Data ref="F7007" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7006" minOccurs="0"/>
+		</Composite>
+		<Composite name="C585" info="PRIORITY DETAILS">
+			<Data ref="F4037" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4036" minOccurs="0"/>
+		</Composite>
+		<Composite name="C593" info="ACCOUNT IDENTIFICATION">
+			<Data ref="F1147"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F1148" minOccurs="0"/>
+			<Data ref="F1146" minOccurs="0" mergedEntries="2"/>
+			<Data ref="F6345" minOccurs="0"/>
+		</Composite>
+		<Composite name="C595" info="ACCOUNTING JOURNAL IDENTIFICATION">
+			<Data ref="F1171"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F1170" minOccurs="0"/>
+		</Composite>
+		<Composite name="C596" info="ACCOUNTING ENTRY TYPE DETAILS">
+			<Data ref="F4475"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4474" minOccurs="0"/>
+		</Composite>
+		<Composite name="C601" info="STATUS CATEGORY">
+			<Data ref="F9015"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C701" info="ERROR POINT DETAILS">
+			<Data ref="F1049" minOccurs="0"/>
+			<Data ref="F1052" minOccurs="0"/>
+			<Data ref="F1054" minOccurs="0"/>
+		</Composite>
+		<Composite name="C702" info="CODE SET IDENTIFICATION">
+			<Data ref="F9150" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C703" info="NATURE OF CARGO">
+			<Data ref="F7085"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C709" info="MESSAGE IDENTIFIER">
+			<Data ref="F1003"/>
+			<Data ref="F1056" minOccurs="0"/>
+			<Data ref="F1058" minOccurs="0"/>
+			<Data ref="F1476" minOccurs="0"/>
+			<Data ref="F1523" minOccurs="0"/>
+			<Data ref="F1060" minOccurs="0"/>
+			<Data ref="F1373" minOccurs="0"/>
+		</Composite>
+		<Composite name="C770" info="ARRAY CELL DETAILS">
+			<Data ref="F9424" minOccurs="0"/>
+		</Composite>
+		<Composite name="C778" info="POSITION IDENTIFICATION">
+			<Data ref="F7164" minOccurs="0"/>
+			<Data ref="F1050" minOccurs="0"/>
+		</Composite>
+		<Composite name="C779" info="ARRAY STRUCTURE IDENTIFICATION">
+			<Data ref="F9428"/>
+			<Data ref="F7405" minOccurs="0"/>
+		</Composite>
+		<Composite name="C780" info="VALUE LIST IDENTIFICATION">
+			<Data ref="F1518"/>
+			<Data ref="F7405" minOccurs="0"/>
+		</Composite>
+		<Composite name="C782" info="DATA SET IDENTIFICATION">
+			<Data ref="F1520"/>
+			<Data ref="F7405" minOccurs="0"/>
+		</Composite>
+		<Composite name="C783" info="FOOTNOTE SET IDENTIFICATION">
+			<Data ref="F9430"/>
+			<Data ref="F7405" minOccurs="0"/>
+		</Composite>
+		<Composite name="C784" info="FOOTNOTE IDENTIFICATION">
+			<Data ref="F9432"/>
+			<Data ref="F7405" minOccurs="0"/>
+		</Composite>
+		<Composite name="C785" info="STATISTICAL CONCEPT IDENTIFICATION">
+			<Data ref="F6434"/>
+			<Data ref="F7405" minOccurs="0"/>
+		</Composite>
+		<Composite name="C786" info="STRUCTURE COMPONENT IDENTIFICATION">
+			<Data ref="F7512"/>
+			<Data ref="F7405" minOccurs="0"/>
+		</Composite>
+		<Composite name="C811" info="QUESTION DETAILS">
+			<Data ref="F4057" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4056" minOccurs="0"/>
+		</Composite>
+		<Composite name="C812" info="RESPONSE DETAILS">
+			<Data ref="F4345" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4344" minOccurs="0"/>
+		</Composite>
+		<Composite name="C814" info="SAFETY SECTION">
+			<Data ref="F4046"/>
+			<Data ref="F4044" minOccurs="0"/>
+		</Composite>
+		<Composite name="C815" info="ADDITIONAL SAFETY INFORMATION">
+			<Data ref="F4039"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4038" minOccurs="0"/>
+		</Composite>
+		<Composite name="C816" info="NAME COMPONENT DETAILS">
+			<Data ref="F3405"/>
+			<Data ref="F3398" minOccurs="0"/>
+			<Data ref="F3401" minOccurs="0"/>
+			<Data ref="F3295" minOccurs="0"/>
+		</Composite>
+		<Composite name="C817" info="ADDRESS USAGE">
+			<Data ref="F3299" minOccurs="0"/>
+			<Data ref="F3131" minOccurs="0"/>
+			<Data ref="F3475" minOccurs="0"/>
+		</Composite>
+		<Composite name="C818" info="PERSON INHERITED CHARACTERISTIC DETAILS">
+			<Data ref="F3311" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F3310" minOccurs="0"/>
+		</Composite>
+		<Composite name="C819" info="COUNTRY SUBDIVISION DETAILS">
+			<Data ref="F3229" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F3228" minOccurs="0"/>
+		</Composite>
+		<Composite name="C820" info="PREMIUM CALCULATION COMPONENT">
+			<Data ref="F4521" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C821" info="TYPE OF DAMAGE">
+			<Data ref="F7501" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7500" minOccurs="0"/>
+		</Composite>
+		<Composite name="C822" info="DAMAGE AREA">
+			<Data ref="F7503" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7502" minOccurs="0"/>
+		</Composite>
+		<Composite name="C823" info="TYPE OF UNIT/COMPONENT">
+			<Data ref="F7505" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7504" minOccurs="0"/>
+		</Composite>
+		<Composite name="C824" info="COMPONENT MATERIAL">
+			<Data ref="F7507" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7506" minOccurs="0"/>
+		</Composite>
+		<Composite name="C825" info="DAMAGE SEVERITY">
+			<Data ref="F7509" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7508" minOccurs="0"/>
+		</Composite>
+		<Composite name="C826" info="ACTION">
+			<Data ref="F1229" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F1228" minOccurs="0"/>
+		</Composite>
+		<Composite name="C827" info="TYPE OF MARKING">
+			<Data ref="F7511"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C828" info="CLINICAL INTERVENTION DETAILS">
+			<Data ref="F9437" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F9436" minOccurs="0"/>
+		</Composite>
+		<Composite name="C829" info="SUB-LINE INFORMATION">
+			<Data ref="F5495" minOccurs="0"/>
+			<Data ref="F1082" minOccurs="0"/>
+		</Composite>
+		<Composite name="C830" info="PROCESS IDENTIFICATION DETAILS">
+			<Data ref="F7191" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7190" minOccurs="0"/>
+		</Composite>
+		<Composite name="C831" info="RESULT DETAILS">
+			<Data ref="F6314" minOccurs="0"/>
+			<Data ref="F6321" minOccurs="0"/>
+			<Data ref="F6155" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F6154" minOccurs="0"/>
+		</Composite>
+		<Composite name="C836" info="CLINICAL INFORMATION DETAILS">
+			<Data ref="F6413" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F6412" minOccurs="0"/>
+		</Composite>
+		<Composite name="C837" info="CERTAINTY DETAILS">
+			<Data ref="F4049" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4048" minOccurs="0"/>
+		</Composite>
+		<Composite name="C838" info="DOSAGE DETAILS">
+			<Data ref="F6083" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F6082" minOccurs="0"/>
+		</Composite>
+		<Composite name="C839" info="ATTENDEE CATEGORY">
+			<Data ref="F7459" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7458" minOccurs="0"/>
+		</Composite>
+		<Composite name="C840" info="ATTENDANCE ADMISSION DETAILS">
+			<Data ref="F9445" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F9444" minOccurs="0"/>
+		</Composite>
+		<Composite name="C841" info="ATTENDANCE DISCHARGE DETAILS">
+			<Data ref="F9447" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F9446" minOccurs="0"/>
+		</Composite>
+		<Composite name="C844" info="ORGANISATION CLASSIFICATION DETAIL">
+			<Data ref="F3083" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F3082" minOccurs="0"/>
+		</Composite>
+		<Composite name="C848" info="MEASUREMENT UNIT DETAILS">
+			<Data ref="F6411" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F6410" minOccurs="0"/>
+		</Composite>
+		<Composite name="C849" info="PARTIES TO INSTRUCTION">
+			<Data ref="F3301"/>
+			<Data ref="F3285" minOccurs="0"/>
+		</Composite>
+		<Composite name="C850" info="STATUS OF INSTRUCTION">
+			<Data ref="F4405"/>
+			<Data ref="F3036" minOccurs="0"/>
+		</Composite>
+		<Composite name="C851" info="RISK OBJECT TYPE">
+			<Data ref="F7179" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C852" info="RISK OBJECT SUB-TYPE">
+			<Data ref="F7177" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7176" minOccurs="0"/>
+		</Composite>
+		<Composite name="C853" info="ERROR SEGMENT POINT DETAILS">
+			<Data ref="F9166" minOccurs="0"/>
+			<Data ref="F1050" minOccurs="0"/>
+			<Data ref="F1159" minOccurs="0"/>
+		</Composite>
+		<Composite name="C878" info="CHARGE/ALLOWANCE ACCOUNT">
+			<Data ref="F3434"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F3194" minOccurs="0"/>
+			<Data ref="F6345" minOccurs="0"/>
+		</Composite>
+		<Composite name="C889" info="CHARACTERISTIC VALUE">
+			<Data ref="F7111" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7110" minOccurs="0" mergedEntries="2"/>
+		</Composite>
+		<Composite name="C901" info="APPLICATION ERROR DETAIL">
+			<Data ref="F9321"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C941" info="RELATIONSHIP">
+			<Data ref="F9143" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F9142" minOccurs="0"/>
+		</Composite>
+		<Composite name="C942" info="MEMBERSHIP CATEGORY">
+			<Data ref="F7451"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7450" minOccurs="0"/>
+		</Composite>
+		<Composite name="C944" info="MEMBERSHIP STATUS">
+			<Data ref="F7453" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7452" minOccurs="0"/>
+		</Composite>
+		<Composite name="C945" info="MEMBERSHIP LEVEL">
+			<Data ref="F7455"/>
+			<Data ref="F7457" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F7456" minOccurs="0"/>
+		</Composite>
+		<Composite name="C948" info="EMPLOYMENT CATEGORY">
+			<Data ref="F9005" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F9004" minOccurs="0"/>
+		</Composite>
+		<Composite name="C950" info="QUALIFICATION CLASSIFICATION">
+			<Data ref="F9007" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F9006" minOccurs="0" mergedEntries="2"/>
+		</Composite>
+		<Composite name="C951" info="OCCUPATION">
+			<Data ref="F9009" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F9008" minOccurs="0" mergedEntries="2"/>
+		</Composite>
+		<Composite name="C953" info="CONTRIBUTION TYPE">
+			<Data ref="F5049"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F5048" minOccurs="0"/>
+		</Composite>
+		<Composite name="C955" info="ATTRIBUTE TYPE">
+			<Data ref="F9021" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F9020" minOccurs="0"/>
+		</Composite>
+		<Composite name="C956" info="ATTRIBUTE DETAIL">
+			<Data ref="F9019" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F9018" minOccurs="0"/>
+		</Composite>
+		<Composite name="C960" info="REASON FOR CHANGE">
+			<Data ref="F4295" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4294" minOccurs="0"/>
+		</Composite>
+		<Composite name="C961" info="FORMULA COMPLEXITY">
+			<Data ref="F9505" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Composite>
+		<Composite name="C970" info="CLAUSE NAME">
+			<Data ref="F4069" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4068" minOccurs="0"/>
+		</Composite>
+		<Composite name="C971" info="PROVISO TYPE">
+			<Data ref="F4073" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4072" minOccurs="0"/>
+		</Composite>
+		<Composite name="C972" info="PROVISO CALCULATION">
+			<Data ref="F4075" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F4074" minOccurs="0"/>
+		</Composite>
+		<Composite name="C973" info="APPLICABILITY TYPE">
+			<Data ref="F9049" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F9048" minOccurs="0"/>
+		</Composite>
+		<Composite name="C974" info="BASIS TYPE">
+			<Data ref="F9047" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F9046" minOccurs="0"/>
+		</Composite>
+		<Composite name="C977" info="PERIOD DETAIL">
+			<Data ref="F2119" minOccurs="0"/>
+			<Data ref="F1131" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+			<Data ref="F2118" minOccurs="0"/>
+		</Composite>
+		<Segment name="ADR" info="ADDRESS">
+			<Composite ref="C817" minOccurs="0"/>
+			<Composite ref="C090" minOccurs="0"/>
+			<Data ref="F3164" minOccurs="0"/>
+			<Data ref="F3251" minOccurs="0"/>
+			<Data ref="F3207" minOccurs="0"/>
+			<Composite ref="C819" minOccurs="0" maxOccurs="5"/>
+			<Composite ref="C517" minOccurs="0" maxOccurs="5"/>
+		</Segment>
+		<Segment name="AGR" info="AGREEMENT IDENTIFICATION">
+			<Composite ref="C543" minOccurs="0"/>
+			<Data ref="F9419" minOccurs="0"/>
+		</Segment>
+		<Segment name="AJT" info="ADJUSTMENT DETAILS">
+			<Data ref="F4465"/>
+			<Data ref="F1082" minOccurs="0"/>
+		</Segment>
+		<Segment name="ALC" info="ALLOWANCE OR CHARGE">
+			<Data ref="F5463"/>
+			<Composite ref="C552" minOccurs="0"/>
+			<Data ref="F4471" minOccurs="0"/>
+			<Data ref="F1227" minOccurs="0"/>
+			<Composite ref="C214" minOccurs="0"/>
+		</Segment>
+		<Segment name="ALI" info="ADDITIONAL INFORMATION">
+			<Data ref="F3239" minOccurs="0"/>
+			<Data ref="F9213" minOccurs="0"/>
+			<Data ref="F4183" minOccurs="0" mergedEntries="5"/>
+		</Segment>
+		<Segment name="APP" info="APPLICABILITY">
+			<Data ref="F9051" minOccurs="0"/>
+			<Composite ref="C973" minOccurs="0"/>
+			<Composite ref="C082" minOccurs="0"/>
+		</Segment>
+		<Segment name="APR" info="ADDITIONAL PRICE INFORMATION">
+			<Data ref="F4043" minOccurs="0"/>
+			<Composite ref="C138" minOccurs="0"/>
+			<Composite ref="C960" minOccurs="0"/>
+		</Segment>
+		<Segment name="ARD" info="MONETARY AMOUNT FUNCTION">
+			<Composite ref="C549" minOccurs="0"/>
+			<Composite ref="C008" minOccurs="0" maxOccurs="8"/>
+		</Segment>
+		<Segment name="ARR" info="ARRAY INFORMATION">
+			<Composite ref="C778" minOccurs="0"/>
+			<Composite ref="C770" minOccurs="0"/>
+		</Segment>
+		<Segment name="ASI" info="ARRAY STRUCTURE IDENTIFICATION">
+			<Composite ref="C779"/>
+			<Composite ref="C082" minOccurs="0"/>
+			<Data ref="F4405" minOccurs="0"/>
+			<Data ref="F4513" minOccurs="0"/>
+		</Segment>
+		<Segment name="ATT" info="ATTRIBUTE">
+			<Data ref="F9017"/>
+			<Composite ref="C955" minOccurs="0"/>
+			<Composite ref="C956" minOccurs="0" maxOccurs="5"/>
+		</Segment>
+		<Segment name="AUT" info="AUTHENTICATION RESULT">
+			<Data ref="F9280"/>
+			<Data ref="F9282" minOccurs="0"/>
+		</Segment>
+		<Segment name="BAS" info="BASIS">
+			<Data ref="F9045"/>
+			<Composite ref="C974"/>
+		</Segment>
+		<Segment name="BGM" info="BEGINNING OF MESSAGE">
+			<Composite ref="C002" minOccurs="0"/>
+			<Composite ref="C106" minOccurs="0"/>
+			<Data ref="F1225" minOccurs="0"/>
+			<Data ref="F4343" minOccurs="0"/>
+			<Data ref="F1373" minOccurs="0"/>
+			<Data ref="F3453" minOccurs="0"/>
+		</Segment>
+		<Segment name="BII" info="STRUCTURE IDENTIFICATION">
+			<Data ref="F7429"/>
+			<Composite ref="C045"/>
+			<Data ref="F7140" minOccurs="0"/>
+		</Segment>
+		<Segment name="BUS" info="BUSINESS FUNCTION">
+			<Composite ref="C521" minOccurs="0"/>
+			<Data ref="F3279" minOccurs="0"/>
+			<Data ref="F4487" minOccurs="0"/>
+			<Composite ref="C551" minOccurs="0"/>
+			<Data ref="F4463" minOccurs="0"/>
+		</Segment>
+		<Segment name="CAV" info="CHARACTERISTIC VALUE">
+			<Composite ref="C889"/>
+		</Segment>
+		<Segment name="CCD" info="CREDIT COVER DETAILS">
+			<Data ref="F4505" minOccurs="0"/>
+			<Data ref="F4507" minOccurs="0"/>
+			<Data ref="F4509" minOccurs="0"/>
+		</Segment>
+		<Segment name="CCI" info="CHARACTERISTIC/CLASS ID">
+			<Data ref="F7059" minOccurs="0"/>
+			<Composite ref="C502" minOccurs="0"/>
+			<Composite ref="C240" minOccurs="0"/>
+			<Data ref="F4051" minOccurs="0"/>
+		</Segment>
+		<Segment name="CDI" info="PHYSICAL OR LOGICAL STATE">
+			<Data ref="F7001"/>
+			<Composite ref="C564"/>
+		</Segment>
+		<Segment name="CDS" info="CODE SET IDENTIFICATION">
+			<Composite ref="C702"/>
+			<Data ref="F1507" minOccurs="0"/>
+			<Data ref="F4513" minOccurs="0"/>
+		</Segment>
+		<Segment name="CDV" info="CODE VALUE DEFINITION">
+			<Data ref="F9426"/>
+			<Data ref="F9434" minOccurs="0"/>
+			<Data ref="F4513" minOccurs="0"/>
+			<Data ref="F9453" minOccurs="0"/>
+			<Data ref="F7299" minOccurs="0"/>
+		</Segment>
+		<Segment name="CED" info="COMPUTER ENVIRONMENT DETAILS">
+			<Data ref="F1501"/>
+			<Composite ref="C079"/>
+			<Data ref="F9448" minOccurs="0"/>
+		</Segment>
+		<Segment name="CIN" info="CLINICAL INFORMATION">
+			<Data ref="F6415"/>
+			<Composite ref="C836" minOccurs="0"/>
+			<Composite ref="C837" minOccurs="0"/>
+		</Segment>
+		<Segment name="CLA" info="CLAUSE IDENTIFICATION">
+			<Data ref="F4059"/>
+			<Composite ref="C970" minOccurs="0"/>
+		</Segment>
+		<Segment name="CLI" info="CLINICAL INTERVENTION">
+			<Data ref="F9441"/>
+			<Composite ref="C828" minOccurs="0"/>
+		</Segment>
+		<Segment name="CMP" info="COMPOSITE DATA ELEMENT IDENTIFICATION">
+			<Data ref="F9146"/>
+			<Data ref="F1507" minOccurs="0"/>
+			<Data ref="F4513" minOccurs="0"/>
+		</Segment>
+		<Segment name="CNI" info="CONSIGNMENT INFORMATION">
+			<Data ref="F1490" minOccurs="0"/>
+			<Composite ref="C503" minOccurs="0"/>
+			<Data ref="F1312" minOccurs="0"/>
+		</Segment>
+		<Segment name="CNT" info="CONTROL TOTAL">
+			<Composite ref="C270"/>
+		</Segment>
+		<Segment name="COD" info="COMPONENT DETAILS">
+			<Composite ref="C823" minOccurs="0"/>
+			<Composite ref="C824" minOccurs="0"/>
+		</Segment>
+		<Segment name="COM" info="COMMUNICATION CONTACT">
+			<Composite ref="C076" maxOccurs="3"/>
+		</Segment>
+		<Segment name="COT" info="CONTRIBUTION DETAILS">
+			<Data ref="F5047"/>
+			<Composite ref="C953" minOccurs="0"/>
+			<Composite ref="C522" minOccurs="0"/>
+			<Composite ref="C203" minOccurs="0"/>
+			<Composite ref="C960" minOccurs="0"/>
+		</Segment>
+		<Segment name="CPI" info="CHARGE PAYMENT INSTRUCTIONS">
+			<Composite ref="C229" minOccurs="0"/>
+			<Composite ref="C231" minOccurs="0"/>
+			<Data ref="F4237" minOccurs="0"/>
+		</Segment>
+		<Segment name="CPS" info="CONSIGNMENT PACKING SEQUENCE">
+			<Data ref="F7164"/>
+			<Data ref="F7166" minOccurs="0"/>
+			<Data ref="F7075" minOccurs="0"/>
+		</Segment>
+		<Segment name="CPT" info="ACCOUNT IDENTIFICATION">
+			<Data ref="F4437"/>
+			<Composite ref="C593"/>
+		</Segment>
+		<Segment name="CST" info="CUSTOMS STATUS OF GOODS">
+			<Data ref="F1496" minOccurs="0"/>
+			<Composite ref="C246" minOccurs="0" mergedEntries="5"/>
+		</Segment>
+		<Segment name="CTA" info="CONTACT INFORMATION">
+			<Data ref="F3139" minOccurs="0"/>
+			<Composite ref="C056" minOccurs="0"/>
+		</Segment>
+		<Segment name="CUX" info="CURRENCIES">
+			<Composite ref="C504" minOccurs="0" mergedEntries="2"/>
+			<Data ref="F5402" minOccurs="0"/>
+			<Data ref="F6341" minOccurs="0"/>
+		</Segment>
+		<Segment name="DAM" info="DAMAGE">
+			<Data ref="F7493"/>
+			<Composite ref="C821" minOccurs="0"/>
+			<Composite ref="C822" minOccurs="0"/>
+			<Composite ref="C825" minOccurs="0"/>
+			<Composite ref="C826" minOccurs="0"/>
+		</Segment>
+		<Segment name="DFN" info="DEFINITION FUNCTION">
+			<Data ref="F9023"/>
+			<Data ref="F9025" minOccurs="0"/>
+			<Data ref="F4519" minOccurs="0"/>
+		</Segment>
+		<Segment name="DGS" info="DANGEROUS GOODS">
+			<Data ref="F8273" minOccurs="0"/>
+			<Composite ref="C205" minOccurs="0"/>
+			<Composite ref="C234" minOccurs="0"/>
+			<Composite ref="C223" minOccurs="0"/>
+			<Data ref="F8339" minOccurs="0"/>
+			<Data ref="F8364" minOccurs="0"/>
+			<Data ref="F8410" minOccurs="0"/>
+			<Data ref="F8126" minOccurs="0"/>
+			<Composite ref="C235" minOccurs="0"/>
+			<Composite ref="C236" minOccurs="0"/>
+			<Data ref="F8255" minOccurs="0"/>
+			<Data ref="F8179" minOccurs="0"/>
+			<Data ref="F8211" minOccurs="0"/>
+			<Composite ref="C289" minOccurs="0"/>
+		</Segment>
+		<Segment name="DII" info="DIRECTORY IDENTIFICATION">
+			<Data ref="F1056"/>
+			<Data ref="F1058"/>
+			<Data ref="F9148" minOccurs="0"/>
+			<Data ref="F1476" minOccurs="0"/>
+			<Data ref="F3453" minOccurs="0"/>
+			<Data ref="F4513" minOccurs="0"/>
+		</Segment>
+		<Segment name="DIM" info="DIMENSIONS">
+			<Data ref="F6145"/>
+			<Composite ref="C211"/>
+		</Segment>
+		<Segment name="DLI" info="DOCUMENT LINE IDENTIFICATION">
+			<Data ref="F1073"/>
+			<Data ref="F1082"/>
+		</Segment>
+		<Segment name="DLM" info="DELIVERY LIMITATIONS">
+			<Data ref="F4455" minOccurs="0"/>
+			<Composite ref="C522" minOccurs="0"/>
+			<Composite ref="C214" minOccurs="0"/>
+			<Data ref="F4457" minOccurs="0"/>
+		</Segment>
+		<Segment name="DMS" info="DOCUMENT/MESSAGE SUMMARY">
+			<Composite ref="C106" minOccurs="0"/>
+			<Composite ref="C002" minOccurs="0"/>
+			<Data ref="F7240" minOccurs="0"/>
+		</Segment>
+		<Segment name="DOC" info="DOCUMENT/MESSAGE DETAILS">
+			<Composite ref="C002"/>
+			<Composite ref="C503" minOccurs="0"/>
+			<Data ref="F3153" minOccurs="0"/>
+			<Data ref="F1220" minOccurs="0"/>
+			<Data ref="F1218" minOccurs="0"/>
+		</Segment>
+		<Segment name="DRD" info="DATA REPRESENTATION DETAILS">
+			<Data ref="F7512" minOccurs="0"/>
+			<Data ref="F7515" minOccurs="0"/>
+			<Data ref="F9169" minOccurs="0"/>
+			<Data ref="F6174" minOccurs="0"/>
+		</Segment>
+		<Segment name="DSG" info="DOSAGE ADMINISTRATION">
+			<Data ref="F6085"/>
+			<Composite ref="C838" minOccurs="0"/>
+		</Segment>
+		<Segment name="DSI" info="DATA SET IDENTIFICATION">
+			<Composite ref="C782"/>
+			<Composite ref="C082" minOccurs="0"/>
+			<Data ref="F4405" minOccurs="0"/>
+			<Composite ref="C286" minOccurs="0"/>
+			<Data ref="F1060" minOccurs="0"/>
+		</Segment>
+		<Segment name="DTM" info="DATE/TIME/PERIOD">
+			<Composite ref="C507"/>
+		</Segment>
+		<Segment name="EDT" info="EDITING DETAILS">
+			<Data ref="F6178" minOccurs="0"/>
+			<Data ref="F9026" minOccurs="0"/>
+			<Data ref="F9031" minOccurs="0"/>
+			<Data ref="F4447" minOccurs="0"/>
+		</Segment>
+		<Segment name="EFI" info="EXTERNAL FILE LINK IDENTIFICATION">
+			<Composite ref="C077"/>
+			<Composite ref="C099" minOccurs="0"/>
+			<Data ref="F1050" minOccurs="0"/>
+			<Data ref="F9450" minOccurs="0"/>
+		</Segment>
+		<Segment name="ELM" info="SIMPLE DATA ELEMENT DETAILS">
+			<Data ref="F9150"/>
+			<Data ref="F9153" minOccurs="0"/>
+			<Data ref="F6113" minOccurs="0"/>
+			<Data ref="F9156" minOccurs="0"/>
+			<Data ref="F9158" minOccurs="0"/>
+			<Data ref="F9161" minOccurs="0"/>
+			<Data ref="F1507" minOccurs="0"/>
+			<Data ref="F4513" minOccurs="0"/>
+			<Data ref="F6432" minOccurs="0"/>
+		</Segment>
+		<Segment name="ELU" info="DATA ELEMENT USAGE DETAILS">
+			<Data ref="F9162"/>
+			<Data ref="F7299" minOccurs="0"/>
+			<Data ref="F1050" minOccurs="0"/>
+			<Data ref="F4513" minOccurs="0"/>
+			<Data ref="F6176" minOccurs="0"/>
+			<Data ref="F9453" minOccurs="0"/>
+			<Data ref="F9285" minOccurs="0"/>
+			<Data ref="F9175" minOccurs="0"/>
+		</Segment>
+		<Segment name="ELV" info="ELEMENT VALUE DEFINITION">
+			<Data ref="F9029"/>
+			<Data ref="F9422" minOccurs="0"/>
+			<Data ref="F7299" minOccurs="0"/>
+			<Data ref="F4513" minOccurs="0"/>
+		</Segment>
+		<Segment name="EMP" info="EMPLOYMENT DETAILS">
+			<Data ref="F9003"/>
+			<Composite ref="C948" minOccurs="0"/>
+			<Composite ref="C951" minOccurs="0"/>
+			<Composite ref="C950" minOccurs="0"/>
+			<Data ref="F3480" minOccurs="0"/>
+			<Data ref="F9035" minOccurs="0"/>
+		</Segment>
+		<Segment name="EQA" info="ATTACHED EQUIPMENT">
+			<Data ref="F8053"/>
+			<Composite ref="C237" minOccurs="0"/>
+		</Segment>
+		<Segment name="EQD" info="EQUIPMENT DETAILS">
+			<Data ref="F8053"/>
+			<Composite ref="C237" minOccurs="0"/>
+			<Composite ref="C224" minOccurs="0"/>
+			<Data ref="F8077" minOccurs="0"/>
+			<Data ref="F8249" minOccurs="0"/>
+			<Data ref="F8169" minOccurs="0"/>
+			<Data ref="F4233" minOccurs="0"/>
+		</Segment>
+		<Segment name="EQN" info="NUMBER OF UNITS">
+			<Composite ref="C523"/>
+		</Segment>
+		<Segment name="ERC" info="APPLICATION ERROR INFORMATION">
+			<Composite ref="C901"/>
+		</Segment>
+		<Segment name="ERP" info="ERROR POINT DETAILS">
+			<Composite ref="C701" minOccurs="0"/>
+			<Composite ref="C853" minOccurs="0"/>
+		</Segment>
+		<Segment name="EVE" info="EVENT">
+			<Data ref="F9635" minOccurs="0"/>
+			<Composite ref="C004" minOccurs="0"/>
+			<Composite ref="C030" minOccurs="0"/>
+			<Composite ref="C063" minOccurs="0" maxOccurs="5"/>
+			<Data ref="F1229" minOccurs="0"/>
+		</Segment>
+		<Segment name="FCA" info="FINANCIAL CHARGES ALLOCATION">
+			<Data ref="F4471"/>
+			<Composite ref="C878" minOccurs="0"/>
+		</Segment>
+		<Segment name="FII" info="FINANCIAL INSTITUTION INFORMATION">
+			<Data ref="F3035"/>
+			<Composite ref="C078" minOccurs="0"/>
+			<Composite ref="C088" minOccurs="0"/>
+			<Data ref="F3207" minOccurs="0"/>
+		</Segment>
+		<Segment name="FNS" info="FOOTNOTE SET">
+			<Composite ref="C783"/>
+			<Composite ref="C082" minOccurs="0"/>
+			<Data ref="F4405" minOccurs="0"/>
+			<Data ref="F4513" minOccurs="0"/>
+		</Segment>
+		<Segment name="FNT" info="FOOTNOTE">
+			<Composite ref="C784"/>
+			<Composite ref="C082" minOccurs="0"/>
+			<Data ref="F4405" minOccurs="0"/>
+			<Data ref="F4513" minOccurs="0"/>
+		</Segment>
+		<Segment name="FOR" info="FORMULA">
+			<Data ref="F9501"/>
+			<Data ref="F7402" minOccurs="0"/>
+			<Data ref="F9502" minOccurs="0"/>
+			<Data ref="F4440" minOccurs="0"/>
+			<Composite ref="C961" minOccurs="0"/>
+		</Segment>
+		<Segment name="FSQ" info="FORMULA SEQUENCE">
+			<Data ref="F9507"/>
+			<Data ref="F9509" minOccurs="0"/>
+			<Data ref="F1050" minOccurs="0"/>
+			<Data ref="F9510" minOccurs="0"/>
+			<Data ref="F4440" minOccurs="0"/>
+		</Segment>
+		<Segment name="FTX" info="FREE TEXT">
+			<Data ref="F4451"/>
+			<Data ref="F4453" minOccurs="0"/>
+			<Composite ref="C107" minOccurs="0"/>
+			<Composite ref="C108" minOccurs="0"/>
+			<Data ref="F3453" minOccurs="0"/>
+			<Data ref="F4447" minOccurs="0"/>
+		</Segment>
+		<Segment name="GDS" info="NATURE OF CARGO">
+			<Composite ref="C703" minOccurs="0"/>
+			<Composite ref="C288" minOccurs="0"/>
+		</Segment>
+		<Segment name="GEI" info="PROCESSING INFORMATION">
+			<Data ref="F9649"/>
+			<Composite ref="C012" minOccurs="0"/>
+			<Data ref="F7187" minOccurs="0"/>
+		</Segment>
+		<Segment name="GID" info="GOODS ITEM DETAILS">
+			<Data ref="F1496" minOccurs="0"/>
+			<Composite ref="C213" minOccurs="0" mergedEntries="5"/>
+		</Segment>
+		<Segment name="GIN" info="GOODS IDENTITY NUMBER">
+			<Data ref="F7405"/>
+			<Composite ref="C208" mergedEntries="5"/>
+		</Segment>
+		<Segment name="GIR" info="RELATED IDENTIFICATION NUMBERS">
+			<Data ref="F7297"/>
+			<Composite ref="C206" mergedEntries="5"/>
+		</Segment>
+		<Segment name="GOR" info="GOVERNMENTAL REQUIREMENTS">
+			<Data ref="F8323" minOccurs="0"/>
+			<Composite ref="C232" minOccurs="0" mergedEntries="4"/>
+		</Segment>
+		<Segment name="GPO" info="GEOGRAPHICAL POSITION">
+			<Data ref="F6029"/>
+			<Data ref="F6000" minOccurs="0"/>
+			<Data ref="F6002" minOccurs="0"/>
+			<Data ref="F6096" minOccurs="0"/>
+		</Segment>
+		<Segment name="GRU" info="SEGMENT GROUP USAGE DETAILS">
+			<Data ref="F9164"/>
+			<Data ref="F7299" minOccurs="0"/>
+			<Data ref="F6176" minOccurs="0"/>
+			<Data ref="F4513" minOccurs="0"/>
+			<Data ref="F1050" minOccurs="0"/>
+		</Segment>
+		<Segment name="HAN" info="HANDLING INSTRUCTIONS">
+			<Composite ref="C524" minOccurs="0"/>
+			<Composite ref="C218" minOccurs="0"/>
+		</Segment>
+		<Segment name="HYN" info="HIERARCHY INFORMATION">
+			<Data ref="F7173"/>
+			<Data ref="F7171" minOccurs="0"/>
+			<Data ref="F1229" minOccurs="0"/>
+			<Composite ref="C212" minOccurs="0"/>
+			<Data ref="F7166" minOccurs="0"/>
+		</Segment>
+		<Segment name="ICD" info="INSURANCE COVER DESCRIPTION">
+			<Composite ref="C330"/>
+			<Composite ref="C331"/>
+		</Segment>
+		<Segment name="IDE" info="IDENTITY">
+			<Data ref="F7495"/>
+			<Composite ref="C206" minOccurs="0"/>
+			<Composite ref="C082" minOccurs="0"/>
+			<Data ref="F4405" minOccurs="0"/>
+			<Data ref="F1222" minOccurs="0"/>
+			<Composite ref="C778" minOccurs="0" maxOccurs="99"/>
+			<Composite ref="C240" minOccurs="0"/>
+		</Segment>
+		<Segment name="IFD" info="INFORMATION DETAIL">
+			<Data ref="F4153" minOccurs="0"/>
+			<Composite ref="C009" minOccurs="0"/>
+			<Composite ref="C010" minOccurs="0"/>
+			<Composite ref="C011" minOccurs="0" maxOccurs="5"/>
+			<Data ref="F4405" minOccurs="0"/>
+		</Segment>
+		<Segment name="IHC" info="PERSON CHARACTERISTIC">
+			<Data ref="F3289"/>
+			<Composite ref="C818" minOccurs="0"/>
+		</Segment>
+		<Segment name="IMD" info="ITEM DESCRIPTION">
+			<Data ref="F7077" minOccurs="0"/>
+			<Composite ref="C272" minOccurs="0"/>
+			<Composite ref="C273" minOccurs="0"/>
+			<Data ref="F7383" minOccurs="0"/>
+		</Segment>
+		<Segment name="IND" info="INDEX DETAILS">
+			<Composite ref="C545" minOccurs="0"/>
+			<Composite ref="C546" minOccurs="0"/>
+		</Segment>
+		<Segment name="INP" info="PARTIES AND INSTRUCTION">
+			<Composite ref="C849" minOccurs="0"/>
+			<Composite ref="C522" minOccurs="0"/>
+			<Composite ref="C850" minOccurs="0"/>
+			<Data ref="F1229" minOccurs="0"/>
+		</Segment>
+		<Segment name="INV" info="INVENTORY MANAGEMENT RELATED DETAILS">
+			<Data ref="F4501" minOccurs="0"/>
+			<Data ref="F7491" minOccurs="0"/>
+			<Data ref="F4499" minOccurs="0"/>
+			<Data ref="F4503" minOccurs="0"/>
+			<Composite ref="C522" minOccurs="0"/>
+		</Segment>
+		<Segment name="IRQ" info="INFORMATION REQUIRED">
+			<Composite ref="C333"/>
+		</Segment>
+		<Segment name="LAN" info="LANGUAGE">
+			<Data ref="F3455"/>
+			<Composite ref="C508" minOccurs="0"/>
+		</Segment>
+		<Segment name="LIN" info="LINE ITEM">
+			<Data ref="F1082" minOccurs="0"/>
+			<Data ref="F1229" minOccurs="0"/>
+			<Composite ref="C212" minOccurs="0"/>
+			<Composite ref="C829" minOccurs="0"/>
+			<Data ref="F1222" minOccurs="0"/>
+			<Data ref="F7083" minOccurs="0"/>
+		</Segment>
+		<Segment name="LOC" info="PLACE/LOCATION IDENTIFICATION">
+			<Data ref="F3227"/>
+			<Composite ref="C517" minOccurs="0"/>
+			<Composite ref="C519" minOccurs="0"/>
+			<Composite ref="C553" minOccurs="0"/>
+			<Data ref="F5479" minOccurs="0"/>
+		</Segment>
+		<Segment name="MEA" info="MEASUREMENTS">
+			<Data ref="F6311"/>
+			<Composite ref="C502" minOccurs="0"/>
+			<Composite ref="C174" minOccurs="0"/>
+			<Data ref="F7383" minOccurs="0"/>
+		</Segment>
+		<Segment name="MEM" info="MEMBERSHIP DETAILS">
+			<Data ref="F7449"/>
+			<Composite ref="C942" minOccurs="0"/>
+			<Composite ref="C944" minOccurs="0"/>
+			<Composite ref="C945" minOccurs="0"/>
+			<Composite ref="C203" minOccurs="0"/>
+			<Composite ref="C960" minOccurs="0"/>
+		</Segment>
+		<Segment name="MKS" info="MARKET/SALES CHANNEL INFORMATION">
+			<Data ref="F7293"/>
+			<Composite ref="C332"/>
+			<Data ref="F1229" minOccurs="0"/>
+		</Segment>
+		<Segment name="MOA" info="MONETARY AMOUNT">
+			<Composite ref="C516"/>
+		</Segment>
+		<Segment name="MSG" info="MESSAGE TYPE IDENTIFICATION">
+			<Composite ref="C709"/>
+			<Data ref="F1507" minOccurs="0"/>
+			<Data ref="F4513" minOccurs="0"/>
+			<Composite ref="C941" minOccurs="0"/>
+		</Segment>
+		<Segment name="MTD" info="MAINTENANCE OPERATION DETAILS">
+			<Data ref="F7495"/>
+			<Data ref="F4513" minOccurs="0"/>
+			<Data ref="F3005" minOccurs="0"/>
+			<Data ref="F3009" minOccurs="0"/>
+		</Segment>
+		<Segment name="NAD" info="NAME AND ADDRESS">
+			<Data ref="F3035"/>
+			<Composite ref="C082" minOccurs="0"/>
+			<Composite ref="C058" minOccurs="0"/>
+			<Composite ref="C080" minOccurs="0"/>
+			<Composite ref="C059" minOccurs="0"/>
+			<Data ref="F3164" minOccurs="0"/>
+			<Composite ref="C819" minOccurs="0"/>
+			<Data ref="F3251" minOccurs="0"/>
+			<Data ref="F3207" minOccurs="0"/>
+		</Segment>
+		<Segment name="NAT" info="NATIONALITY">
+			<Data ref="F3493"/>
+			<Composite ref="C042" minOccurs="0"/>
+		</Segment>
+		<Segment name="PAC" info="PACKAGE">
+			<Data ref="F7224" minOccurs="0"/>
+			<Composite ref="C531" minOccurs="0"/>
+			<Composite ref="C202" minOccurs="0"/>
+			<Composite ref="C402" minOccurs="0"/>
+			<Composite ref="C532" minOccurs="0"/>
+		</Segment>
+		<Segment name="PAI" info="PAYMENT INSTRUCTIONS">
+			<Composite ref="C534"/>
+		</Segment>
+		<Segment name="PAS" info="ATTENDANCE">
+			<Data ref="F9443"/>
+			<Composite ref="C839" minOccurs="0"/>
+			<Composite ref="C840" minOccurs="0"/>
+			<Composite ref="C841" minOccurs="0"/>
+		</Segment>
+		<Segment name="PCC" info="PREMIUM CALCULATION COMPONENT DETAILS">
+			<Composite ref="C820" minOccurs="0"/>
+			<Data ref="F4522" minOccurs="0"/>
+		</Segment>
+		<Segment name="PCD" info="PERCENTAGE DETAILS">
+			<Composite ref="C501"/>
+			<Data ref="F4405" minOccurs="0"/>
+		</Segment>
+		<Segment name="PCI" info="PACKAGE IDENTIFICATION">
+			<Data ref="F4233" minOccurs="0"/>
+			<Composite ref="C210" minOccurs="0"/>
+			<Data ref="F8169" minOccurs="0"/>
+			<Composite ref="C827" minOccurs="0"/>
+		</Segment>
+		<Segment name="PDI" info="PERSON DEMOGRAPHIC INFORMATION">
+			<Data ref="F3499" minOccurs="0"/>
+			<Composite ref="C085" minOccurs="0"/>
+			<Composite ref="C101" minOccurs="0"/>
+		</Segment>
+		<Segment name="PER" info="PERIOD RELATED DETAILS">
+			<Data ref="F2023" minOccurs="0"/>
+			<Composite ref="C977" minOccurs="0"/>
+		</Segment>
+		<Segment name="PGI" info="PRODUCT GROUP INFORMATION">
+			<Data ref="F5379"/>
+			<Composite ref="C288" minOccurs="0"/>
+		</Segment>
+		<Segment name="PIA" info="ADDITIONAL PRODUCT ID">
+			<Data ref="F4347"/>
+			<Composite ref="C212" mergedEntries="5"/>
+		</Segment>
+		<Segment name="PNA" info="PARTY IDENTIFICATION">
+			<Data ref="F3035"/>
+			<Composite ref="C206" minOccurs="0"/>
+			<Composite ref="C082" minOccurs="0"/>
+			<Data ref="F3403" minOccurs="0"/>
+			<Data ref="F3397" minOccurs="0"/>
+			<Composite ref="C816" minOccurs="0" mergedEntries="5"/>
+			<Data ref="F1229" minOccurs="0"/>
+		</Segment>
+		<Segment name="POC" info="PURPOSE OF CONVEYANCE CALL">
+			<Composite ref="C525"/>
+		</Segment>
+		<Segment name="PRC" info="PROCESS IDENTIFICATION">
+			<Composite ref="C242" minOccurs="0"/>
+			<Composite ref="C830" minOccurs="0"/>
+		</Segment>
+		<Segment name="PRI" info="PRICE DETAILS">
+			<Composite ref="C509" minOccurs="0"/>
+			<Data ref="F5213" minOccurs="0"/>
+		</Segment>
+		<Segment name="PRV" info="PROVISO DETAILS">
+			<Data ref="F4071"/>
+			<Composite ref="C971" minOccurs="0"/>
+			<Composite ref="C972" minOccurs="0"/>
+		</Segment>
+		<Segment name="PSD" info="PHYSICAL SAMPLE DESCRIPTION">
+			<Data ref="F4407" minOccurs="0"/>
+			<Data ref="F7039" minOccurs="0"/>
+			<Composite ref="C526" minOccurs="0"/>
+			<Data ref="F7045" minOccurs="0"/>
+			<Data ref="F7047" minOccurs="0"/>
+			<Composite ref="C514" minOccurs="0" mergedEntries="3"/>
+		</Segment>
+		<Segment name="PTY" info="PRIORITY">
+			<Data ref="F4035"/>
+			<Composite ref="C585" minOccurs="0"/>
+		</Segment>
+		<Segment name="PYT" info="PAYMENT TERMS">
+			<Data ref="F4279"/>
+			<Composite ref="C019" minOccurs="0"/>
+			<Data ref="F2475" minOccurs="0"/>
+			<Data ref="F2009" minOccurs="0"/>
+			<Data ref="F2151" minOccurs="0"/>
+			<Data ref="F2152" minOccurs="0"/>
+		</Segment>
+		<Segment name="QRS" info="QUERY AND RESPONSE">
+			<Data ref="F7293"/>
+			<Composite ref="C811" minOccurs="0"/>
+			<Composite ref="C812" minOccurs="0"/>
+		</Segment>
+		<Segment name="QTY" info="QUANTITY">
+			<Composite ref="C186"/>
+		</Segment>
+		<Segment name="QUA" info="QUALIFICATION">
+			<Data ref="F9037"/>
+			<Composite ref="C950" minOccurs="0"/>
+		</Segment>
+		<Segment name="QVR" info="QUANTITY VARIANCES">
+			<Composite ref="C279" minOccurs="0"/>
+			<Data ref="F4221" minOccurs="0"/>
+			<Composite ref="C960" minOccurs="0"/>
+		</Segment>
+		<Segment name="RCS" info="REQUIREMENTS AND CONDITIONS">
+			<Data ref="F7293"/>
+			<Composite ref="C550" minOccurs="0"/>
+			<Data ref="F1229" minOccurs="0"/>
+			<Data ref="F3207" minOccurs="0"/>
+		</Segment>
+		<Segment name="REL" info="RELATIONSHIP">
+			<Data ref="F9141"/>
+			<Composite ref="C941" minOccurs="0"/>
+		</Segment>
+		<Segment name="RFF" info="REFERENCE">
+			<Composite ref="C506"/>
+		</Segment>
+		<Segment name="RJL" info="ACCOUNTING JOURNAL IDENTIFICATION">
+			<Composite ref="C595" minOccurs="0"/>
+			<Composite ref="C596" minOccurs="0"/>
+		</Segment>
+		<Segment name="RNG" info="RANGE DETAILS">
+			<Data ref="F6167"/>
+			<Composite ref="C280" minOccurs="0"/>
+		</Segment>
+		<Segment name="ROD" info="RISK OBJECT TYPE">
+			<Composite ref="C851" minOccurs="0"/>
+			<Composite ref="C852" minOccurs="0"/>
+		</Segment>
+		<Segment name="RSL" info="RESULT">
+			<Data ref="F6087"/>
+			<Data ref="F6077" minOccurs="0"/>
+			<Composite ref="C831" minOccurs="0" mergedEntries="2"/>
+			<Composite ref="C848" minOccurs="0"/>
+			<Data ref="F6079" minOccurs="0"/>
+		</Segment>
+		<Segment name="RTE" info="RATE DETAILS">
+			<Composite ref="C128"/>
+			<Data ref="F4405" minOccurs="0"/>
+		</Segment>
+		<Segment name="SAL" info="REMUNERATION TYPE IDENTIFICATION">
+			<Composite ref="C049" minOccurs="0"/>
+		</Segment>
+		<Segment name="SCC" info="SCHEDULING CONDITIONS">
+			<Data ref="F4017"/>
+			<Data ref="F4493" minOccurs="0"/>
+			<Composite ref="C329" minOccurs="0"/>
+		</Segment>
+		<Segment name="SCD" info="STRUCTURE COMPONENT DEFINITION">
+			<Data ref="F7497"/>
+			<Composite ref="C786" minOccurs="0"/>
+			<Composite ref="C082" minOccurs="0"/>
+			<Data ref="F4405" minOccurs="0"/>
+			<Data ref="F1222" minOccurs="0"/>
+			<Composite ref="C778" minOccurs="0"/>
+			<Composite ref="C240" minOccurs="0"/>
+		</Segment>
+		<Segment name="SEG" info="SEGMENT IDENTIFICATION">
+			<Data ref="F9166"/>
+			<Data ref="F1507" minOccurs="0"/>
+			<Data ref="F4513" minOccurs="0"/>
+		</Segment>
+		<Segment name="SEL" info="SEAL NUMBER">
+			<Data ref="F9308" minOccurs="0"/>
+			<Composite ref="C215" minOccurs="0"/>
+			<Data ref="F4517" minOccurs="0"/>
+			<Composite ref="C208" minOccurs="0"/>
+			<Data ref="F4525" minOccurs="0"/>
+		</Segment>
+		<Segment name="SEQ" info="SEQUENCE DETAILS">
+			<Data ref="F1229" minOccurs="0"/>
+			<Composite ref="C286" minOccurs="0"/>
+		</Segment>
+		<Segment name="SFI" info="SAFETY INFORMATION">
+			<Data ref="F7164"/>
+			<Composite ref="C814" minOccurs="0"/>
+			<Composite ref="C815" minOccurs="0"/>
+			<Data ref="F4513" minOccurs="0"/>
+		</Segment>
+		<Segment name="SGP" info="SPLIT GOODS PLACEMENT">
+			<Composite ref="C237"/>
+			<Data ref="F7224" minOccurs="0"/>
+		</Segment>
+		<Segment name="SGU" info="SEGMENT USAGE DETAILS">
+			<Data ref="F9166"/>
+			<Data ref="F7299" minOccurs="0"/>
+			<Data ref="F6176" minOccurs="0"/>
+			<Data ref="F7168" minOccurs="0"/>
+			<Data ref="F1050" minOccurs="0"/>
+			<Data ref="F1049" minOccurs="0"/>
+			<Data ref="F4513" minOccurs="0"/>
+		</Segment>
+		<Segment name="SPR" info="ORGANISATION CLASSIFICATION DETAILS">
+			<Data ref="F7293"/>
+			<Data ref="F3079" minOccurs="0"/>
+			<Composite ref="C844" minOccurs="0"/>
+		</Segment>
+		<Segment name="SPS" info="SAMPLING PARAMETERS FOR SUMMARY STATISTICS">
+			<Composite ref="C526" minOccurs="0"/>
+			<Data ref="F6074" minOccurs="0"/>
+			<Composite ref="C512" minOccurs="0" mergedEntries="5"/>
+		</Segment>
+		<Segment name="STA" info="STATISTICS">
+			<Data ref="F6331"/>
+			<Composite ref="C527" minOccurs="0"/>
+		</Segment>
+		<Segment name="STC" info="STATISTICAL CONCEPT">
+			<Composite ref="C785"/>
+			<Composite ref="C082" minOccurs="0"/>
+			<Data ref="F4405" minOccurs="0"/>
+			<Data ref="F4513" minOccurs="0"/>
+		</Segment>
+		<Segment name="STG" info="STAGES">
+			<Data ref="F9421"/>
+			<Data ref="F6426" minOccurs="0"/>
+			<Data ref="F6428" minOccurs="0"/>
+		</Segment>
+		<Segment name="STS" info="STATUS">
+			<Composite ref="C601" minOccurs="0"/>
+			<Composite ref="C555" minOccurs="0"/>
+			<Composite ref="C556" minOccurs="0" mergedEntries="5"/>
+		</Segment>
+		<Segment name="TAX" info="DUTY/TAX/FEE DETAILS">
+			<Data ref="F5283"/>
+			<Composite ref="C241" minOccurs="0"/>
+			<Composite ref="C533" minOccurs="0"/>
+			<Data ref="F5286" minOccurs="0"/>
+			<Composite ref="C243" minOccurs="0"/>
+			<Data ref="F5305" minOccurs="0"/>
+			<Data ref="F3446" minOccurs="0"/>
+			<Data ref="F1227" minOccurs="0"/>
+			<Data ref="F5307" minOccurs="0"/>
+		</Segment>
+		<Segment name="TCC" info="CHARGE/RATE CALCULATIONS">
+			<Composite ref="C200" minOccurs="0"/>
+			<Composite ref="C203" minOccurs="0"/>
+			<Composite ref="C528" minOccurs="0"/>
+			<Composite ref="C554" minOccurs="0"/>
+		</Segment>
+		<Segment name="TDT" info="TRANSPORT INFORMATION">
+			<Data ref="F8051"/>
+			<Data ref="F8028" minOccurs="0"/>
+			<Composite ref="C220" minOccurs="0"/>
+			<Composite ref="C001" minOccurs="0"/>
+			<Composite ref="C040" minOccurs="0"/>
+			<Data ref="F8101" minOccurs="0"/>
+			<Composite ref="C401" minOccurs="0"/>
+			<Composite ref="C222" minOccurs="0"/>
+			<Data ref="F8281" minOccurs="0"/>
+			<Composite ref="C003" minOccurs="0"/>
+		</Segment>
+		<Segment name="TEM" info="TEST METHOD">
+			<Composite ref="C244" minOccurs="0"/>
+			<Data ref="F4419" minOccurs="0"/>
+			<Data ref="F3077" minOccurs="0"/>
+			<Data ref="F6311" minOccurs="0"/>
+			<Data ref="F7188" minOccurs="0"/>
+			<Composite ref="C515" minOccurs="0"/>
+		</Segment>
+		<Segment name="TMD" info="TRANSPORT MOVEMENT DETAILS">
+			<Composite ref="C219" minOccurs="0"/>
+			<Data ref="F8332" minOccurs="0"/>
+			<Data ref="F8341" minOccurs="0"/>
+		</Segment>
+		<Segment name="TMP" info="TEMPERATURE">
+			<Data ref="F6245"/>
+			<Composite ref="C239" minOccurs="0"/>
+		</Segment>
+		<Segment name="TOD" info="TERMS OF DELIVERY OR TRANSPORT">
+			<Data ref="F4055" minOccurs="0"/>
+			<Data ref="F4215" minOccurs="0"/>
+			<Composite ref="C100" minOccurs="0"/>
+		</Segment>
+		<Segment name="TPL" info="TRANSPORT PLACEMENT">
+			<Composite ref="C222"/>
+		</Segment>
+		<Segment name="TRU" info="TECHNICAL RULES">
+			<Data ref="F7402"/>
+			<Data ref="F1056" minOccurs="0"/>
+			<Data ref="F1058" minOccurs="0"/>
+			<Data ref="F7175" minOccurs="0"/>
+			<Data ref="F3055" minOccurs="0"/>
+		</Segment>
+		<Segment name="TSR" info="TRANSPORT SERVICE REQUIREMENTS">
+			<Composite ref="C536" minOccurs="0"/>
+			<Composite ref="C233" minOccurs="0"/>
+			<Composite ref="C537" minOccurs="0"/>
+			<Composite ref="C703" minOccurs="0"/>
+		</Segment>
+		<Segment name="VLI" info="VALUE LIST IDENTIFICATION">
+			<Composite ref="C780"/>
+			<Composite ref="C082" minOccurs="0"/>
+			<Data ref="F4405" minOccurs="0"/>
+			<Data ref="F1514" minOccurs="0"/>
+			<Data ref="F1507" minOccurs="0"/>
+			<Data ref="F1505" minOccurs="0"/>
+			<Composite ref="C240" minOccurs="0"/>
+			<Data ref="F4513" minOccurs="0"/>
+		</Segment>
+	</Elements>
+</Config>

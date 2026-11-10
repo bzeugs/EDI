@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="5" xsi:noNamespaceSchemaLocation="../EDIConfig5.xsd">
+	<Codelist>
+		<Field Name="F8155" Type="Alphanumeric" ListName="ISO6346" Length="1" Offset="1">
+			<Title>ISO 6346</Title>
+			<Description>Code specifying seagoing container type.</Description>
+			<Values>
+				<Value Code="1"/>
+				<Value Code="2"/>
+				<Value Code="3"/>
+				<Value Code="4"/>
+				<Value Code="B"/>
+				<Value Code="C"/>
+				<Value Code="G"/>
+				<Value Code="H"/>
+				<Value Code="L"/>
+				<Value Code="M"/>
+				<Value Code="N"/>
+			</Values>
+		</Field>
+		<Field Name="F8155" Type="Alphanumeric" ListName="ISO6346" Length="1" Offset="2">
+			<Title>ISO 6346</Title>
+			<Description>Code specifying seagoing container type.</Description>
+			<Values>
+				<Value Code="0"/>
+				<Value Code="2"/>
+				<Value Code="4"/>
+				<Value Code="5"/>
+				<Value Code="6"/>
+				<Value Code="8"/>
+				<Value Code="9"/>
+				<Value Code="C"/>
+				<Value Code="D"/>
+				<Value Code="E"/>
+				<Value Code="F"/>
+			</Values>
+		</Field>
+		<Field Name="F8155" Type="Alphanumeric" ListName="ISO6346" Length="2" Offset="3">
+			<Title>ISO 6346</Title>
+			<Description>Code specifying seagoing container type.</Description>
+			<Values>
+				<Value Code="G0"/>
+				<Value Code="G1"/>
+				<Value Code="G2"/>
+				<Value Code="G3"/>
+				<Value Code="B0"/>
+				<Value Code="B1"/>
+				<Value Code="B3"/>
+				<Value Code="B4"/>
+				<Value Code="B5"/>
+				<Value Code="B6"/>
+				<Value Code="S0"/>
+				<Value Code="S1"/>
+				<Value Code="S2"/>
+				<Value Code="R0"/>
+				<Value Code="R1"/>
+				<Value Code="R2"/>
+				<Value Code="R3"/>
+				<Value Code="H0"/>
+				<Value Code="H1"/>
+				<Value Code="H2"/>
+				<Value Code="H5"/>
+				<Value Code="H6"/>
+				<Value Code="U0"/>
+				<Value Code="U1"/>
+				<Value Code="U2"/>
+				<Value Code="U3"/>
+				<Value Code="U4"/>
+				<Value Code="U5"/>
+				<Value Code="P0"/>
+				<Value Code="P1"/>
+				<Value Code="P2"/>
+				<Value Code="P3"/>
+				<Value Code="P4"/>
+				<Value Code="P5"/>
+				<Value Code="T0"/>
+				<Value Code="T1"/>
+				<Value Code="T2"/>
+				<Value Code="T3"/>
+				<Value Code="T4"/>
+				<Value Code="T5"/>
+				<Value Code="T6"/>
+				<Value Code="T7"/>
+				<Value Code="T8"/>
+				<Value Code="T9"/>
+				<Value Code="A0"/>
+			</Values>
+		</Field>
+	</Codelist>
+</Config>

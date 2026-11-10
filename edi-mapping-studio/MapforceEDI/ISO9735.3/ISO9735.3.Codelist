@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="3" xsi:noNamespaceSchemaLocation="../EDIConfig.xsd">
+	<Codelist>
+		<Field Name="F0013" Length="3" Type="Alphanumeric">
+			<Title>Service segment tag.</Title>
+			<Description>Code identifying a service segment.</Description>
+			<Values>
+				<Value Code="UNA">
+					<Title>Service string advice</Title>
+					<Description>Service string advice.</Description>
+				</Value>
+				<Value Code="UNB">
+					<Title>Interchange header segment</Title>
+					<Description>Interchange header segment</Description>
+				</Value>
+				<Value Code="UNE">
+					<Title>Functional group trailer segment</Title>
+					<Description>Functional group trailer segment</Description>
+				</Value>
+				<Value Code="UNG">
+					<Title>Functional group header segment</Title>
+					<Description>Functional group header segment</Description>
+				</Value>
+				<Value Code="UNH">
+					<Title>Message header segment</Title>
+					<Description>Message header segment</Description>
+				</Value>
+				<Value Code="UNT">
+					<Title>Message trailer segment</Title>
+					<Description>Message trailer segment</Description>
+				</Value>
+				<Value Code="UNZ">
+					<Title>Interchange trailer segment</Title>
+					<Description>Interchange trailer segment</Description>
+				</Value>
+			</Values>
+		</Field>
+		<Field Name="F0083" Length="3" Type="Alphanumeric">
+			<Title>Action</Title>
+			<Description>A code indicating acknowledgement, or rejection (the action taken) of a subject interchange, or part of the subject interchange.</Description>
+			<Values>
+				<Value Code="4">
+					<Title>This level and all lower levels rejected</Title>
+					<Description>The corresponding referenced-level and all its lower referenced-levels are rejected. One or more errors are reported at this reporting-level or a lower reporting-level.</Description>
+				</Value>
+				<Value Code="7">
+					<Title>This level acknowledged, next lower level acknowledged if not explicitly rejected</Title>
+					<Description>The corresponding referenced-level is acknowledged. All messages or functional groups at the next lower referenced-level are acknowledged except those explicitly reported as rejected at the next lower reporting-level in this CONTRL message.</Description>
+				</Value>
+				<Value Code="8">
+					<Title>Interchange received</Title>
+					<Description>Indication of interchange receipt, see clause 3.</Description>
+				</Value>
+			</Values>
+		</Field>
+		<Field Name="F0085" Length="3" Type="Alphanumeric">
+			<Title>Syntax error</Title>
+			<Description>A code indicating the syntax error detected.</Description>
+			<Values>
+				<Value Code="2">
+					<Title>Syntax version or level not supported</Title>
+					<Description>Notification that the syntax version and/or level is not supported by the recipient.</Description>
+				</Value>
+				<Value Code="7">
+					<Title>Interchange recipient not actual recipient</Title>
+					<Description>Notification that the Interchange recipient (S003) is different from the actual recipient.</Description>
+				</Value>
+				<Value Code="12">
+					<Title>Invalid value</Title>
+					<Description>Notification that the value of a simple data element, composite data element or component data element does not conform to the relevant specifications for the value.</Description>
+				</Value>
+				<Value Code="13">
+					<Title>Missing</Title>
+					<Description>Notification that a mandatory (or otherwise required) service or user segment, data element, composite data element or component data element is missing.</Description>
+				</Value>
+				<Value Code="14">
+					<Title>Value not supported in this position</Title>
+					<Description>Notification that the recipient does not support use of the specific value of an identified simple data element, composite data element or component data element in the position where it is used. The value may be valid according to the relevant specifications and may be supported if it is used in another position.</Description>
+				</Value>
+				<Value Code="15">
+					<Title>Not supported in this position</Title>
+					<Description>Notification that the recipient does not support use of the segment type, simple data element type, composite data element type or component data element type in the specific in the identified position.</Description>
+				</Value>
+				<Value Code="16">
+					<Title>Too many constituents</Title>
+					<Description>Notification that the identified segment contained to many data elements or that the identified composite data element contained too many component data elements.</Description>
+				</Value>
+				<Value Code="17">
+					<Title>No agreement</Title>
+					<Description>No agreement exists that allows receipt of an interchange, functional group or message with the value of the identified simple data element, composite data element or component data element.</Description>
+				</Value>
+				<Value Code="18">
+					<Title>Unspecified error</Title>
+					<Description>Notification that an error has been identified, but the nature of the error is not reported.</Description>
+				</Value>
+				<Value Code="19">
+					<Title>Invalid decimal notation</Title>
+					<Description>Notification that the character indicated as decimal notation in UNA is invalid, or the decimal notation used in a data element is not consistent with the one indicated in UNA.</Description>
+				</Value>
+				<Value Code="20">
+					<Title>Character invalid as service character</Title>
+					<Description>Notification that a character advised in UNA is invalid as service character.</Description>
+				</Value>
+				<Value Code="21">
+					<Title>Invalid character(s)</Title>
+					<Description>Notification that one or more character(s) used in the interchange is not a valid character as defined by the syntax level indicated in UNB. The invalid character is part of the referenced-level, or followed immediately after the identified part of the interchange.</Description>
+				</Value>
+				<Value Code="22">
+					<Title>Invalid service character(s)</Title>
+					<Description>Notification that the service character(s) used in the interchange is not a valid service character as advised in UNA or not one of the service characters in the syntax level indicated in UNB or defined in an interchange agreement. If the code is used in UCS or UCD, the invalid character followed immediately after the identified part of the interchange.</Description>
+				</Value>
+				<Value Code="23">
+					<Title>Unknown Interchange sender</Title>
+					<Description>Notification that the Interchange sender (S002) is unknown.</Description>
+				</Value>
+				<Value Code="24">
+					<Title>Too old</Title>
+					<Description>Notification that the received interchange or functional group is older than a limit specified in an IA or determined by the recipient. 25 Test indicator not supported</Description>
+				</Value>
+				<Value Code="25">
+					<Title>Test indicator not supported</Title>
+					<Description>Notification that a test processing could not be performed for the identified interchange, functional group or message.</Description>
+				</Value>
+				<Value Code="26">
+					<Title>Duplicate detected</Title>
+					<Description>Notification that a possible duplication of a previously received interchange, functional group or message has been detected. The earlier transmission may have been rejected.</Description>
+				</Value>
+				<Value Code="27">
+					<Title>Security function not supported</Title>
+					<Description>Notification that a security function related to the referenced-level or data element is not supported.</Description>
+				</Value>
+				<Value Code="28">
+					<Title>References do not match</Title>
+					<Description>Notification that the control reference in UNB/UNG/UNH does not match the one in UNZ/UNE/UNT.</Description>
+				</Value>
+				<Value Code="29">
+					<Title>Control count does not match number of instances received</Title>
+					<Description>Notification that the number of functional groups/messages/segments does not match the number given in UNZ/UNE/UNT.</Description>
+				</Value>
+				<Value Code="30">
+					<Title>Functional groups and messages mixed</Title>
+					<Description>Notification that individual messages and functional groups have been mixed at the same level in the interchange.</Description>
+				</Value>
+				<Value Code="31">
+					<Title>More than one message type in group</Title>
+					<Description>Notification that different message types are contained in a functional group.</Description>
+				</Value>
+				<Value Code="32">
+					<Title>Lower level empty</Title>
+					<Description>Notification that the interchange did not contain any messages or functional groups, or a functional group did not contain any messages.</Description>
+				</Value>
+				<Value Code="33">
+					<Title>Invalid occurrence outside message or functional group</Title>
+					<Description>Notification that an invalid segment or data element occurred in the interchange, between messages or between functional groups. Rejection is reported at the level above.</Description>
+				</Value>
+				<Value Code="34">
+					<Title>Nesting indicator not allowed</Title>
+					<Description>Notification that explicit nesting has been used in a message where it shall not be used.</Description>
+				</Value>
+				<Value Code="35">
+					<Title>Too many segment repetitions</Title>
+					<Description>Notification that a segment was repeated too many times.</Description>
+				</Value>
+				<Value Code="36">
+					<Title>Too many segment group repetitions</Title>
+					<Description>Notification that a segment group is repeated to many times.</Description>
+				</Value>
+				<Value Code="37">
+					<Title>Invalid type of character(s)</Title>
+					<Description>Notification that one or more numeric characters were used in an alphabetic (component) data element or that one or more alphabetic characters were used in a numeric (component) data element.</Description>
+				</Value>
+				<Value Code="38">
+					<Title>Missing digit in front of decimal sign</Title>
+					<Description>Notification that a decimal sign is not preceded by one or more digits.</Description>
+				</Value>
+				<Value Code="39">
+					<Title>Data element too long</Title>
+					<Description>Notification that the length of the data element received exceeded the maximum length specified in the data element description.</Description>
+				</Value>
+				<Value Code="40">
+					<Title>Data element too short</Title>
+					<Description>Notification that the length of the data element received is shorter than the minimum length specified in the data element description.</Description>
+				</Value>
+				<Value Code="41">
+					<Title>Permanent communication network error</Title>
+					<Description>Notification that a permanent error was reported by the communication network used for transfer of the interchange. Re-transmission of an identical interchange with the same parameters at network level will not succeed.</Description>
+				</Value>
+				<Value Code="42">
+					<Title>Temporary communication network error</Title>
+					<Description>Notification that a temporary error was reported by the communication network used for transfer of the interchange. Re-transmissions of an identical interchange may succeed.</Description>
+				</Value>
+				<Value Code="43">
+					<Title>Unknown interchange recipient</Title>
+					<Description>Notification that the interchange recipient is not known by a network provider.</Description>
+				</Value>
+
+			</Values>
+		</Field>
+	</Codelist>
+</Config>

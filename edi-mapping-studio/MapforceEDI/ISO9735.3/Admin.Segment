@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../EDIConfig.xsd" Version="3">
+	<Elements>
+		<Data name="F0001" type="string" minLength="4" maxLength="4" info="Syntax identifier"/>
+		<Data name="F0002" type="string" minLength="1" maxLength="1" info="Syntax version number"/>
+		<Data name="F0004" type="string" maxLength="35" info="Interchange sender identification"/>
+		<Data name="F0007" type="string" maxLength="4" info="Identification code qualifier"/>
+		<Data name="F0008" type="string" maxLength="35" info="Interchange sender internal identification"/>
+		<Data name="F0010" type="string" maxLength="35" info="Interchange recipient identification"/>
+		<Data name="F0013" type="string" maxLength="3" info="SERVICE SEGMENT TAG, CODED"/>
+		<Data name="F0014" type="string" maxLength="35" info="Interchange recipient internal identification"/>
+		<Data name="F0017" type="decimal" minLength="6" maxLength="8" info="Date"/>
+		<Data name="F0019" type="decimal" minLength="4" maxLength="4" info="Time"/>
+		<Data name="F0020" type="string" maxLength="14" info="INTERCHANGE CONTROL REFERENCE"/>
+		<Data name="F0022" type="string" maxLength="14" info="Recipient reference/password"/>
+		<Data name="F0025" type="string" minLength="2" maxLength="2" info="Recipient reference/password qualifier"/>
+		<Data name="F0026" type="string" maxLength="14" info="APPLICATION REFERENCE"/>
+		<Data name="F0029" type="string" minLength="1" maxLength="1" info="PROCESSING PRIORITY CODE"/>
+		<Data name="F0031" type="decimal" minLength="1" maxLength="1" info="ACKNOWLEDGEMENT REQUEST"/>
+		<Data name="F0032" type="string" maxLength="35" info="INTERCHANGE AGREEMENT IDENTIFIER"/>
+		<Data name="F0035" type="decimal" minLength="1" maxLength="1" info="TEST INDICATOR"/>
+		<Data name="F0036" type="decimal" maxLength="6" info="INTERCHANGE CONTROL COUNT"/>
+		<Data name="F0038" type="string" maxLength="6" info="MESSAGE GROUP IDENTIFICATION"/>
+		<Data name="F0040" type="string" maxLength="35" info="Application sender identification"/>
+		<Data name="F0042" type="string" maxLength="35" info="Interchange sender internal sub-identification"/>
+		<Data name="F0044" type="string" maxLength="35" info="Application recipient identification"/>
+		<Data name="F0046" type="string" maxLength="35" info="Interchange recipient internal sub-identification"/>
+		<Data name="F0048" type="string" maxLength="14" info="FUNCTIONAL GROUP REFERENCE NUMBER"/>
+		<Data name="F0051" type="string" maxLength="3" info="Controlling agency, coded"/>
+		<Data name="F0052" type="string" maxLength="3" info="Message version number"/>
+		<Data name="F0054" type="string" maxLength="3" info="Message release number"/>
+		<Data name="F0057" type="string" maxLength="6" info="Association assigned code"/>
+		<Data name="F0058" type="string" maxLength="14" info="APPLICATION PASSWORD"/>
+		<Data name="F0060" type="decimal" maxLength="6" info="GROUP CONTROL COUNT"/>
+		<Data name="F0062" type="string" maxLength="14" info="MESSAGE REFERENCE NUMBER"/>
+		<Data name="F0065" type="string" maxLength="6" info="Message type"/>
+		<Data name="F0068" type="string" maxLength="35" info="COMMON ACCESS REFERENCE"/>
+		<Data name="F0070" type="decimal" maxLength="2" info="Sequence of transfers"/>
+		<Data name="F0073" type="string" minLength="1" maxLength="1" info="First and last transfer"/>
+		<Data name="F0074" type="decimal" maxLength="10" info="NUMBER OF SEGMENTS IN A MESSAGE"/>
+		<Data name="F0076" type="string" minLength="2" maxLength="2" info="Syntax release number"/>
+		<Data name="F0080" type="string" maxLength="6" info="Service code list directory version number"/>
+		<Data name="F0081" type="string" minLength="1" maxLength="1" info="SECTION IDENTIFICATION"/>
+		<Data name="F0083" type="string" maxLength="3" info="ACTION, CODED"/>
+		<Data name="F0085" type="string" maxLength="3" info="SYNTAX ERROR, CODED"/>
+		<Data name="F0087" type="string" maxLength="4" info="ANTI-COLLISION SEGMENT GROUP IDENTIFICATION"/>
+		<Data name="F0096" type="decimal" maxLength="6" info="SEGMENT POSITION IN MESSAGE BODY"/>
+		<Data name="F0098" type="decimal" maxLength="3" info="Erroneous data element position in segment"/>
+		<Data name="F0104" type="decimal" maxLength="3" info="Erroneous component data element position"/>
+		<Data name="F0110" type="string" maxLength="6" info="Code list directory version number"/>
+		<Data name="F0113" type="string" maxLength="6" info="Message type sub-function identification"/>
+		<Data name="F0115" type="string" maxLength="14" info="Message subset identification"/>
+		<Data name="F0116" type="string" maxLength="3" info="Message subset version number"/>
+		<Data name="F0118" type="string" maxLength="3" info="Message subset release number"/>
+		<Data name="F0121" type="string" maxLength="14" info="Message implementation guideline identification"/>
+		<Data name="F0122" type="string" maxLength="3" info="Message implementation guideline version number"/>
+		<Data name="F0124" type="string" maxLength="3" info="Message implementation guideline release number"/>
+		<Data name="F0127" type="string" maxLength="14" info="Scenario identification"/>
+		<Data name="F0128" type="string" maxLength="3" info="Scenario version number"/>
+		<Data name="F0130" type="string" maxLength="3" info="Scenario release number"/>
+		<Data name="F0133" type="string" maxLength="3" info="Character encoding, coded"/>
+		<Data name="F0136" type="decimal" maxLength="6" info="Erroneous data element occurrence"/>
+		<Data name="F0138" type="decimal" maxLength="6" info="SECURITY SEGMENT POSITION"/>
+		<Data name="F0314" type="string" maxLength="15" info="Event time"/>
+		<Data name="F0336" type="decimal" minLength="4" maxLength="4" info="Time offset"/>
+		<Data name="F0338" type="decimal" maxLength="8" info="Event date"/>
+		<Data name="F0340" type="string" maxLength="35" info="INTERACTIVE MESSAGE REFERENCE NUMBER"/>
+		<Data name="F0342" type="string" maxLength="3" info="Dialogue version number"/>
+		<Data name="F0344" type="string" maxLength="3" info="Dialogue release number"/>
+		<Data name="F0501" type="string" maxLength="3" info="SECURITY SERVICE, CODED"/>
+		<Data name="F0503" type="string" maxLength="3" info="RESPONSE TYPE, CODED"/>
+		<Data name="F0505" type="string" maxLength="3" info="FILTER FUNCTION, CODED"/>
+		<Data name="F0507" type="string" maxLength="3" info="ORIGINAL CHARACTER SET ENCODING, CODED"/>
+		<Data name="F0509" type="string" maxLength="3" info="ROLE OF SECURITY PROVIDER, CODED"/>
+		<Data name="F0511" type="string" maxLength="1024" info="Security party identification"/>
+		<Data name="F0513" type="string" maxLength="3" info="Security party code list qualifier"/>
+		<Data name="F0515" type="string" maxLength="3" info="Security party code list responsible agency, coded"/>
+		<Data name="F0517" type="string" maxLength="3" info="Date and time qualifier"/>
+		<Data name="F0523" type="string" maxLength="3" info="Use of algorithm, coded"/>
+		<Data name="F0525" type="string" maxLength="3" info="Cryptographic mode of operation, coded"/>
+		<Data name="F0527" type="string" maxLength="3" info="Algorithm, coded"/>
+		<Data name="F0529" type="string" maxLength="3" info="Algorithm code list identifier"/>
+		<Data name="F0531" type="string" maxLength="3" info="Algorithm parameter qualifier"/>
+		<Data name="F0533" type="string" maxLength="3" info="Mode of operation code list identifier"/>
+		<Data name="F0534" type="string" maxLength="14" info="SECURITY REFERENCE NUMBER"/>
+		<Data name="F0536" type="string" maxLength="35" info="CERTIFICATE REFERENCE"/>
+		<Data name="F0538" type="string" maxLength="35" info="Key name"/>
+		<Data name="F0541" type="string" maxLength="3" info="SCOPE OF SECURITY APPLICATION, CODED"/>
+		<Data name="F0543" type="string" maxLength="3" info="CERTIFICATE ORIGINAL CHARACTER SET REPERTOIRE, CODED"/>
+		<Data name="F0545" type="string" maxLength="3" info="CERTIFICATE SYNTAX AND VERSION, CODED"/>
+		<Data name="F0546" type="string" maxLength="35" info="USER AUTHORISATION LEVEL"/>
+		<Data name="F0548" type="string" maxLength="4" info="Service character for signature"/>
+		<Data name="F0551" type="string" maxLength="3" info="Service character for signature qualifier"/>
+		<Data name="F0554" type="string" maxLength="512" info="Algorithm parameter value"/>
+		<Data name="F0556" type="decimal" maxLength="18" info="LENGTH OF DATA IN OCTETS OF BITS"/>
+		<Data name="F0558" type="string" maxLength="70" info="List parameter"/>
+		<Data name="F0560" type="string" maxLength="1024" info="Validation value"/>
+		<Data name="F0563" type="string" maxLength="3" info="Validation value qualifier"/>
+		<Data name="F0565" type="string" maxLength="3" info="MESSAGE RELATION, CODED"/>
+		<Data name="F0567" type="string" maxLength="3" info="SECURITY STATUS, CODED"/>
+		<Data name="F0569" type="string" maxLength="3" info="REVOCATION REASON, CODED"/>
+		<Data name="F0571" type="string" maxLength="3" info="SECURITY ERROR, CODED"/>
+		<Data name="F0572" type="decimal" maxLength="4" info="CERTIFICATE SEQUENCE NUMBER"/>
+		<Data name="F0575" type="string" maxLength="3" info="List parameter qualifier"/>
+		<Data name="F0577" type="string" maxLength="3" info="Security party qualifier"/>
+		<Data name="F0579" type="string" maxLength="3" info="KEY MANAGEMENT FUNCTION QUALIFIER"/>
+		<Data name="F0582" type="decimal" maxLength="2" info="NUMBER OF PADDING BYTES"/>
+		<Data name="F0586" type="string" maxLength="35" info="Security party name"/>
+		<Data name="F0588" type="decimal" maxLength="10" info="NUMBER OF SECURITY SEGMENTS"/>
+		<Data name="F0591" type="string" maxLength="3" info="Padding mechanism, coded"/>
+		<Data name="F0601" type="string" maxLength="3" info="Padding mechanism code list identifier"/>
+		<Data name="F0800" type="string" maxLength="35" info="PACKAGE REFERENCE NUMBER"/>
+		<Data name="F0810" type="decimal" maxLength="18" info="Length of object in octets of bits"/>
+		<Composite name="S001" info="SYNTAX IDENTIFIER">
+			<Data ref="F0001"/>
+			<Data ref="F0002"/>
+			<Data ref="F0080" minOccurs="0"/>
+			<Data ref="F0133" minOccurs="0"/>
+			<Data ref="F0076" minOccurs="0"/>
+		</Composite>
+		<Composite name="S002" info="INTERCHANGE SENDER">
+			<Data ref="F0004"/>
+			<Data ref="F0007" minOccurs="0"/>
+			<Data ref="F0008" minOccurs="0"/>
+		</Composite>
+		<Composite name="S003" info="INTERCHANGE RECIPIENT">
+			<Data ref="F0010"/>
+			<Data ref="F0007" minOccurs="0"/>
+			<Data ref="F0014" minOccurs="0"/>
+		</Composite>
+		<Composite name="S004" info="DATE AND TIME OF PREPARATION">
+			<Data ref="F0017"/>
+			<Data ref="F0019"/>
+		</Composite>
+		<Composite name="S005" info="RECIPIENT REFERENCE/PASSWORD DETAILS">
+			<Data ref="F0022"/>
+			<Data ref="F0025" minOccurs="0"/>
+		</Composite>
+		<Composite name="S006" info="APPLICATION SENDER IDENTIFICATION">
+			<Data ref="F0040"/>
+			<Data ref="F0007" minOccurs="0"/>
+		</Composite>
+		<Composite name="S007" info="APPLICATION RECIPIENT IDENTIFICATION">
+			<Data ref="F0044"/>
+			<Data ref="F0007" minOccurs="0"/>
+		</Composite>
+		<Composite name="S008" info="MESSAGE VERSION">
+			<Data ref="F0052"/>
+			<Data ref="F0054"/>
+			<Data ref="F0057" minOccurs="0"/>
+		</Composite>
+		<Composite name="S009" info="MESSAGE IDENTIFIER">
+			<Data ref="F0065"/>
+			<Data ref="F0052"/>
+			<Data ref="F0054"/>
+			<Data ref="F0051"/>
+			<Data ref="F0057" minOccurs="0"/>
+		</Composite>
+		<Composite name="S010" info="STATUS OF THE TRANSFER">
+			<Data ref="F0070"/>
+			<Data ref="F0073" minOccurs="0"/>
+		</Composite>
+		<Composite name="S011" info="DATA ELEMENT IDENTIFICATION">
+			<Data ref="F0098"/>
+			<Data ref="F0104" minOccurs="0"/>
+		</Composite>
+		<Composite name="S501" info="SECURITY DATE AND TIME">
+			<Data ref="F0517"/>
+			<Data ref="F0338" minOccurs="0"/>
+			<Data ref="F0314" minOccurs="0"/>
+			<Data ref="F0336" minOccurs="0"/>
+		</Composite>
+		<Composite name="S502" info="SECURITY ALGORITHM">
+			<Data ref="F0523"/>
+			<Data ref="F0525" minOccurs="0"/>
+			<Data ref="F0533" minOccurs="0"/>
+			<Data ref="F0527" minOccurs="0"/>
+			<Data ref="F0529" minOccurs="0"/>
+			<Data ref="F0591" minOccurs="0"/>
+			<Data ref="F0601" minOccurs="0"/>
+		</Composite>
+		<Composite name="S503" info="ALGORITHM PARAMETER">
+			<Data ref="F0531"/>
+			<Data ref="F0554"/>
+		</Composite>
+		<Segment name="UCD" info="DATA ELEMENT ERROR INDICATION">
+			<Data ref="F0085"/>
+			<Composite ref="S011"/>
+		</Segment>
+		<Segment name="UCF" info="GROUP RESPONSE">
+			<Data ref="F0048"/>
+			<Composite ref="S006" minOccurs="0"/>
+			<Composite ref="S007" minOccurs="0"/>
+			<Data ref="F0083"/>
+			<Data ref="F0085" minOccurs="0"/>
+			<Data ref="F0013" minOccurs="0"/>
+			<Composite ref="S011" minOccurs="0"/>
+		</Segment>
+		<Segment name="UCI" info="INTERCHANGE RESPONSE">
+			<Data ref="F0020"/>
+			<Composite ref="S002"/>
+			<Composite ref="S003"/>
+			<Data ref="F0083"/>
+			<Data ref="F0085" minOccurs="0"/>
+			<Data ref="F0013" minOccurs="0"/>
+			<Composite ref="S011" minOccurs="0"/>
+		</Segment>
+		<Segment name="UCM" info="MESSAGE/PACKAGE RESPONSE">
+			<Data ref="F0062" minOccurs="0"/>
+			<Composite ref="S009" minOccurs="0"/>
+			<Data ref="F0083"/>
+			<Data ref="F0085" minOccurs="0"/>
+			<Data ref="F0013" minOccurs="0"/>
+			<Composite ref="S011" minOccurs="0"/>
+			<Data ref="F0800" minOccurs="0"/>
+		</Segment>
+		<Segment name="UCS" info="SEGMENT ERROR INDICATION">
+			<Data ref="F0096"/>
+			<Data ref="F0085" minOccurs="0"/>
+		</Segment>
+		<Segment name="UNA" info="Service String Advice"/>
+		<Segment name="UNB" info="INTERCHANGE HEADER">
+			<Composite ref="S001"/>
+			<Composite ref="S002"/>
+			<Composite ref="S003"/>
+			<Composite ref="S004"/>
+			<Data ref="F0020"/>
+			<Composite ref="S005" minOccurs="0"/>
+			<Data ref="F0026" minOccurs="0"/>
+			<Data ref="F0029" minOccurs="0"/>
+			<Data ref="F0031" minOccurs="0"/>
+			<Data ref="F0032" minOccurs="0"/>
+			<Data ref="F0035" minOccurs="0"/>
+		</Segment>
+		<Segment name="UNE" info="GROUP TRAILER">
+			<Data ref="F0060"/>
+			<Data ref="F0048"/>
+		</Segment>
+		<Segment name="UNG" info="GROUP HEADER">
+			<Data ref="F0038" minOccurs="0"/>
+			<Composite ref="S006" minOccurs="0"/>
+			<Composite ref="S007" minOccurs="0"/>
+			<Composite ref="S004" minOccurs="0"/>
+			<Data ref="F0048"/>
+			<Data ref="F0051" minOccurs="0"/>
+			<Composite ref="S008" minOccurs="0"/>
+			<Data ref="F0058" minOccurs="0"/>
+		</Segment>
+		<Segment name="UNH" info="MESSAGE HEADER">
+			<Data ref="F0062"/>
+			<Composite ref="S009"/>
+			<Data ref="F0068" minOccurs="0"/>
+			<Composite ref="S010" minOccurs="0"/>
+		</Segment>
+		<Segment name="UNP" info="OBJECT TRAILER">
+			<Data ref="F0810"/>
+			<Data ref="F0800"/>
+		</Segment>
+		<Segment name="UNS" info="SECTION CONTROL">
+			<Data ref="F0081"/>
+		</Segment>
+		<Segment name="UNT" info="MESSAGE TRAILER">
+			<Data ref="F0074"/>
+			<Data ref="F0062"/>
+		</Segment>
+		<Segment name="UNZ" info="INTERCHANGE TRAILER">
+			<Data ref="F0036"/>
+			<Data ref="F0020"/>
+		</Segment>
+		<Segment name="USA" info="SECURITY ALGORITHM">
+			<Composite ref="S502"/>
+			<Composite ref="S503" minOccurs="0" maxOccurs="9"/>
+		</Segment>
+		<Segment name="USB" info="SECURED DATA IDENTIFICATION">
+			<Data ref="F0503"/>
+			<Composite ref="S501" minOccurs="0"/>
+			<Composite ref="S002"/>
+			<Composite ref="S003"/>
+		</Segment>
+	</Elements>
+</Config>

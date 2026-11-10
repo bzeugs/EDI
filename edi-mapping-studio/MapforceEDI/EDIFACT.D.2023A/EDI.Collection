@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Messages Version="3">
+	<Meta>
+		<Version>D</Version>
+		<Release>23A</Release>
+		<Agency>UN</Agency>
+	</Meta>
+	<Root File="Envelope.Config"/>
+	<Message Type="APERAK" File="APERAK.Config" Description="Application error and acknowledgement message"/>
+	<Message Type="AUTHOR" File="AUTHOR.Config" Description="Authorization message"/>
+	<Message Type="BALANC" File="BALANC.Config" Description="Balance message"/>
+	<Message Type="BANSTA" File="BANSTA.Config" Description="Banking status message"/>
+	<Message Type="BAPLIE" File="BAPLIE.Config" Description="Bayplan/stowage plan occupied and empty locations message"/>
+	<Message Type="BERMAN" File="BERMAN.Config" Description="Berth management message"/>
+	<Message Type="BMISRM" File="BMISRM.Config" Description="Bulk marine inspection summary report message"/>
+	<Message Type="BOPBNK" File="BOPBNK.Config" Description="Bank transactions and portfolio transactions report message"/>
+	<Message Type="BOPCUS" File="BOPCUS.Config" Description="Balance of payment customer transaction report message"/>
+	<Message Type="BOPDIR" File="BOPDIR.Config" Description="Direct balance of payment declaration message"/>
+	<Message Type="BOPINF" File="BOPINF.Config" Description="Balance of payment information from customer message"/>
+	<Message Type="BUSCRD" File="BUSCRD.Config" Description="Business credit report message"/>
+	<Message Type="CALINF" File="CALINF.Config" Description="Vessel call information message"/>
+	<Message Type="CASINT" File="CASINT.Config" Description="Request for legal administration action in civil proceedings message"/>
+	<Message Type="CASRES" File="CASRES.Config" Description="Legal administration response in civil proceedings message"/>
+	<Message Type="CHACCO" File="CHACCO.Config" Description="Chart of accounts message"/>
+	<Message Type="CLASET" File="CLASET.Config" Description="Classification information set message"/>
+	<Message Type="CNTCND" File="CNTCND.Config" Description="Contractual conditions message"/>
+	<Message Type="COACSU" File="COACSU.Config" Description="Commercial account summary message"/>
+	<Message Type="COARRI" File="COARRI.Config" Description="Container discharge/loading report message"/>
+	<Message Type="CODECO" File="CODECO.Config" Description="Container gate-in/gate-out report message"/>
+	<Message Type="CODENO" File="CODENO.Config" Description="Permit expiration/clearance ready notice message"/>
+	<Message Type="COEDOR" File="COEDOR.Config" Description="Transport equipment stock and profile report  message"/>
+	<Message Type="COHAOR" File="COHAOR.Config" Description="Container special handling order message"/>
+	<Message Type="COLREQ" File="COLREQ.Config" Description="Request for a documentary collection message"/>
+	<Message Type="COMDIS" File="COMDIS.Config" Description="Commercial dispute message"/>
+	<Message Type="CONAPW" File="CONAPW.Config" Description="Advice on pending works message"/>
+	<Message Type="CONDPV" File="CONDPV.Config" Description="Direct payment valuation message"/>
+	<Message Type="CONDRA" File="CONDRA.Config" Description="Drawing administration message"/>
+	<Message Type="CONDRO" File="CONDRO.Config" Description="Drawing organisation message"/>
+	<Message Type="CONEST" File="CONEST.Config" Description="Establishment of contract message"/>
+	<Message Type="CONITT" File="CONITT.Config" Description="Invitation to tender message"/>
+	<Message Type="CONPVA" File="CONPVA.Config" Description="Payment valuation message"/>
+	<Message Type="CONQVA" File="CONQVA.Config" Description="Quantity valuation message"/>
+	<Message Type="CONRPW" File="CONRPW.Config" Description="Response of pending works message"/>
+	<Message Type="CONTEN" File="CONTEN.Config" Description="Tender message"/>
+	<Message Type="CONWQD" File="CONWQD.Config" Description="Work item quantity determination message"/>
+	<Message Type="COPARN" File="COPARN.Config" Description="Container announcement message"/>
+	<Message Type="COPAYM" File="COPAYM.Config" Description="Contributions for payment"/>
+	<Message Type="COPINO" File="COPINO.Config" Description="Container pre-notification message"/>
+	<Message Type="COPRAR" File="COPRAR.Config" Description="Container discharge/loading order message"/>
+	<Message Type="COREOR" File="COREOR.Config" Description="Container release order message"/>
+	<Message Type="COSTCO" File="COSTCO.Config" Description="Container stuffing/stripping confirmation message"/>
+	<Message Type="COSTOR" File="COSTOR.Config" Description="Container stuffing/stripping order message"/>
+	<Message Type="CREADV" File="CREADV.Config" Description="Credit advice message"/>
+	<Message Type="CREEXT" File="CREEXT.Config" Description="Extended credit advice message"/>
+	<Message Type="CREMUL" File="CREMUL.Config" Description="Multiple credit advice message"/>
+	<Message Type="CUSCAR" File="CUSCAR.Config" Description="Customs cargo report message"/>
+	<Message Type="CUSDEC" File="CUSDEC.Config" Description="Customs declaration message"/>
+	<Message Type="CUSEXP" File="CUSEXP.Config" Description="Customs express consignment declaration message"/>
+	<Message Type="CUSPED" File="CUSPED.Config" Description="Periodic customs declaration message"/>
+	<Message Type="CUSREP" File="CUSREP.Config" Description="Customs conveyance report message"/>
+	<Message Type="CUSRES" File="CUSRES.Config" Description="Customs response message"/>
+	<Message Type="DAPLOS" File="DAPLOS.Config" Description="Data Plot Sheet"/>
+	<Message Type="DEBADV" File="DEBADV.Config" Description="Debit advice message"/>
+	<Message Type="DEBMUL" File="DEBMUL.Config" Description="Multiple debit advice message"/>
+	<Message Type="DEBREC" File="DEBREC.Config" Description="Debts recovery message"/>
+	<Message Type="DELFOR" File="DELFOR.Config" Description="Delivery schedule message"/>
+	<Message Type="DELJIT" File="DELJIT.Config" Description="Delivery just in time message"/>
+	<Message Type="DESADV" File="DESADV.Config" Description="Despatch advice message"/>
+	<Message Type="DESTIM" File="DESTIM.Config" Description="Equipment damage and repair estimate message"/>
+	<Message Type="DGRECA" File="DGRECA.Config" Description="Dangerous goods recapitulation message"/>
+	<Message Type="DIRDEB" File="DIRDEB.Config" Description="Direct debit message"/>
+	<Message Type="DIRDEF" File="DIRDEF.Config" Description="Directory definition message"/>
+	<Message Type="DMRDEF" File="DMRDEF.Config" Description="Data maintenance request definition message"/>
+	<Message Type="DMSTAT" File="DMSTAT.Config" Description="Data maintenance status report/query message"/>
+	<Message Type="DOCADV" File="DOCADV.Config" Description="Documentary credit advice message"/>
+	<Message Type="DOCAMA" File="DOCAMA.Config" Description="Advice of an amendment of a documentary credit message"/>
+	<Message Type="DOCAMI" File="DOCAMI.Config" Description="Documentary credit amendment information message"/>
+	<Message Type="DOCAMR" File="DOCAMR.Config" Description="Request for an amendment of a documentary credit message"/>
+	<Message Type="DOCAPP" File="DOCAPP.Config" Description="Documentary credit application message"/>
+	<Message Type="DOCARE" File="DOCARE.Config" Description="Response to an amendment of a documentary credit message"/>
+	<Message Type="DOCINF" File="DOCINF.Config" Description="Documentary credit issuance information message"/>
+	<Message Type="ENTREC" File="ENTREC.Config" Description="Accounting entries message"/>
+	<Message Type="FINCAN" File="FINCAN.Config" Description="Financial cancellation message"/>
+	<Message Type="FINPAY" File="FINPAY.Config" Description="Multiple interbank funds transfer message"/>
+	<Message Type="FINSTA" File="FINSTA.Config" Description="Financial statement of an account message"/>
+	<Message Type="GENRAL" File="GENRAL.Config" Description="General purpose message"/>
+	<Message Type="GESMES" File="GESMES.Config" Description="Generic statistical message"/>
+	<Message Type="GOVCBR" File="GOVCBR.Config" Description="Government Cross Border Regulatory message"/>
+	<Message Type="HANMOV" File="HANMOV.Config" Description="Cargo/goods handling and movement message"/>
+	<Message Type="ICASRP" File="ICASRP.Config" Description="Insurance claim assessment and reporting message"/>
+	<Message Type="ICSOLI" File="ICSOLI.Config" Description="Insurance claim solicitor's instruction message"/>
+	<Message Type="IFCSUM" File="IFCSUM.Config" Description="Forwarding and consolidation summary message"/>
+	<Message Type="IFTCCA" File="IFTCCA.Config" Description="Forwarding and transport shipment charge calculation message"/>
+	<Message Type="IFTDGN" File="IFTDGN.Config" Description="Dangerous goods notification message"/>
+	<Message Type="IFTFCC" File="IFTFCC.Config" Description="International transport freight costs and other charges message"/>
+	<Message Type="IFTICL" File="IFTICL.Config" Description="Cargo insurance claims message"/>
+	<Message Type="IFTMAN" File="IFTMAN.Config" Description="Arrival notice message"/>
+	<Message Type="IFTMBC" File="IFTMBC.Config" Description="Booking confirmation message"/>
+	<Message Type="IFTMBF" File="IFTMBF.Config" Description="Firm booking message"/>
+	<Message Type="IFTMBP" File="IFTMBP.Config" Description="Provisional booking message"/>
+	<Message Type="IFTMCA" File="IFTMCA.Config" Description="Consignment advice message"/>
+	<Message Type="IFTMCS" File="IFTMCS.Config" Description="Instruction contract status message"/>
+	<Message Type="IFTMIN" File="IFTMIN.Config" Description="Instruction message"/>
+	<Message Type="IFTRIN" File="IFTRIN.Config" Description="Forwarding and transport rate information message"/>
+	<Message Type="IFTSAI" File="IFTSAI.Config" Description="Forwarding and transport schedule and availability information message"/>
+	<Message Type="IFTSTA" File="IFTSTA.Config" Description="International multimodal status report message"/>
+	<Message Type="IFTSTQ" File="IFTSTQ.Config" Description="International multimodal status request message"/>
+	<Message Type="IMPDEF" File="IMPDEF.Config" Description="EDI implementation guide definition message"/>
+	<Message Type="INFCON" File="INFCON.Config" Description="Infrastructure condition message"/>
+	<Message Type="INFENT" File="INFENT.Config" Description="Enterprise accounting information message"/>
+	<Message Type="INSDES" File="INSDES.Config" Description="Instruction to despatch message"/>
+	<Message Type="INSPRE" File="INSPRE.Config" Description="Insurance premium message"/>
+	<Message Type="INSREQ" File="INSREQ.Config" Description="Inspection request message"/>
+	<Message Type="INSRPT" File="INSRPT.Config" Description="Inspection report message"/>
+	<Message Type="INVOIC" File="INVOIC.Config" Description="Invoice message"/>
+	<Message Type="INVRPT" File="INVRPT.Config" Description="Inventory report message"/>
+	<Message Type="IPPOAD" File="IPPOAD.Config" Description="Insurance policy administration message"/>
+	<Message Type="IPPOMO" File="IPPOMO.Config" Description="Motor insurance policy message"/>
+	<Message Type="ISENDS" File="ISENDS.Config" Description="Intermediary system enablement or disablement message"/>
+	<Message Type="ITRRPT" File="ITRRPT.Config" Description="In transit report detail message"/>
+	<Message Type="JAPRES" File="JAPRES.Config" Description="Job application result message"/>
+	<Message Type="JINFDE" File="JINFDE.Config" Description="Job information demand message"/>
+	<Message Type="JOBAPP" File="JOBAPP.Config" Description="Job application proposal message"/>
+	<Message Type="JOBCON" File="JOBCON.Config" Description="Job order confirmation message"/>
+	<Message Type="JOBMOD" File="JOBMOD.Config" Description="Job order modification message"/>
+	<Message Type="JOBOFF" File="JOBOFF.Config" Description="Job order message"/>
+	<Message Type="JUPREQ" File="JUPREQ.Config" Description="Justified payment request message"/>
+	<Message Type="LEDGER" File="LEDGER.Config" Description="Ledger message"/>
+	<Message Type="LREACT" File="LREACT.Config" Description="Life reinsurance activity message"/>
+	<Message Type="LRECLM" File="LRECLM.Config" Description="Life reinsurance claims message"/>
+	<Message Type="MEDPID" File="MEDPID.Config" Description="Person identification message"/>
+	<Message Type="MEDPRE" File="MEDPRE.Config" Description="Medical prescription message"/>
+	<Message Type="MEDREQ" File="MEDREQ.Config" Description="Medical service request message"/>
+	<Message Type="MEDRPT" File="MEDRPT.Config" Description="Medical service report message"/>
+	<Message Type="MEDRUC" File="MEDRUC.Config" Description="Medical resource usage and cost message"/>
+	<Message Type="MEQPOS" File="MEQPOS.Config" Description="Means of transport and equipment position message"/>
+	<Message Type="MOVINS" File="MOVINS.Config" Description="Stowage instruction message"/>
+	<Message Type="MSCONS" File="MSCONS.Config" Description="Metered services consumption report message"/>
+	<Message Type="ORDCHG" File="ORDCHG.Config" Description="Purchase order change request message"/>
+	<Message Type="ORDERS" File="ORDERS.Config" Description="Purchase order message"/>
+	<Message Type="ORDRSP" File="ORDRSP.Config" Description="Purchase order response message"/>
+	<Message Type="OSTENQ" File="OSTENQ.Config" Description="Order status enquiry message"/>
+	<Message Type="OSTRPT" File="OSTRPT.Config" Description="Order status report message"/>
+	<Message Type="PARTIN" File="PARTIN.Config" Description="Party information message"/>
+	<Message Type="PAXLST" File="PAXLST.Config" Description="Passenger list message"/>
+	<Message Type="PAYDUC" File="PAYDUC.Config" Description="Payroll deductions advice message"/>
+	<Message Type="PAYEXT" File="PAYEXT.Config" Description="Extended payment order message"/>
+	<Message Type="PAYMUL" File="PAYMUL.Config" Description="Multiple payment order message"/>
+	<Message Type="PAYORD" File="PAYORD.Config" Description="Payment order message"/>
+	<Message Type="PRICAT" File="PRICAT.Config" Description="Price/sales catalogue message"/>
+	<Message Type="PRIHIS" File="PRIHIS.Config" Description="Pricing history message"/>
+	<Message Type="PROCST" File="PROCST.Config" Description="Project cost reporting message"/>
+	<Message Type="PRODAT" File="PRODAT.Config" Description="Product data message"/>
+	<Message Type="PRODEX" File="PRODEX.Config" Description="Product exchange reconciliation message"/>
+	<Message Type="PROINQ" File="PROINQ.Config" Description="Product inquiry message"/>
+	<Message Type="PROSRV" File="PROSRV.Config" Description="Product service message"/>
+	<Message Type="PROTAP" File="PROTAP.Config" Description="Project tasks planning message"/>
+	<Message Type="PRPAID" File="PRPAID.Config" Description="Insurance premium payment message"/>
+	<Message Type="QALITY" File="QALITY.Config" Description="Quality data message"/>
+	<Message Type="QUOTES" File="QUOTES.Config" Description="Quote message"/>
+	<Message Type="RDRMES" File="RDRMES.Config" Description="Raw data reporting message"/>
+	<Message Type="REBORD" File="REBORD.Config" Description="Reinsurance bordereau message"/>
+	<Message Type="RECADV" File="RECADV.Config" Description="Receiving advice message"/>
+	<Message Type="RECALC" File="RECALC.Config" Description="Reinsurance calculation message"/>
+	<Message Type="RECECO" File="RECECO.Config" Description="Credit risk cover message"/>
+	<Message Type="RECLAM" File="RECLAM.Config" Description="Reinsurance claims message"/>
+	<Message Type="RECORD" File="RECORD.Config" Description="Reinsurance core data message"/>
+	<Message Type="REGENT" File="REGENT.Config" Description="Registration of enterprise message"/>
+	<Message Type="RELIST" File="RELIST.Config" Description="Reinsured objects list message"/>
+	<Message Type="REMADV" File="REMADV.Config" Description="Remittance advice message"/>
+	<Message Type="REPREM" File="REPREM.Config" Description="Reinsurance premium message"/>
+	<Message Type="REQDOC" File="REQDOC.Config" Description="Request for document message"/>
+	<Message Type="REQOTE" File="REQOTE.Config" Description="Request for quote message"/>
+	<Message Type="RESETT" File="RESETT.Config" Description="Reinsurance settlement message"/>
+	<Message Type="RESMSG" File="RESMSG.Config" Description="Reservation message"/>
+	<Message Type="RETACC" File="RETACC.Config" Description="Reinsurance technical account message"/>
+	<Message Type="RETANN" File="RETANN.Config" Description="Announcement for returns message"/>
+	<Message Type="RETINS" File="RETINS.Config" Description="Instruction for returns message"/>
+	<Message Type="RPCALL" File="RPCALL.Config" Description="Repair call message"/>
+	<Message Type="SAFHAZ" File="SAFHAZ.Config" Description="Safety and hazard data message"/>
+	<Message Type="SANCRT" File="SANCRT.Config" Description="International movement of goods governmental regulatory message"/>
+	<Message Type="SLSFCT" File="SLSFCT.Config" Description="Sales forecast message"/>
+	<Message Type="SLSRPT" File="SLSRPT.Config" Description="Sales data report message"/>
+	<Message Type="SOCADE" File="SOCADE.Config" Description="Social administration message"/>
+	<Message Type="SSIMOD" File="SSIMOD.Config" Description="Modification of identity details message"/>
+	<Message Type="SSRECH" File="SSRECH.Config" Description="Worker's insurance history message"/>
+	<Message Type="SSREGW" File="SSREGW.Config" Description="Notification of registration of a worker message"/>
+	<Message Type="STATAC" File="STATAC.Config" Description="Statement of account message"/>
+	<Message Type="STLRPT" File="STLRPT.Config" Description="Settlement transaction reporting message"/>
+	<Message Type="SUPCOT" File="SUPCOT.Config" Description="Superannuation contributions advice message"/>
+	<Message Type="SUPMAN" File="SUPMAN.Config" Description="Superannuation maintenance message"/>
+	<Message Type="SUPRES" File="SUPRES.Config" Description="Supplier response message"/>
+	<Message Type="TANSTA" File="TANSTA.Config" Description="Tank status report message"/>
+	<Message Type="TAXCON" File="TAXCON.Config" Description="Tax control message"/>
+	<Message Type="TPFREP" File="TPFREP.Config" Description="Terminal performance message"/>
+	<Message Type="UTILMD" File="UTILMD.Config" Description="Utilities master data message"/>
+	<Message Type="UTILTS" File="UTILTS.Config" Description="Utilities time series message"/>
+	<Message Type="VATDEC" File="VATDEC.Config" Description="Value added tax message"/>
+	<Message Type="VERMAS" File="VERMAS.Config" Description="Verified gross mass message"/>
+	<Message Type="VESDEP" File="VESDEP.Config" Description="Vessel departure message"/>
+	<Message Type="WASDIS" File="WASDIS.Config" Description="Waste disposal information message"/>
+	<Message Type="WKGRDC" File="WKGRDC.Config" Description="Work grant decision message"/>
+	<Message Type="WKGRRE" File="WKGRRE.Config" Description="Work grant request message"/>
+</Messages>

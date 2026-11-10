@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Messages Version="3">
+	<Meta>
+		<Version>4</Version>
+		<Release>1</Release>
+		<Agency>UN</Agency>
+	</Meta>
+	<Root File="Envelope.Config"/>
+	<Message Type="AUTACK" File="AUTACK.Config" Description="Acknowledgement message"/>
+	<Message Type="CONTRL" File="CONTRL.Config" Description="Control message"/>
+	<Message Type="KEYMAN" File="KEYMAN.Config" Description="Security key and certificate management message"/>
+</Messages>
