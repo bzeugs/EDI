@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EDI Mapping Studio – V0.2</title>
+<style>
+:root{font-family:system-ui,Arial,sans-serif;color:#1c2940;background:#f4f7fb}*{box-sizing:border-box}body{margin:0}header{background:#15345a;color:white;padding:20px 28px}header h1{margin:0 0 5px}header p{margin:0;color:#cbd8ea}.layout{display:grid;grid-template-columns:270px 1fr;gap:16px;max-width:1400px;margin:20px auto;padding:0 16px}.panel{background:white;border:1px solid #dce4ee;border-radius:12px;padding:18px;min-width:0}button,input,select{font:inherit}button{border:1px solid #d2ddeb;border-radius:7px;background:white;padding:9px;cursor:pointer;text-align:left}button:hover,.active{background:#e6f0ff}aside button{width:100%;margin:4px 0}h2{margin-top:0}small,.muted{color:#62738b}input[type=file]{max-width:100%}#tree{max-height:65vh;overflow:auto}details{margin-left:13px;padding:3px 0}summary{cursor:pointer}summary:hover{color:#135a9d}.node{display:block;padding:4px 8px;border:0;background:none;max-width:100%;overflow-wrap:anywhere}.node.selected{background:#e6f0ff}code,pre{white-space:pre-wrap;overflow-wrap:anywhere}.cols{display:grid;grid-template-columns:minmax(0,2fr) minmax(260px,1fr);gap:16px}.tag{display:inline-block;background:#e9f2fc;border-radius:5px;padding:3px 7px;margin:3px;font-size:12px}#status{margin:12px 0;color:#395777}@media(max-width:850px){.layout,.cols{grid-template-columns:1fr}}
+</style></head><body><header><h1>EDI Mapping Studio <small>V0.2</small></h1><p>Lokaler Struktur-Explorer für EDI, XML, SAP-IDoc und FlexText · Experimenteller Prototyp</p></header>
+<div class="layout"><aside class="panel"><h2>Formate</h2><div id="formats"></div><hr><p class="muted">Alle Dateien werden lokal im Browser verarbeitet. Keine Übertragung an einen Server.</p></aside>
+<main><section class="panel"><h2 id="heading">Format wählen</h2><p id="hint"></p><label>Strukturdatei(en) lokal auswählen<br><input id="files" type="file" multiple accept=".xsd,.xml,.mft,.txt,.config,.zip"></label><p class="muted">XSD/XML und MFT werden direkt analysiert. ZIP und Altova-EDI-Konfigurationen benötigen noch einen eigenen Importadapter.</p><div id="status" role="status">Bereit.</div></section>
+<div class="cols" style="margin-top:16px"><section class="panel"><h2>Strukturbaum</h2><input id="search" placeholder="Element suchen …" style="width:100%;padding:9px;margin-bottom:12px"><div id="tree">Bitte eine Strukturdatei auswählen.</div></section><section class="panel"><h2>Elementdetails</h2><div id="details">Klicke auf einen Eintrag im Strukturbaum.</div></section></div>
+</main></div>
+<script>
+'use strict';
+const formats=[
+['UBL 2.5','XSD','UBL-Invoice-2.5.xsd mit Common Components'],
+['ebInterface 6.1 – Bund','XSD','Bund-Variante getrennt von AustriaPro'],
+['ebInterface 6.1 – AustriaPro','XSD','AustriaPro-Variante'],
+['SAP INVOICE ZINVOIC02','Parserbericht','Parser_zinvoice02_750.txt'],
+['EBOR-V1','XSD ZIP','EBOR_SC_ONLY.zip mit Imports/Includes'],
+['Zeus CreditNoteV1','XSD','CreditNoteV1.xsd'],
+['Zeus ImmediateV1','XSD','ImmediateV1.xsd'],
+['EDIFACT INVOIC D.16B','Altova EDI','EDIFACT.D.2016B / INVOIC.Config'],
+['EDIFACT INVOIC D.23A','Altova EDI','EDIFACT.D.2023A / INVOIC.Config'],
+['EDIFACT INVOIC D.24A','Altova EDI','EDIFACT.D.2024A / INVOIC.Config'],
+['ADX Flatfile V6.1','FlexText','Amdocsfredi_V6_1.mft']];
+const $=s=>document.querySelector(s);const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let current=0,nodes=[];
+function setFormat(i){current=i;$('#heading').textContent=formats[i][0];$('#hint').textContent=formats[i][1]+' · '+formats[i][2];document.querySelectorAll('#formats button').forEach((b,j)=>b.classList.toggle('active',j===i));}
+$('#formats').innerHTML=formats.map((f,i)=>'<button data-index="'+i+'">'+esc(f[0])+'<br><small>'+esc(f[1])+'</small></button>').join('');
+document.querySelectorAll('#formats button').forEach(b=>b.onclick=()=>setFormat(+b.dataset.index));setFormat(0);
+const children=(el,name)=>Array.from(el.children).filter(x=>x.localName===name);
+const first=(el,name)=>children(el,name)[0];
+function xsdParse(doc){const root=doc.documentElement;const types=new Map(),elements=new Map();
+for(const e of children(root,'complexType').concat(children(root,'simpleType')))if(e.getAttribute('name'))types.set(e.getAttribute('name'),e);
+for(const e of children(root,'element'))if(e.getAttribute('name'))elements.set(e.getAttribute('name'),e);
+const local=s=>(s||'').split(':').pop();
+function make(e,depth,seen){const name=e.getAttribute('name')||local(e.getAttribute('ref'))||e.localName;const t=e.getAttribute('type')||'';const result={name,kind:e.localName,type:t,min:e.getAttribute('minOccurs')||'1',max:e.getAttribute('maxOccurs')||'1',description:Array.from(e.getElementsByTagNameNS('*','documentation')).map(x=>x.textContent.trim()).filter(Boolean).slice(0,2).join(' '),children:[]};
+if(depth>12)return result;
+let def=first(e,'complexType')||first(e,'simpleType')||types.get(local(t));
+if(!def&&e.hasAttribute('ref'))def=elements.get(local(e.getAttribute('ref')));
+if(def&&!seen.has(def)){const next=new Set(seen);next.add(def);const group=['sequence','choice','all'].flatMap(n=>children(def,n));const nested=group.flatMap(g=>children(g,'element'));result.children=nested.map(x=>make(x,depth+1,next));const restriction=first(def,'restriction');if(restriction)result.codes=children(restriction,'enumeration').map(x=>x.getAttribute('value'));}
+return result;}
+return Array.from(elements.values()).map(e=>make(e,0,new Set()));}
+function xmlParse(doc){function walk(e,d){return {name:e.tagName,kind:'XML-Element',value:(e.children.length?'':e.textContent.trim()).slice(0,500),attributes:Array.from(e.attributes).map(a=>a.name+'='+a.value),children:d>20?[]:Array.from(e.children).map(x=>walk(x,d+1))};}return [walk(doc.documentElement,0)];}
+function mftParse(doc){const project=doc.querySelector('FlexText > Commands > Project');if(!project)throw Error('Keine FlexText/Commands/Project-Struktur gefunden');const root={name:project.querySelector('RootName')?.getAttribute('Value')||'FlexText',kind:'FlexText',children:[]};const defs=Array.from(doc.querySelectorAll('FLF'));const unique=new Set();for(const e of defs){const name=e.getAttribute('Name')||e.querySelector('Name')?.getAttribute('Value')||'FLF';if(unique.has(name))continue;unique.add(name);const fields=Array.from(e.querySelectorAll('Field')).map(x=>({name:x.getAttribute('Name')||x.querySelector('Name')?.getAttribute('Value')||'Field',kind:'FlexText-Feld',children:[]}));root.children.push({name,kind:'FlexText-Record',children:fields});}return [root];}
+function parserReport(text){const lines=text.split(/\r?\n/).filter(Boolean);return [{name:'Parserbericht',kind:'Text',children:lines.slice(0,1200).map((line,i)=>({name:(i+1)+': '+line.slice(0,140),kind:'Berichtszeile',value:line,children:[]}))}];}
+function render(){const q=$('#search').value.trim().toLowerCase();$('#tree').replaceChildren();function append(n,parent,depth){const hit=!q||JSON.stringify(n).toLowerCase().includes(q);if(!hit)return;const wrapper=document.createElement(n.children?.length?'details':'div');if(n.children?.length)wrapper.open=depth<2||!!q;const btn=document.createElement('button');btn.className='node';btn.textContent=n.name+(n.type?' : '+n.type:'');btn.onclick=e=>{e.stopPropagation();$('#details').innerHTML='<h3>'+esc(n.name)+'</h3><p><span class="tag">'+esc(n.kind)+'</span></p><p>Typ: '+esc(n.type||'–')+'</p><p>Kardinalität: '+esc(n.min||'–')+'..'+esc(n.max||'–')+'</p><p>'+esc(n.description||n.value||'')+'</p>'+(n.codes?.length?'<h4>Enumerationen</h4><pre>'+esc(n.codes.join('\n'))+'</pre>':'')+(n.attributes?.length?'<h4>Attribute</h4><pre>'+esc(n.attributes.join('\n'))+'</pre>':'');document.querySelectorAll('.node.selected').forEach(x=>x.classList.remove('selected'));btn.classList.add('selected');};if(n.children?.length){const s=document.createElement('summary');s.append(btn);wrapper.append(s);}else wrapper.append(btn);parent.append(wrapper);for(const c of n.children||[])append(c,wrapper,depth+1);}nodes.forEach(n=>append(n,$('#tree'),0));}
+$('#search').oninput=render;
+$('#files').onchange=async e=>{try{const files=Array.from(e.target.files);if(!files.length)return;const file=files[0];const name=file.name.toLowerCase();if(name.endsWith('.zip')||name.endsWith('.config'))throw Error('ZIP-/Altova-Config-Import ist für eine spätere Version vorgesehen. Bitte vorerst einzelne XSD/XML/MFT-Dateien wählen.');const text=await file.text();if(name.endsWith('.txt'))nodes=parserReport(text);else{const doc=new DOMParser().parseFromString(text,'application/xml');if(doc.querySelector('parsererror'))throw Error('Ungültiges XML');nodes=name.endsWith('.mft')?mftParse(doc):name.endsWith('.xsd')?xsdParse(doc):xmlParse(doc);}$('#status').textContent=file.name+' eingelesen · '+nodes.length+' Wurzelelement(e)';render();}catch(err){$('#status').textContent='Fehler: '+err.message;}};
+</script></body></html>
